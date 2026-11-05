@@ -267,6 +267,11 @@ button{font:inherit}
 .steps4{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:.6cqw;align-items:center;font-size:var(--fs-sm);font-weight:600;letter-spacing:-.01em}
 .steps4 li{display:flex;align-items:center;gap:.6cqw}
 .steps4 li+li::before{content:"→";color:var(--acc);font-weight:400}
+.rk-head{color:var(--acc);margin-bottom:var(--g1)}
+.rk-list{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--g3)}
+.rk-list li{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:.5cqw;position:relative;padding:1cqw 0 1cqw 1.5cqw;border-top:1px solid var(--line);font-size:var(--fs-item);font-weight:500;letter-spacing:-.015em;line-height:1.25}
+.rk-list li::before{content:"";position:absolute;left:0;top:calc(1cqw + .5em);width:.55cqw;height:.55cqw;border-radius:50%;background:var(--acc);transform:translateY(-50%)}
+.rk-list li span{font-size:var(--fs-sm);color:var(--mut);font-weight:400}
 .rk-caps{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--g3)}
 .rk-caps li{border-top:1px solid var(--line);padding-block:var(--g2);display:flex;flex-direction:column;gap:.45cqw}
 .rk-caps b{font-size:var(--fs-item);font-weight:600;letter-spacing:-.015em}
@@ -376,6 +381,7 @@ body.present .slide.on{display:block}
   body:not(.present) .duo,
   body:not(.present) .caps,
   body:not(.present) .rk-caps,
+  body:not(.present) .rk-list,
   body:not(.present) .vm,
   body:not(.present) .sign{grid-template-columns:1fr}
   body:not(.present) .engineer,
@@ -613,7 +619,7 @@ body:not(.present) .pbar{display:none}
       <ul class="outs">
         <li><span class="who"><span class="tile t-agent" role="img" aria-label="Agent Bheem logo"></span><span class="mono">Agent Bheem</span></span><b>Ask your business anything</b><span class="dsc">Live answers on sales, stock, profit, and people, in plain conversation.</span></li>
         <li><span class="who"><span class="tile t-ss" role="img" aria-label="SocialSelling.AI logo"></span><span class="mono">SocialSelling.AI</span></span><b>Never miss a lead</b><span class="dsc">Capture, call, qualify, and follow up on every lead automatically.</span></li>
-        <li><span class="who"><span class="tile t-ranko" role="img" aria-label="Ranko logo"></span><span class="mono">Ranko</span></span><b>Grow with AI marketing</b><span class="dsc">Campaigns planned, launched, and optimized across Meta, Google, and search.</span></li>
+        <li><span class="who"><span class="tile t-ranko" role="img" aria-label="Ranko logo"></span><span class="mono">Ranko</span></span><b>Grow with AI marketing</b><span class="dsc">Social media, SEO, ads, and content, handled end to end.</span></li>
         <li><span class="who"><span class="tile t-fino" role="img" aria-label="CA Fino mascot"></span><span class="mono">CA Fino</span></span><b>Keep your books audit-ready</b><span class="dsc">Bills, ledgers, GST, and TDS handled, with every entry approved by you.</span></li>
         <li><span class="who"><span class="tile t-stephy" role="img" aria-label="HR Stephy logo"></span><span class="mono">HR Stephy</span></span><b>Run HR on autopilot</b><span class="dsc">Hiring, attendance, payroll, and compliance, answered and automated.</span></li>
         <li><span class="who"><span class="tile lg-bv t-bvbg" role="img" aria-label="Bheemverse logo"></span><span class="mono">Bheemverse Engineering</span></span><b>Build AI for your process</b><span class="dsc">Custom models, agents, and integrations engineered around your workflows.</span></li>
@@ -821,14 +827,23 @@ body:not(.present) .pbar{display:none}
         <p class="body">Ranko is the all-in-one AI Marketing OS that helps marketing teams plan, create, launch, and optimize campaigns faster than ever.</p>
         <ol class="steps4" aria-label="Campaign cycle"><li>Plan</li><li>Create</li><li>Launch</li><li>Optimize</li></ol>
       </div>
-      <ul class="rk-caps">
-        <li><b>Competitor Intelligence</b><span>Analyze competitors and uncover growth opportunities.</span></li>
-        <li><b>SEO Optimization</b><span>Identify issues and improve rankings automatically.</span></li>
-        <li><b>AI Ad Management</b><span>Create and optimize Meta and Google ad campaigns automatically.</span></li>
-        <li><b>Funnel Analytics</b><span>Detect drop-offs and improve conversions.</span></li>
-        <li><b>Campaign Optimization</b><span>Continuously optimize performance metrics.</span></li>
-        <li><b>ROI Intelligence</b><span>Track profitability and maximize ROI.</span></li>
-      </ul>
+      <div class="rk-right">
+        <p class="mono rk-head">Complete digital marketing, handled</p>
+        <ul class="rk-list">
+          <li>Social media management</li>
+          <li>SEO</li>
+          <li>AEO <span>· for AI answer engines</span></li>
+          <li>Blogs</li>
+          <li>Posts &amp; reels</li>
+          <li>Auto-posting</li>
+          <li>Ad management</li>
+          <li>Campaign management</li>
+          <li>Brand audit <span>· find gaps, fix them</span></li>
+          <li>30-day content calendar</li>
+          <li>Competitor analysis</li>
+          <li>ROI tracking</li>
+        </ul>
+      </div>
     </div>
     <footer class="foot"><span>Bheemverse</span><span class="r"><span>Ranko</span><span class="num"></span></span></footer>
   </div>
@@ -1083,7 +1098,7 @@ body:not(.present) .pbar{display:none}
   });
 
   /* ---------- entrance animation + count-up for every slide ---------- */
-  const STG = ['.engineer', '.stack', '.products', '.outs', '.figs', '.offers', '.caps', '.pipe', '.rk-caps', '.desks', '.approve', '.ind', '.track', '.steps5', '.vm', '.claims', '.asks', '.duo'];
+  const STG = ['.engineer', '.stack', '.products', '.outs', '.figs', '.offers', '.caps', '.pipe', '.rk-caps', '.rk-list', '.desks', '.approve', '.ind', '.track', '.steps5', '.vm', '.claims', '.asks', '.duo'];
   slides.forEach(s => {
     s.querySelectorAll('.content > *').forEach((el, i) => el.style.setProperty('--d', i));
     s.querySelectorAll(STG.join(',')).forEach(g => {
