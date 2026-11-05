@@ -298,8 +298,10 @@ button{font:inherit}
 
 /* industries */
 .s-ind .content{justify-content:space-between}
-.ind{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1cqw}
-.ind li{display:flex;align-items:center;justify-content:center;gap:.4em;height:4.2cqw;padding-inline:1cqw;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:1.45cqw;font-weight:500;letter-spacing:-.015em;white-space:nowrap;text-align:center}
+.ind{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line-2);border-radius:.6cqw;overflow:hidden;background:var(--white)}
+.ind li{display:flex;align-items:center;gap:.4em;padding:1.15cqw 1.5cqw;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:1.5cqw;font-weight:500;letter-spacing:-.015em;white-space:nowrap}
+.ind li:nth-child(4n){border-right:0}
+.ind li:nth-child(n+5){border-bottom:0}
 .ind .amp{color:var(--mut);font-weight:300}
 .clients{display:flex;flex-direction:column;gap:var(--g1)}
 .mq-head{color:var(--acc)}
@@ -430,8 +432,10 @@ body.present .slide.on{display:block}
   body:not(.present) .who-head{grid-template-columns:1fr}
   body:not(.present) .nn{height:120px}
   body:not(.present) .nn-fig .mono{text-align:left}
-  body:not(.present) .ind{gap:8px}
-  body:not(.present) .ind li{font-size:13.5px;height:38px;padding-inline:10px;white-space:normal}
+  body:not(.present) .ind{grid-template-columns:1fr 1fr;border-radius:8px}
+  body:not(.present) .ind li{font-size:14px;padding:10px 12px;white-space:normal;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  body:not(.present) .ind li:nth-child(2n){border-right:0}
+  body:not(.present) .ind li:nth-child(n+7){border-bottom:0}
   body:not(.present) .mq{--lh:30px}
   body:not(.present) .mq-track,body:not(.present) .mq-set{gap:40px}
   @keyframes marquee{to{transform:translateX(calc(-50% - 20px))}}
