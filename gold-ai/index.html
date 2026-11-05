@@ -1,0 +1,1162 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bheem Gold AI | Bheemverse</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Bheem Gold AI: AI sales and performance for NBFC gold loan lenders, with custom AI models and agents hosted in India.">
+<meta name="theme-color" content="#0A1430">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bheemverse">
+<meta property="og:url" content="https://deck.bheemverse.com/gold-ai/">
+<meta property="og:title" content="Bheem Gold AI | AI Sales &amp; Performance for gold loan NBFCs">
+<meta property="og:description" content="Custom AI models and agents that turn every branch's gold loan data into a daily plan for every employee. Hosted in India.">
+<meta property="og:image" content="https://deck.bheemverse.com/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: a column of 16:9 slides sized in container units (1cqw = 1/100 of a slide); dark cinematic and light corporate slides alternate.
+   Single visual world by choice — the deck sets its own canvas and every colour, so it reads the same in either host theme. */
+:root {
+  /* Royal Blue & Gold — the chosen identity: royal sapphire structure, gold highlights, ivory corporate slides */
+  --page: #030820; --navy-950: #050c2b; --navy-900: #0a1747; --navy-800: #12246b; --mid: #1a3590;
+  --accent-deep: #1d3fb8; --blue: #2952d9; --blue-bright: #4a74f0; --teal: #c9962e; --cyan: #f2c55c; --glow-2: #ffe2a0; --accent-ink: #1d3fb8;
+  --paper: #fdfcf8; --paper-2: #f4f1e8; --silver-100: #f1eee4; --hair: #e3ddcc; --silver: #cfcabb; --white: #ffffff;
+  --ink: #0b1640; --ink-2: #464c66; --ink-3: #7a7f94; --mute: #c3c8dc; --mute-2: #e1e4f0; --mute-3: #8e95b0;
+  --accent-rgb: 41, 82, 217; --glow-rgb: 242, 197, 92; --line-rgb: 190, 200, 255; --deep-rgb: 18, 36, 107; --ground-rgb: 5, 12, 43; --silver-rgb: 207, 202, 187;
+  --red: #e5484d; --amber: #f5b544; --green: #1fbf8f;
+  --f-display: 'Sora', 'Segoe UI', system-ui, sans-serif;
+  --f-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--page); color: var(--white); font-family: var(--f-body); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 48px; }
+
+/* toolbar */
+.bar { flex-wrap: wrap; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; display: flex; align-items: center; gap: 14px; max-width: 1280px; margin: 0 auto; padding-block: 12px; background: var(--page); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--page); }
+.bar-name { flex: 1; min-width: 0; font: 600 15px/1.3 var(--f-display); letter-spacing: -.01em; color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-name span { color: var(--silver); font: 500 12px var(--f-mono); letter-spacing: .08em; margin-left: 10px; }
+.bar button { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; border: 1px solid rgba(var(--glow-rgb), .45); background: linear-gradient(135deg, rgba(var(--accent-rgb), .35), rgba(var(--glow-rgb), .18)); color: var(--white); font: 600 13px var(--f-display); cursor: pointer; }
+.bar button:hover { border-color: var(--cyan); }
+.bar button:focus-visible, .pv button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+
+.deck { display: grid; gap: 28px; max-width: 1280px; margin: 0 auto; }
+.slide { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; container-type: inline-size; border-radius: 10px; box-shadow: 0 30px 60px -36px rgba(0, 0, 0, .9); }
+.slide > .in { position: absolute; inset: 0; padding: 4.4cqw 5cqw 3.2cqw; display: flex; flex-direction: column; }
+
+/* dark cinematic */
+.dark { background: radial-gradient(60% 75% at 82% 18%, rgba(var(--accent-rgb), .32), transparent 62%), radial-gradient(45% 55% at 12% 95%, rgba(var(--glow-rgb), .12), transparent 70%), linear-gradient(160deg, var(--navy-900), var(--navy-950) 70%); color: var(--white); }
+.dark::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(var(--line-rgb), .06) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--line-rgb), .06) 1px, transparent 1px);
+  background-size: 4cqw 4cqw; mask-image: radial-gradient(90% 90% at 70% 30%, #000 20%, transparent 85%); pointer-events: none; }
+/* light corporate */
+.light { background: linear-gradient(180deg, var(--paper), var(--paper-2)); color: var(--ink); }
+.light::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: .35cqw; background: linear-gradient(90deg, var(--navy-800), var(--blue) 55%, var(--cyan)); }
+
+/* type */
+.eyebrow { font: 600 1cqw/1 var(--f-mono); letter-spacing: .22em; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 1.1cqw; }
+.dark .eyebrow { color: var(--cyan); }
+h1, h2 { margin: 0; font-family: var(--f-display); font-weight: 700; letter-spacing: -.035em; text-wrap: balance; }
+h2 { font-size: 3.3cqw; line-height: 1.08; }
+.light h2 { color: var(--navy-900); }
+.lead { font-size: 1.3cqw; line-height: 1.5; color: var(--ink-2); max-width: 62ch; margin: 1.2cqw 0 0; }
+.dark .lead { color: var(--mute); }
+.foot { margin-top: auto; display: flex; justify-content: space-between; align-items: baseline; gap: 2cqw; font: 500 .9cqw var(--f-body); color: var(--ink-3); }
+.dark .foot { color: var(--mute-3); }
+.foot b { font: 600 .9cqw var(--f-mono); color: inherit; font-variant-numeric: tabular-nums; }
+.body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 2cqw; padding-block: 2cqw; min-height: 0; }
+
+/* panels */
+.panel { border-radius: .9cqw; padding: 1.6cqw 1.6cqw 1.7cqw; }
+.light .panel { background: var(--silver-100); border: 1px solid var(--hair); }
+.dark .panel { background: linear-gradient(160deg, rgba(var(--deep-rgb), .7), rgba(var(--ground-rgb), .7)); border: 1px solid rgba(var(--line-rgb), .14); backdrop-filter: blur(4px); }
+.panel h3 { margin: 0 0 .6cqw; font: 700 1.35cqw/1.2 var(--f-display); letter-spacing: -.015em; }
+.panel p { margin: 0; font-size: 1.1cqw; line-height: 1.5; color: var(--ink-2); }
+.dark .panel p { color: var(--mute); }
+.panel .tag { display: block; margin-top: .9cqw; font: 600 .95cqw var(--f-mono); letter-spacing: .02em; color: var(--accent-ink); }
+.dark .panel .tag { color: var(--cyan); }
+.panel.hero { background: linear-gradient(150deg, var(--navy-800), var(--navy-950)); border: 1px solid rgba(var(--glow-rgb), .35); color: var(--white); box-shadow: 0 1.5cqw 3cqw -1.5cqw rgba(var(--accent-rgb), .55); }
+.panel.hero h3 { color: var(--cyan); } .panel.hero p { color: var(--mute-2); }
+.g4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2cqw; }
+.g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2cqw; }
+.num { font: 700 3cqw/1 var(--f-display); letter-spacing: -.04em; background: linear-gradient(135deg, var(--blue), var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 1.2cqw; display: block; }
+.note { font-size: 1.25cqw; line-height: 1.5; color: var(--ink-2); margin: 0; }
+.dark .note { color: var(--mute); }
+
+/* 1 · cover */
+.cover h1 { font-size: 5.6cqw; line-height: 1.02; max-width: 13ch; margin-top: auto; }
+.cover h1 em { font-style: normal; background: linear-gradient(90deg, #fff 10%, var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cover .lead { font-size: 1.45cqw; max-width: 46ch; margin-top: 2cqw; }
+.cover .meta { margin-top: auto; display: flex; justify-content: space-between; font: 600 1.05cqw var(--f-display); letter-spacing: -.005em; }
+.cover .meta span:last-child { font: 500 1cqw var(--f-mono); color: var(--silver); letter-spacing: .08em; }
+.orbit { position: absolute; right: 6cqw; top: 50%; translate: 0 -50%; width: 30cqw; aspect-ratio: 1; }
+.orbit i { position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(var(--glow-rgb), .28); }
+.orbit i:nth-child(2) { inset: 16%; border-color: rgba(var(--accent-rgb), .35); }
+.orbit i:nth-child(3) { inset: 34%; border: 0; background: radial-gradient(circle, rgba(var(--glow-rgb), .55), rgba(var(--accent-rgb), .25) 55%, transparent 72%); filter: blur(.2cqw); }
+.orbit b { position: absolute; width: 1cqw; height: 1cqw; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 1.4cqw var(--cyan); top: 50%; left: 50%; margin: -.5cqw; transform: rotate(var(--a)) translateX(15cqw); }
+.orbit b.s { width: .6cqw; height: .6cqw; margin: -.3cqw; background: var(--silver); box-shadow: none; transform: rotate(var(--a)) translateX(10.2cqw); }
+@media (prefers-reduced-motion: no-preference) { .orbit { animation: spin 60s linear infinite; } @keyframes spin { to { rotate: 360deg; } } }
+
+/* 3 · statement */
+.statement h2 { font-size: 3.9cqw; line-height: 1.12; max-width: 24ch; }
+.statement h2 em { font-style: normal; color: var(--cyan); text-shadow: 0 0 2.4cqw rgba(var(--glow-rgb), .35); }
+.statement .rule { width: 5cqw; height: .3cqw; border-radius: 1cqw; background: linear-gradient(90deg, var(--blue-bright), var(--cyan)); margin-bottom: 2.4cqw; }
+.loop { display: flex; align-items: center; gap: .8cqw; margin-top: 3cqw; }
+.loop span { padding: .7cqw 1.3cqw; border-radius: 999px; border: 1px solid rgba(var(--glow-rgb), .4); background: rgba(var(--deep-rgb), .6); font: 600 1cqw var(--f-mono); letter-spacing: .02em; color: var(--mute-2); }
+.loop svg { width: 1.6cqw; height: 1.6cqw; color: var(--cyan); }
+
+/* 4 · flow */
+.flow { display: grid; grid-template-columns: 1fr auto 1.05fr auto 1.05fr auto 1.15fr; align-items: center; gap: 1.2cqw; }
+.flow .stack { display: grid; gap: 1cqw; }
+.flow .arrow { width: 3cqw; height: 1.4cqw; color: var(--blue); }
+.flow .engine { background: linear-gradient(150deg, var(--navy-800), var(--navy-950)); color: var(--white); border: 0; }
+.flow .engine ul { margin: 0; padding: 0 0 0 1.2cqw; font-size: 1.1cqw; line-height: 1.75; color: var(--mute-2); }
+.flow .agents { background: linear-gradient(140deg, var(--blue), var(--accent-deep) 55%, var(--teal)); color: var(--white); border: 0; box-shadow: 0 1.5cqw 3cqw -1.5cqw rgba(var(--accent-rgb), .7); }
+.flow .agents p { color: var(--mute-2); }
+.roles p { margin-top: .5cqw; } .roles b { color: var(--navy-900); font-weight: 600; }
+
+/* 5 · KPI table */
+.kpi { width: 100%; border-collapse: collapse; font-size: 1.12cqw; }
+.kpi th { text-align: left; font: 600 .9cqw var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); padding: 0 1cqw .9cqw; border-bottom: 1px solid rgba(var(--glow-rgb), .35); }
+.kpi td { padding: .78cqw 1cqw; border-bottom: 1px solid rgba(var(--line-rgb), .12); color: var(--mute-2); vertical-align: middle; }
+.kpi td:first-child { color: var(--white); font-weight: 600; font-family: var(--f-display); letter-spacing: -.01em; width: 22%; }
+.kpi .w { width: 15cqw; }
+.wbar { display: flex; align-items: center; gap: 1cqw; }
+.wbar i { height: .55cqw; border-radius: 1cqw; background: linear-gradient(90deg, var(--blue-bright), var(--cyan)); box-shadow: 0 0 1cqw rgba(var(--glow-rgb), .35); }
+.wbar b { font: 600 1.15cqw var(--f-mono); color: var(--white); font-variant-numeric: tabular-nums; min-width: 3.4cqw; text-align: right; }
+.pill3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2cqw; }
+.pill3 div { padding: 1.1cqw 1.3cqw; border-radius: .8cqw; border: 1px solid rgba(var(--line-rgb), .16); background: rgba(var(--deep-rgb), .55); }
+.pill3 b { display: block; font: 700 1.2cqw var(--f-display); margin-bottom: .35cqw; }
+.pill3 span { font-size: 1.02cqw; line-height: 1.45; color: var(--mute); }
+
+/* 7 · target guide */
+.guide { display: grid; grid-template-columns: 1.25fr 1fr; gap: 3cqw; align-items: center; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.05cqw; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 2.4cqw 1fr; gap: 1.1cqw; font-size: 1.15cqw; line-height: 1.45; color: var(--mute); counter-increment: s; }
+.steps li::before { content: counter(s); width: 2.4cqw; height: 2.4cqw; border-radius: 50%; display: grid; place-items: center; font: 700 1.05cqw var(--f-mono); color: var(--cyan); border: 1px solid rgba(var(--glow-rgb), .5); background: rgba(var(--deep-rgb), .8); }
+.steps li:last-child::before { background: var(--cyan); color: var(--navy-950); border-color: var(--cyan); }
+.steps b { color: var(--white); font-weight: 600; }
+.phone { justify-self: center; width: 25cqw; padding: 1.1cqw; border-radius: 3cqw; background: linear-gradient(160deg, var(--navy-800), var(--navy-950)); border: 1px solid rgba(var(--silver-rgb), .35); box-shadow: 0 0 0 .35cqw rgba(var(--deep-rgb), .9), 0 3cqw 5cqw -2cqw rgba(var(--accent-rgb), .55); }
+.screen { border-radius: 2.1cqw; background: var(--white); color: var(--ink); padding: 2.2cqw 1.6cqw 1.8cqw; display: grid; gap: .9cqw; }
+.screen small { font: 600 .82cqw var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+.bubble { background: var(--silver-100); border-radius: 0 1.2cqw 1.2cqw 1.2cqw; padding: 1.2cqw 1.3cqw; font-size: 1.02cqw; line-height: 1.5; display: grid; gap: .45cqw; }
+.bubble b { font-weight: 600; color: var(--navy-900); }
+.bubble .it { padding-left: 1cqw; position: relative; } .bubble .it::before { content: ""; position: absolute; left: 0; top: .62cqw; width: .42cqw; height: .42cqw; border-radius: 50%; background: var(--blue); }
+.bubble .hint { color: var(--ink-2); font-size: .95cqw; }
+
+/* 9 · funnel */
+.funnel { display: grid; grid-template-columns: 1fr 1.2fr; column-gap: 3cqw; row-gap: .8cqw; align-items: center; }
+.funnel .h { font: 600 .9cqw var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); }
+.funnel .h:first-child { text-align: center; }
+.stage { justify-self: center; height: 3.4cqw; display: grid; place-items: center; border-radius: .7cqw; font: 600 1.15cqw var(--f-display); letter-spacing: -.01em; color: var(--white); }
+.leak { font-size: 1.15cqw; color: var(--mute-2); display: flex; align-items: center; gap: 1cqw; }
+.leak::before { content: ""; flex: none; width: 2.2cqw; height: 1px; background: linear-gradient(90deg, rgba(var(--glow-rgb), .8), transparent); }
+
+/* 10 · patterns */
+.pat h3 { font-size: 1.25cqw; }
+.pat p { font-size: 1.02cqw; }
+.pat p .to { color: var(--blue); font-weight: 600; }
+.band { display: flex; align-items: center; gap: 1.4cqw; padding: 1.1cqw 1.6cqw; border-radius: .9cqw; background: linear-gradient(90deg, var(--navy-800), var(--navy-950)); color: var(--mute-2); font-size: 1.12cqw; }
+.band b { font: 600 .95cqw var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); white-space: nowrap; }
+
+/* 11 · forecast */
+.fc { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3cqw; align-items: center; }
+.fc h4 { margin: 0 0 1.6cqw; font: 700 1.3cqw var(--f-display); }
+.br { margin-bottom: 1.9cqw; }
+.br-t { font-size: 1.15cqw; color: var(--mute); margin-bottom: .8cqw; }
+.br-t b { color: var(--white); font-family: var(--f-display); font-weight: 600; }
+.br-t .st { font-weight: 600; }
+.track { position: relative; height: .8cqw; border-radius: 1cqw; background: rgba(var(--line-rgb), .14); }
+.track .rg { position: absolute; top: -.35cqw; height: 1.5cqw; border-radius: 1cqw; }
+.track .tg { position: absolute; top: -1cqw; bottom: -1cqw; left: 66.667%; width: 2px; background: var(--white); }
+.axis { position: relative; height: 1.6cqw; font: 500 .9cqw var(--f-mono); color: var(--mute-3); }
+.axis span { position: absolute; top: 0; translate: -50% 0; } .axis span:first-child { translate: 0 0; } .axis span:last-child { translate: -100% 0; }
+.axis .t { color: var(--white); font-weight: 600; }
+.cap { font-size: .95cqw; color: var(--mute-3); margin-top: .6cqw; }
+.dark .panel ul { margin: .4cqw 0 1.4cqw; padding-left: 1.3cqw; font-size: 1.08cqw; line-height: 1.7; color: var(--mute-2); }
+.dark .panel ul:last-child { margin-bottom: 0; }
+
+/* 12 · risk */
+.risk .chip { display: inline-block; padding: .4cqw 1.2cqw; border-radius: 999px; font: 700 1.1cqw var(--f-display); margin-bottom: 1.1cqw; }
+.risk p { font-size: 1.15cqw; }
+.signals { display: flex; flex-wrap: wrap; align-items: center; gap: .7cqw; font-size: 1cqw; }
+.signals b { font: 600 .9cqw var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-right: .4cqw; }
+.signals span { padding: .45cqw 1cqw; border-radius: 999px; background: var(--white); border: 1px solid var(--hair); color: var(--ink); }
+
+/* 13 · appraisal */
+.ap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3cqw; align-items: center; }
+.rules { display: grid; gap: 1.2cqw; }
+.rules div { padding-left: 1.4cqw; border-left: 2px solid var(--cyan); font-size: 1.15cqw; line-height: 1.45; color: var(--mute); }
+.rules b { color: var(--white); font-weight: 600; }
+.sug { padding: 2cqw; border-radius: 1.2cqw; background: linear-gradient(160deg, var(--white), var(--paper-2)); color: var(--ink); box-shadow: 0 2cqw 4cqw -2cqw rgba(var(--glow-rgb), .45); }
+.sug small { font: 600 .9cqw var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--blue); }
+.sug h4 { margin: .7cqw 0 1.2cqw; padding-bottom: 1.1cqw; border-bottom: 1px solid var(--hair); font: 700 1.75cqw/1.2 var(--f-display); letter-spacing: -.02em; color: var(--navy-900); }
+.sug .why { font: 600 1cqw var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+.sug ul { margin: .6cqw 0 1.2cqw; padding-left: 1.3cqw; font-size: 1.12cqw; line-height: 1.7; }
+.sug p { margin: 0; font-size: 1cqw; color: var(--ink-2); }
+
+/* 15 · rollout icons */
+.ico { width: 2.6cqw; height: 2.6cqw; border-radius: .8cqw; display: grid; place-items: center; margin-bottom: 1.1cqw; background: rgba(var(--glow-rgb), .12); border: 1px solid rgba(var(--glow-rgb), .35); color: var(--cyan); }
+.ico svg { width: 1.45cqw; height: 1.45cqw; }
+
+/* 16 · plan */
+.gantt { display: grid; grid-template-columns: 28% 1fr; row-gap: 1.25cqw; align-items: center; position: relative; }
+.gantt .lbl { font: 600 1.15cqw var(--f-display); letter-spacing: -.01em; color: var(--navy-900); }
+.lane { position: relative; height: 2.6cqw; }
+.lane i { position: absolute; top: 0; bottom: 0; border-radius: .6cqw; display: flex; align-items: center; padding-left: 1cqw; font: 600 .98cqw var(--f-mono); font-style: normal; color: var(--white); white-space: nowrap; }
+.gantt .grid { position: absolute; left: 28%; right: 0; top: -1cqw; bottom: 3.2cqw; background-image: linear-gradient(90deg, var(--hair) 1px, transparent 1px); background-size: calc(100% / 18) 100%; pointer-events: none; z-index: 0; }
+.gantt .lane, .gantt .lbl { z-index: 1; }
+.mis { position: absolute; top: -2.6cqw; bottom: 3.2cqw; width: 2px; background: var(--red); z-index: 2; }
+.mis span { position: absolute; top: 0; left: .7cqw; white-space: nowrap; font: 600 .98cqw var(--f-display); color: var(--red); }
+.wk { position: relative; height: 1.4cqw; font: 500 .95cqw var(--f-mono); color: var(--ink-2); }
+.wk span { position: absolute; translate: -50% 0; white-space: nowrap; } .wk span:last-child { translate: -78% 0; }
+
+/* 17 · next steps */
+.ns { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3cqw; align-items: center; }
+.ns ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.6cqw; counter-reset: n; }
+.ns ol > li { display: grid; grid-template-columns: 3.4cqw 1fr; align-items: baseline; font-size: 1.3cqw; line-height: 1.45; color: var(--mute-2); counter-increment: n; }
+.ns ol > li::before { content: counter(n); font: 700 2.6cqw/1 var(--f-display); background: linear-gradient(135deg, var(--blue-bright), var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+
+/* ── motion: entrance choreography (on scroll-in and on each presented slide) + ambient text effects ── */
+@media (prefers-reduced-motion: no-preference) {
+  .slide .w { display: inline-block; }
+  .play .w { animation: wIn .75s cubic-bezier(.2, .8, .2, 1) both; animation-delay: calc(var(--d, 0) * 42ms + 140ms); }
+  @keyframes wIn { from { opacity: 0; transform: translateY(.55em); filter: blur(.45cqw); } }
+  .play .eyebrow { animation: eIn .7s cubic-bezier(.2, .8, .2, 1) both; }
+  @keyframes eIn { from { opacity: 0; letter-spacing: .6em; } }
+  .play .lead, .play .note, .play .foot, .play .meta, .play .cap, .play .band, .play .rule { animation: fIn .8s ease both; animation-delay: .55s; }
+  @keyframes fIn { from { opacity: 0; transform: translateY(1cqw); } }
+  .play [data-st] { animation: up .65s cubic-bezier(.2, .8, .2, 1) both; animation-delay: calc(var(--i, 0) * 70ms + 380ms); }
+  @keyframes up { from { opacity: 0; transform: translateY(1.6cqw) scale(.985); } }
+  .play .wbar i, .play .lane i, .play .track .rg { transform-origin: left center; animation: grow 1s cubic-bezier(.2, .8, .2, 1) both; animation-delay: calc(var(--i, 0) * 90ms + 700ms); }
+  @keyframes grow { from { transform: scaleX(0); opacity: .2; } }
+  .play .stage { animation: widen .9s cubic-bezier(.2, .8, .2, 1) both; animation-delay: calc(var(--i, 0) * 80ms + 400ms); }
+  @keyframes widen { from { clip-path: inset(0 50% 0 50% round .7cqw); opacity: .3; } to { clip-path: inset(0 0 0 0 round .7cqw); } }
+  .play .mis { animation: drop 1s cubic-bezier(.2, .8, .2, 1) both; animation-delay: 1.4s; transform-origin: top; }
+  @keyframes drop { from { transform: scaleY(0); opacity: 0; } }
+  .play .phone { animation: phoneIn 1.1s cubic-bezier(.2, .8, .2, 1) both; animation-delay: .5s; }
+  @keyframes phoneIn { from { opacity: 0; transform: translateY(4cqw) rotate(3deg) scale(.96); } }
+  .play .orbit i:nth-child(3) { animation: core 1.4s ease both; }
+  @keyframes core { from { opacity: 0; transform: scale(.4); } }
+
+  /* ambient text effects */
+  .num, .cover h1 em, .ns ol > li::before {
+    background-image: linear-gradient(110deg, var(--blue-bright) 0%, var(--cyan) 35%, #ffffff 48%, var(--cyan) 60%, var(--blue-bright) 100%);
+    background-size: 260% 100%; animation: shimmer 5.5s linear infinite; }
+  .cover h1 em { background-image: linear-gradient(110deg, #ffffff 0%, #ffffff 25%, var(--cyan) 45%, #ffffff 55%, var(--cyan) 75%, #ffffff 100%); }
+  @keyframes shimmer { from { background-position: 100% 0; } to { background-position: -160% 0; } }
+  .statement h2 em { animation: glow 3.2s ease-in-out infinite; }
+  @keyframes glow { 50% { text-shadow: 0 0 1cqw rgba(var(--glow-rgb), .9), 0 0 3.2cqw rgba(var(--glow-rgb), .45); color: var(--glow-2); } }
+  .panel.hero h3, .dark .eyebrow { position: relative; }
+  .loop span { animation: pulse 4.8s ease-in-out infinite; animation-delay: calc(var(--i, 0) * 1.2s); }
+  @keyframes pulse { 0%, 70%, 100% { border-color: rgba(var(--glow-rgb), .4); box-shadow: none; } 15% { border-color: var(--cyan); box-shadow: 0 0 1.4cqw rgba(var(--glow-rgb), .55); color: #fff; } }
+  .orbit i:nth-child(3) { animation: breathe 5s ease-in-out infinite; }
+  @keyframes breathe { 50% { transform: scale(1.12); filter: blur(.5cqw); } }
+  .dark::before { animation: drift 40s linear infinite; }
+  @keyframes drift { to { background-position: 4cqw 4cqw; } }
+  .panel { transition: transform .25s cubic-bezier(.2, .8, .2, 1), box-shadow .25s; }
+  .panel:hover { transform: translateY(-.25cqw); box-shadow: 0 1.2cqw 2.4cqw -1.4cqw rgba(var(--accent-rgb), .45); }
+}
+
+/* neural network behind the dark slides — canvas, coloured from the palette, faded away from the text column */
+.net { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;
+  -webkit-mask-image: radial-gradient(75% 95% at 78% 45%, #000 25%, transparent 80%); mask-image: radial-gradient(75% 95% at 78% 45%, #000 25%, transparent 80%); }
+.slide > .in { z-index: 1; }
+/* logo — Bheemverse (white mark, tinted per slide through a mask) */
+:root { --bv-logo: url("data:image/png;base64,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"); }
+.bv { display: inline-block; flex: none; aspect-ratio: 1; background: currentColor; -webkit-mask: var(--bv-logo) center / contain no-repeat; mask: var(--bv-logo) center / contain no-repeat; }
+.foot > span:first-child { display: inline-flex; align-items: center; gap: .9cqw; }
+.foot .bv { width: 2.6cqw; }
+.light .foot .bv { color: var(--navy-900); } .dark .foot .bv { color: var(--mute-2); }
+.cover .bv-top { position: absolute; top: 3.4cqw; right: 4.4cqw; width: 7.5cqw; color: #fff; z-index: 2; filter: drop-shadow(0 0 1.2cqw rgba(var(--glow-rgb), .35)); }
+.cover .for { display: flex; align-items: center; gap: 1.5cqw; margin-top: -.6cqw; }
+.cover .for .cover .for .eyebrow { margin: 0; }
+.duo { display: flex; align-items: center; gap: 2cqw; margin-top: 2.6cqw; }
+.duo .bv { width: 7.5cqw; color: #fff; }
+.duo .duo i { width: 1px; height: 6.5cqw; background: rgba(var(--line-rgb), .35); }
+.duo small { font: 500 1cqw var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mute); max-width: 18ch; line-height: 1.5; }
+.light .num { background-image: linear-gradient(110deg, var(--accent-deep) 0%, var(--blue-bright) 35%, var(--teal) 50%, var(--blue-bright) 65%, var(--accent-deep) 100%); }
+.ns-l { display: grid; gap: 1.4cqw; }
+/* ── per-slide visuals: card icons, watermarks, illustrations ── */
+.ic { display: grid; place-items: center; width: 2.7cqw; height: 2.7cqw; border-radius: .8cqw; margin-bottom: 1cqw;
+  background: linear-gradient(140deg, rgba(var(--accent-rgb), .14), rgba(var(--glow-rgb), .18)); border: 1px solid rgba(var(--accent-rgb), .22); color: var(--accent-deep); }
+.ic svg, svg.ic { width: 1.5cqw; height: 1.5cqw; }
+svg.ic { padding: .55cqw; box-sizing: content-box; width: 1.55cqw; height: 1.55cqw; }
+.dark .ic, .panel.hero .ic, .flow .engine .ic, .flow .agents .ic { background: rgba(var(--glow-rgb), .12); border-color: rgba(var(--glow-rgb), .4); color: var(--cyan); }
+.cardhead { display: flex; align-items: flex-start; justify-content: space-between; } .cardhead .num { margin-bottom: 1.2cqw; } .cardhead .ic { margin: 0; }
+.pat .ic { float: right; margin: 0 0 .4cqw .8cqw; width: 2.4cqw; height: 2.4cqw; }
+svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; height: 30cqw; color: var(--accent-deep); opacity: .06; pointer-events: none; z-index: 0; stroke-width: 1.1; }
+.light::before { content: ""; position: absolute; right: -10cqw; top: -14cqw; width: 42cqw; height: 42cqw; border-radius: 50%; background: radial-gradient(circle, rgba(var(--glow-rgb), .22), transparent 65%); pointer-events: none; }
+/* slide 3 · named customers */
+.namelist { position: absolute; z-index: 1; right: 5cqw; top: 50%; translate: 0 -50%; width: 24cqw; padding: 1.6cqw; border-radius: 1.4cqw; display: grid; gap: .9cqw;
+  background: linear-gradient(160deg, rgba(18, 36, 107, .85), rgba(5, 12, 43, .85)); border: 1px solid rgba(var(--glow-rgb), .35); box-shadow: 0 2cqw 4cqw -2cqw rgba(0, 0, 0, .7), 0 0 3cqw -1cqw rgba(var(--glow-rgb), .35); }
+.nl-h { display: flex; align-items: center; gap: .7cqw; padding-bottom: .9cqw; border-bottom: 1px solid rgba(var(--line-rgb), .18); }
+.nl-h b { font: 700 1.25cqw var(--f-display); color: #fff; } .nl-h em { font: 500 .85cqw var(--f-mono); font-style: normal; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); }
+.nl-dot { width: .8cqw; height: .8cqw; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 1cqw var(--cyan); }
+.nl-r { display: grid; grid-template-columns: 2.4cqw 1fr 2.2cqw; align-items: center; gap: .9cqw; padding: .55cqw .6cqw; border-radius: .8cqw; background: rgba(255, 255, 255, .04); }
+.nl-r > i { width: 2.4cqw; height: 2.4cqw; border-radius: 50%; background: linear-gradient(135deg, hsl(var(--h) 70% 60%), hsl(var(--h) 60% 38%)); }
+.nl-r span { display: grid; gap: .45cqw; } .nl-r s { display: block; height: .55cqw; border-radius: 1cqw; background: rgba(var(--line-rgb), .35); } .nl-r s + s { background: rgba(var(--line-rgb), .16); }
+.nl-r > b { justify-self: end; width: 2.2cqw; height: 2.2cqw; border-radius: 50%; display: grid; place-items: center; font: 700 1cqw var(--f-display); color: var(--navy-950); background: var(--cyan); }
+.nl-r.on { background: rgba(var(--glow-rgb), .12); border: 1px solid rgba(var(--glow-rgb), .4); } .nl-r.on > b { background: var(--green); color: #fff; }
+.statement h2, .statement .lead, .statement .loop { max-width: 54cqw; }
+/* slide 4 · flow icons sit inline */
+.flow .panel .ic { width: 2.4cqw; height: 2.4cqw; }
+/* slide 5 · donut */
+.kpiwrap { display: grid; grid-template-columns: 1fr 19cqw; gap: 2.6cqw; align-items: center; }
+.donut { margin: 0; display: grid; gap: 1cqw; justify-items: center; } .donut svg { width: 13cqw; height: 13cqw; overflow: visible; }
+.donut .d1 { font: 700 14px var(--f-display); fill: #fff; } .donut .d2 { font: 500 6.5px var(--f-mono); fill: var(--mute); letter-spacing: .5px; }
+.donut figcaption { display: grid; gap: .35cqw; width: 100%; } .donut figcaption span { display: grid; grid-template-columns: .9cqw 1fr auto; align-items: center; gap: .6cqw; font-size: .9cqw; color: var(--mute); }
+.donut figcaption i { width: .9cqw; height: .9cqw; border-radius: .25cqw; } .donut figcaption b { font: 600 .9cqw var(--f-mono); color: #fff; }
+.kpi td:first-child { width: 26%; }
+/* slide 12 · gauge */
+.gauge { position: absolute; z-index: 1; right: 5cqw; top: 3cqw; width: 17cqw; } .gauge .gl { font: 600 8px var(--f-mono); letter-spacing: 1.2px; fill: var(--ink-2); }
+/* slide 14 · shield */
+.shield { position: absolute; z-index: 1; right: 5.5cqw; top: 2.6cqw; width: 9.5cqw; filter: drop-shadow(0 1.2cqw 2cqw rgba(10, 23, 71, .35)); }
+@media (prefers-reduced-motion: no-preference) {
+  .play .namelist { animation: phoneIn 1s cubic-bezier(.2, .8, .2, 1) both; animation-delay: .45s; }
+  .play .nl-r { animation: up .55s cubic-bezier(.2, .8, .2, 1) both; } .play .nl-r:nth-child(2) { animation-delay: .8s; } .play .nl-r:nth-child(3) { animation-delay: .9s; } .play .nl-r:nth-child(4) { animation-delay: 1s; } .play .nl-r:nth-child(5) { animation-delay: 1.1s; } .play .nl-r:nth-child(6) { animation-delay: 1.4s; }
+  .play .donut circle[stroke-dasharray] { animation: dash 1.4s cubic-bezier(.2, .8, .2, 1) both; animation-delay: .7s; } @keyframes dash { from { stroke-dasharray: 0 999; } }
+  .needle { transform-origin: 100px 105px; } .play .needle { animation: needle 1.6s cubic-bezier(.3, 1.4, .5, 1) both; animation-delay: .6s; } @keyframes needle { from { transform: rotate(-95deg); } }
+  .play .shield { animation: phoneIn 1s cubic-bezier(.2, .8, .2, 1) both; animation-delay: .4s; }
+  .play .ic { animation: pop .5s cubic-bezier(.3, 1.6, .5, 1) both; animation-delay: calc(var(--i, 0) * 70ms + 520ms); } @keyframes pop { from { transform: scale(.4); opacity: 0; } }
+  .wm { animation: wmspin 80s linear infinite; } @keyframes wmspin { to { rotate: 10deg; } }
+}
+/* slide 17 · next steps — a four-step roadmap and a success scorecard */
+.nx-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 2cqw; }
+.nx-logo { width: 6.5cqw; color: #fff; filter: drop-shadow(0 0 1.2cqw rgba(var(--glow-rgb), .3)); }
+.road { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4cqw; position: relative; }
+.road::before { content: ""; position: absolute; left: 1.8cqw; right: 1.8cqw; top: 1.7cqw; height: 2px; background: linear-gradient(90deg, rgba(var(--glow-rgb), .9), rgba(var(--accent-rgb), .6) 60%, rgba(var(--glow-rgb), .25)); }
+.road li { position: relative; display: grid; grid-template-rows: auto 1fr; gap: 1.2cqw; }
+.road-node { position: relative; z-index: 1; width: 3.4cqw; height: 3.4cqw; border-radius: 50%; display: grid; place-items: center; font: 700 1.4cqw var(--f-display); color: var(--navy-950);
+  background: radial-gradient(circle at 35% 30%, var(--glow-2), var(--cyan) 55%, var(--teal)); box-shadow: 0 0 0 .45cqw rgba(var(--ground-rgb), 1), 0 0 0 .55cqw rgba(var(--glow-rgb), .45), 0 0 2cqw rgba(var(--glow-rgb), .55); }
+.road-card { min-height: 12.5cqw; padding: 1.4cqw 1.4cqw 1.5cqw; border-radius: 1cqw; background: linear-gradient(165deg, rgba(var(--deep-rgb), .85), rgba(var(--ground-rgb), .85)); border: 1px solid rgba(var(--line-rgb), .16);
+  border-top: 2px solid rgba(var(--glow-rgb), .7); box-shadow: 0 1.6cqw 3cqw -2cqw rgba(0, 0, 0, .8); }
+.road-card b { display: block; margin-bottom: .45cqw; font: 700 1.45cqw var(--f-display); letter-spacing: -.015em; color: #fff; }
+.road-card p { margin: 0; font-size: 1.08cqw; line-height: 1.5; color: var(--mute-2); }
+.road-card .ic { margin-bottom: .9cqw; }
+.score { display: grid; grid-template-columns: 17cqw 1fr; gap: 2.4cqw; align-items: center; padding: 1.6cqw 1.8cqw; border-radius: 1.1cqw;
+  background: linear-gradient(100deg, rgba(var(--glow-rgb), .1), rgba(var(--deep-rgb), .55) 40%); border: 1px solid rgba(var(--glow-rgb), .3); }
+.score-h h3 { margin: 0 0 .5cqw; font: 700 1.55cqw/1.2 var(--f-display); letter-spacing: -.015em; color: var(--cyan); }
+.score-h p { margin: 0; font-size: 1cqw; line-height: 1.5; color: var(--mute); }
+.score-g { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: .8cqw; }
+.score-g li { display: flex; align-items: center; gap: .8cqw; padding: .75cqw .9cqw; border-radius: .8cqw; background: rgba(255, 255, 255, .04); border: 1px solid rgba(var(--line-rgb), .12); font-size: .98cqw; line-height: 1.35; color: var(--mute-2); }
+.score-g li .ic, .score-g li svg.ic { flex: none; margin: 0; width: 1.2cqw; height: 1.2cqw; padding: .45cqw; }
+.nx .body { justify-content: space-evenly; }
+@media (prefers-reduced-motion: no-preference) {
+  .play .road::before { animation: grow 1.4s cubic-bezier(.2, .8, .2, 1) both; animation-delay: .5s; transform-origin: left; }
+  .road-node { animation: nodeGlow 3.2s ease-in-out infinite; }
+  @keyframes nodeGlow { 50% { box-shadow: 0 0 0 .45cqw rgba(var(--ground-rgb), 1), 0 0 0 .55cqw rgba(var(--glow-rgb), .8), 0 0 3cqw rgba(var(--glow-rgb), .85); } }
+}
+
+/* presenter */
+.pv { position: fixed; inset: 0; z-index: 50; background: #000; display: grid; place-items: center; }
+.pv[hidden] { display: none !important; }
+.pv-stage { width: min(100vw, calc(100vh * 16 / 9)); }
+.pv-stage .slide { border-radius: 0; box-shadow: none; }
+.pv-ui { position: fixed; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 12px; padding: 10px max(16px, env(safe-area-inset-left, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(transparent, rgba(0, 0, 0, .75)); opacity: 0; transition: opacity .25s; }
+.pv:hover .pv-ui, .pv:focus-within .pv-ui { opacity: 1; }
+.pv-ui button { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .3); background: rgba(var(--deep-rgb), .8); color: #fff; font: 600 16px var(--f-display); cursor: pointer; }
+.pv-ui .n { font: 600 13px var(--f-mono); color: #c3cbd6; font-variant-numeric: tabular-nums; min-width: 64px; text-align: center; }
+.pv-ui .prog { flex: 1; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, .18); overflow: hidden; } .pv-ui .prog i { display: block; height: 100%; background: linear-gradient(90deg, var(--blue-bright), var(--cyan)); transition: width .3s; }
+@media (max-width: 520px) { .bar-name span { display: none; } .deck { gap: 16px; } }
+/* ── product deck additions ── */
+.cover .prod { margin-top: auto; display: flex; align-items: center; gap: 1.3cqw; }
+.cover .prod b { font: 700 1.9cqw/1 var(--f-display); letter-spacing: -.02em; color: #fff; padding: .75cqw 1.25cqw; border-radius: .8cqw; border: 1px solid rgba(var(--glow-rgb), .5); background: rgba(var(--deep-rgb), .65); }
+.cover .prod b em { font-style: normal; color: var(--cyan); }
+.cover .prod span { font: 500 1cqw var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+.cover .prod ~ h1 { margin-top: 1.8cqw; }
+.g2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4cqw; }
+.band.lite { background: rgba(var(--deep-rgb), .55); border: 1px solid rgba(var(--glow-rgb), .3); }
+/* flow and gantt on a dark slide */
+.dark .flow .arrow { color: var(--cyan); }
+.dark .roles b { color: #fff; }
+.dark .flow .engine { border: 1px solid rgba(var(--glow-rgb), .3); }
+/* target planner cascade */
+.tp { display: grid; grid-template-columns: 1.15fr 1fr; gap: 3cqw; align-items: center; }
+.cascade { display: grid; gap: .9cqw; }
+.lv { position: relative; margin-left: calc(var(--x) * 2.6cqw); display: grid; grid-template-columns: 8cqw 1fr; align-items: center; gap: 1cqw; padding: 1cqw 1.4cqw; border-radius: .8cqw; background: var(--white); border: 1px solid var(--hair); }
+.lv b { font: 700 1.25cqw var(--f-display); letter-spacing: -.01em; color: var(--navy-900); }
+.lv span { font-size: 1.05cqw; line-height: 1.4; color: var(--ink-2); }
+.lv + .lv::before { content: ""; position: absolute; left: -1.6cqw; top: -1cqw; width: 1.3cqw; height: calc(50% + 1cqw); border-left: 2px solid rgba(var(--accent-rgb), .35); border-bottom: 2px solid rgba(var(--accent-rgb), .35); border-bottom-left-radius: .5cqw; }
+.lv.top { background: linear-gradient(150deg, var(--navy-800), var(--navy-950)); border-color: rgba(var(--glow-rgb), .35); }
+.lv.top b { color: var(--cyan); } .lv.top span { color: var(--mute-2); }
+.lv.end { border: 1px solid rgba(var(--glow-rgb), .6); box-shadow: 0 1cqw 2cqw -1.2cqw rgba(var(--glow-rgb), .6); }
+.light .panel ul { margin: .4cqw 0 1.2cqw; padding-left: 1.3cqw; font-size: 1.08cqw; line-height: 1.65; color: var(--ink-2); }
+.light .panel ul:last-child { margin-bottom: 0; }
+/* command centre mock-up */
+.cc { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2.4cqw; align-items: center; }
+.mock { border-radius: 1cqw; overflow: hidden; background: var(--white); border: 1px solid var(--hair); box-shadow: 0 2cqw 4cqw -2.4cqw rgba(10, 23, 71, .45); }
+.mock-top { display: flex; align-items: center; gap: .5cqw; padding: .8cqw 1.2cqw; background: var(--navy-900); color: var(--mute-2); font: 600 .85cqw var(--f-mono); letter-spacing: .06em; }
+.mock-top i { width: .7cqw; height: .7cqw; border-radius: 50%; background: rgba(255, 255, 255, .25); }
+.mock-top span { margin-left: .8cqw; }
+.mock-body { padding: 1.3cqw; display: grid; gap: 1cqw; }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: .7cqw; }
+.tile { padding: .8cqw .9cqw; border-radius: .6cqw; background: var(--silver-100); border: 1px solid var(--hair); }
+.tile small { display: block; font: 600 .72cqw/1.3 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); min-height: 1.9cqw; }
+.tile b { display: block; font: 700 1.6cqw/1.1 var(--f-display); letter-spacing: -.02em; color: var(--navy-900); margin-top: .3cqw; }
+.tile em { font-style: normal; font-size: .82cqw; color: var(--ink-3); }
+.tile em.dn { color: #b42328; }
+.mrows { display: grid; gap: .55cqw; }
+.mrow { display: grid; grid-template-columns: 6cqw 1fr 6.4cqw; align-items: center; gap: 1cqw; font-size: .95cqw; }
+.mrow b { font: 600 .95cqw var(--f-display); color: var(--navy-900); }
+.mrow .mbar { height: .6cqw; border-radius: 1cqw; background: var(--mute-2); overflow: hidden; }
+.mrow .mbar i { display: block; height: 100%; border-radius: 1cqw; }
+.pill { justify-self: end; padding: .25cqw .8cqw; border-radius: 999px; font: 600 .8cqw var(--f-display); font-style: normal; }
+.pill.r { background: #fde3e4; color: #b42328; } .pill.a { background: #fdf0d5; color: #9a6200; } .pill.g { background: #dff5ec; color: #0f7a59; }
+.agentcard { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1cqw; padding: 1cqw 1.1cqw; border-radius: .8cqw; background: linear-gradient(120deg, rgba(var(--accent-rgb), .08), rgba(var(--glow-rgb), .14)); border: 1px solid rgba(var(--accent-rgb), .2); }
+.agentcard .ic { margin: 0; width: 2.3cqw; height: 2.3cqw; }
+.agentcard b { display: block; font: 700 .95cqw var(--f-display); color: var(--navy-900); margin-bottom: .2cqw; }
+.agentcard span { font-size: .9cqw; line-height: 1.4; color: var(--ink-2); }
+.agentcard .btn { padding: .5cqw 1cqw; border-radius: 999px; background: var(--accent-deep); color: #fff; font: 600 .85cqw var(--f-display); white-space: nowrap; }
+.rolelist { display: grid; gap: .75cqw; }
+.role { display: grid; grid-template-columns: auto 1fr; gap: 1.1cqw; align-items: center; padding: .75cqw 1cqw; border-radius: .8cqw; background: var(--silver-100); border: 1px solid var(--hair); }
+.role .ic { margin: 0; width: 2.4cqw; height: 2.4cqw; }
+.role b { display: block; font: 700 1.1cqw var(--f-display); color: var(--navy-900); }
+.role span { font-size: .98cqw; line-height: 1.35; color: var(--ink-2); }
+/* platform diagram */
+.arch { display: grid; grid-template-columns: 1fr auto 1.25fr auto 1fr; gap: 1.1cqw; align-items: center; }
+.arch .col { display: grid; gap: .7cqw; }
+.colh { font: 600 .85cqw var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); margin-bottom: .2cqw; }
+.src { display: flex; align-items: center; gap: .8cqw; padding: .75cqw 1cqw; border-radius: .7cqw; background: rgba(var(--deep-rgb), .6); border: 1px solid rgba(var(--line-rgb), .16); font-size: 1.02cqw; line-height: 1.3; color: var(--mute-2); }
+.src .ic { margin: 0; flex: none; width: 2cqw; height: 2cqw; }
+.src .ic svg { width: 1.15cqw; height: 1.15cqw; }
+.arch .arrow { width: 2.6cqw; height: 1.4cqw; color: var(--cyan); }
+.core { padding: 1.3cqw; border-radius: 1cqw; display: grid; gap: .7cqw; background: linear-gradient(150deg, rgba(var(--accent-rgb), .35), rgba(var(--ground-rgb), .9)); border: 1px solid rgba(var(--glow-rgb), .45); box-shadow: 0 1.5cqw 3cqw -1.5cqw rgba(var(--accent-rgb), .6); }
+.core > b { font: 700 1.35cqw var(--f-display); color: #fff; }
+.layer { padding: .75cqw 1cqw; border-radius: .6cqw; background: rgba(255, 255, 255, .05); border: 1px solid rgba(var(--line-rgb), .16); }
+.layer b { display: block; font: 700 1.05cqw var(--f-display); color: var(--cyan); margin-bottom: .15cqw; }
+.layer span { font-size: .95cqw; line-height: 1.4; color: var(--mute-2); }
+/* deployment options */
+.dep h3 { font-size: 1.6cqw; }
+.dep .tag { margin: 0 0 1cqw; }
+.dep ul { margin: 1cqw 0 0 !important; }
+.light .panel.hero ul { color: var(--mute-2); }
+.scale { display: grid; grid-template-columns: auto repeat(4, 1fr); align-items: center; gap: 1.6cqw; padding: 1.2cqw 1.8cqw; border-radius: .9cqw; background: linear-gradient(90deg, var(--navy-800), var(--navy-950)); color: var(--mute-2); }
+.scale b { font: 600 .95cqw var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); white-space: nowrap; }
+.scale span { font-size: 1.02cqw; line-height: 1.35; }
+.scale em { display: block; font: 700 1.9cqw/1.15 var(--f-display); font-style: normal; letter-spacing: -.02em; color: #fff; }
+.panel.hero .tag { color: var(--cyan); }
+/* custom models */
+.models .panel { padding: 1.4cqw 1.5cqw 1.5cqw; }
+.models .panel h3 { font-size: 1.25cqw; }
+.models .panel p { font-size: 1.02cqw; }
+.models .panel p .to, .dark.pat p .to { color: var(--cyan); font-weight: 600; }
+.models .ic { margin-bottom: .7cqw; }
+.models svg.ic { width: 1.3cqw; height: 1.3cqw; padding: .45cqw; }
+.models .panel .tag { display: inline-block; margin-top: .8cqw; padding: .25cqw .75cqw; border-radius: 999px; border: 1px solid rgba(var(--glow-rgb), .45); background: rgba(var(--glow-rgb), .08); font-size: .82cqw; }
+/* model lifecycle */
+.pipe { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 1cqw; position: relative; }
+.pipe::before { content: ""; position: absolute; left: 1.5cqw; right: 1.5cqw; top: 1.5cqw; height: 2px; background: linear-gradient(90deg, var(--accent-deep), var(--teal)); }
+.pipe li { position: relative; display: grid; grid-template-rows: auto 1fr; gap: 1cqw; }
+.pipe .node { position: relative; z-index: 1; width: 3cqw; height: 3cqw; border-radius: 50%; display: grid; place-items: center; font: 700 1.2cqw var(--f-display); color: var(--cyan); background: var(--navy-900); box-shadow: 0 0 0 .35cqw var(--paper); }
+.pipe .card { padding: 1.1cqw 1.1cqw 1.2cqw; border-radius: .8cqw; background: var(--white); border: 1px solid var(--hair); }
+.pipe .card b { display: block; font: 700 1.15cqw/1.25 var(--f-display); color: var(--navy-900); margin-bottom: .4cqw; }
+.pipe .card span { font-size: .98cqw; line-height: 1.45; color: var(--ink-2); }
+.pipe li:last-child .card { background: linear-gradient(150deg, var(--navy-800), var(--navy-950)); border-color: rgba(var(--glow-rgb), .4); }
+.pipe li:last-child .card b { color: var(--cyan); } .pipe li:last-child .card span { color: var(--mute-2); }
+.loopnote { display: flex; align-items: center; justify-content: flex-end; gap: .8cqw; margin: -1cqw 0 0; font: 600 1cqw var(--f-mono); letter-spacing: .04em; color: var(--accent-deep); }
+.loopnote .ic { margin: 0; }
+.loopnote svg.ic { width: 1.1cqw; height: 1.1cqw; padding: .35cqw; }
+.gov { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1cqw; }
+.gov div { padding: 1cqw 1.2cqw; border-radius: .8cqw; background: var(--silver-100); border: 1px solid var(--hair); border-left: 3px solid var(--teal); }
+.gov b { display: block; font: 700 1.1cqw var(--f-display); color: var(--navy-900); margin-bottom: .3cqw; }
+.gov span { font-size: .98cqw; line-height: 1.45; color: var(--ink-2); }
+@media (prefers-reduced-motion: no-preference) {
+  .play .mrow .mbar i { transform-origin: left center; animation: grow 1s cubic-bezier(.2, .8, .2, 1) both; animation-delay: .9s; }
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-name">Bheem Gold AI · Sales &amp; Performance<span>25 SLIDES · 16:9</span></div>
+  <button type="button" id="present" aria-label="Present full screen">▶ Present</button>
+</header>
+
+<main class="deck" id="deck">
+
+<!-- 1 · cover -->
+<section class="slide dark cover" aria-label="Slide 1"><div class="in">
+  <p class="eyebrow">AI Sales &amp; Performance for gold loan NBFCs</p>
+  <span class="bv bv-top" role="img" aria-label="Bheemverse Innovation"></span>
+  <div class="prod"><b>Bheem Gold <em>AI</em></b><span>Sales &amp; Performance module</span></div>
+  <h1>Every branch, every employee, <em>on target</em></h1>
+  <p class="lead">Custom AI models trained on your own data for sales tracking, a daily Target Guide for every employee, forecasting and loan risk, all hosted in India.</p>
+  <div class="meta"><span>Bheemverse Innovation Pvt Ltd</span><span>FOR NBFC GOLD LOAN LENDERS · NOVEMBER 2026</span></div>
+  <div class="orbit" aria-hidden="true"><i></i><i></i><i></i><b style="--a:-38deg"></b><b class="s" style="--a:140deg"></b><b class="s" style="--a:250deg"></b></div>
+</div></section>
+
+<!-- 2 · the problem -->
+<section class="slide light" aria-label="Slide 2"><i class="wm" data-lucide="target" aria-hidden="true"></i><div class="in">
+  <p class="eyebrow">The problem</p>
+  <h2>Targets are set for the month, but won or lost one customer at a time</h2>
+  <div class="body">
+    <div class="g4">
+      <div class="panel"><span class="cardhead"><span class="num">1</span><i class="ic" data-lucide="calendar-x" aria-hidden="true"></i></span><h3>Misses show up too late</h3><p>Month-end MIS shows the gap when there is no time left to close it.</p></div>
+      <div class="panel"><span class="cardhead"><span class="num">2</span><i class="ic" data-lucide="phone-missed" aria-hidden="true"></i></span><h3>Easy business slips away</h3><p>Renewals due, top-ups after a gold rate rise, customers who closed: no one is told whom to call today.</p></div>
+      <div class="panel"><span class="cardhead"><span class="num">3</span><i class="ic" data-lucide="arrow-right-left" aria-hidden="true"></i></span><h3>Customers quietly move</h3><p>Takeovers by banks and other lenders are noticed only when the loan closes.</p></div>
+      <div class="panel"><span class="cardhead"><span class="num">4</span><i class="ic" data-lucide="scale" aria-hidden="true"></i></span><h3>Appraisals on volume alone</h3><p>Quality, consistency and each branch’s real potential are hard to see across a large network.</p></div>
+    </div>
+    <p class="note">Bheem Gold AI turns the data already in your gold loan system into a daily plan for every person, from the branch counter to head office.</p>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>02</b></div>
+</div></section>
+
+<!-- 3 · the idea -->
+<section class="slide dark statement" aria-label="Slide 3"><div class="namelist" aria-hidden="true">
+    <div class="nl-h"><span class="nl-dot"></span><b>Today</b><em>named customers</em></div>
+    <div class="nl-r"><i style="--h:42"></i><span><s style="width:70%"></s><s style="width:45%"></s></span><b>₹</b></div>
+    <div class="nl-r"><i style="--h:200"></i><span><s style="width:58%"></s><s style="width:38%"></s></span><b>₹</b></div>
+    <div class="nl-r"><i style="--h:150"></i><span><s style="width:76%"></s><s style="width:30%"></s></span><b>₹</b></div>
+    <div class="nl-r"><i style="--h:280"></i><span><s style="width:52%"></s><s style="width:42%"></s></span><b>₹</b></div>
+    <div class="nl-r on"><i style="--h:42"></i><span><s style="width:64%"></s><s style="width:34%"></s></span><b>✓</b></div>
+  </div><div class="in">
+  <div class="body">
+    <div class="rule" aria-hidden="true"></div>
+    <h2>A missed target becomes a list of <em>named customers to contact today</em>, not a red cell on a month-end report.</h2>
+    <p class="lead">AI agents work in a loop: spot the gap, find the cause, act on it, then check whether it worked.</p>
+    <div class="loop" aria-hidden="true"><span>Spot the gap</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Find the cause</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Act on it</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Check it worked</span></div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>03</b></div>
+</div></section>
+
+<!-- 4 · the product -->
+<section class="slide light" aria-label="Slide 4"><i class="wm" data-lucide="boxes" aria-hidden="true"></i><div class="in">
+  <p class="eyebrow">The product</p>
+  <h2>Eight modules on one platform</h2>
+  <div class="body">
+    <div class="g4">
+      <div class="panel"><i class="ic" data-lucide="activity" aria-hidden="true"></i><h3>Sales Tracking</h3><p>Every lead and loan from enquiry to disbursal, credited to the right employee.</p></div>
+      <div class="panel hero"><i class="ic" data-lucide="list-checks" aria-hidden="true"></i><h3>Target Guide</h3><p>Each employee’s daily list of customers to contact, in their own language.</p></div>
+      <div class="panel"><i class="ic" data-lucide="split" aria-hidden="true"></i><h3>Target Planner</h3><p>The company plan split to zone, region, branch and employee by real potential.</p></div>
+      <div class="panel"><i class="ic" data-lucide="fingerprint" aria-hidden="true"></i><h3>Customer &amp; Employee Intelligence</h3><p>Customer cycles and signs of leaving; each employee’s strengths and gaps.</p></div>
+      <div class="panel"><i class="ic" data-lucide="line-chart" aria-hidden="true"></i><h3>Forecasting</h3><p>Month and quarter forecasts as ranges, with gold-price what-ifs.</p></div>
+      <div class="panel"><i class="ic" data-lucide="gauge" aria-hidden="true"></i><h3>Loan Risk</h3><p>A risk band for every active loan: overdue, NPA and auction.</p></div>
+      <div class="panel"><i class="ic" data-lucide="award" aria-hidden="true"></i><h3>Appraisal &amp; Incentives</h3><p>Quarterly rating suggestions with reasons; incentives under your rules.</p></div>
+      <div class="panel"><i class="ic" data-lucide="layout-dashboard" aria-hidden="true"></i><h3>Command Centre</h3><p>A view for every role, and a morning brief for leadership.</p></div>
+    </div>
+    <div class="band"><b>Models + agents</b><span>Custom AI models find the patterns and forecast; 7 AI agents act on them and check the result.</span></div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>04</b></div>
+</div></section>
+
+<!-- 5 · how it works -->
+<section class="slide dark" aria-label="Slide 5"><div class="in">
+  <p class="eyebrow">How it works</p>
+  <h2>From your loan data to a daily plan</h2>
+  <div class="body">
+    <div class="flow">
+      <div class="stack">
+        <div class="panel"><i class="ic" data-lucide="database" aria-hidden="true"></i><h3>Your gold loan system</h3><p>Read-only: loans, renewals, interest, overdue, branches, staff</p></div>
+        <div class="panel"><i class="ic" data-lucide="inbox" aria-hidden="true"></i><h3>One lead inbox</h3><p>Website, app, WhatsApp, call centre, missed calls, walk-ins, referrals</p></div>
+      </div>
+      <svg class="arrow" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg>
+      <div class="panel engine"><i class="ic" data-lucide="cpu" aria-hidden="true"></i><h3>Custom AI models</h3><ul><li>Customer and employee patterns</li><li>Lead conversion</li><li>Target forecasts</li><li>Loan risk bands</li></ul></div>
+      <svg class="arrow" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg>
+      <div class="panel agents"><i class="ic" data-lucide="bot" aria-hidden="true"></i><h3>Seven AI agents</h3><p>Spot the gap, find the cause, act, check the result</p></div>
+      <svg class="arrow" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg>
+      <div class="panel roles"><i class="ic" data-lucide="users" aria-hidden="true"></i><h3>Your people</h3><p><b>Employee:</b> today’s customer list</p><p><b>Branch manager:</b> who needs help</p><p><b>Region and zone:</b> branch pace</p><p><b>Leadership:</b> morning brief and decisions</p></div>
+    </div>
+    <p class="note">We only read from your system. We never change loans, rates or customer records.</p>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>05</b></div>
+</div></section>
+
+<!-- 6 · agents -->
+<section class="slide light" aria-label="Slide 6"><i class="wm" data-lucide="bot" aria-hidden="true"></i><div class="in">
+  <p class="eyebrow">The AI agents</p>
+  <h2>Seven agents that turn numbers into action</h2>
+  <div class="body">
+    <div class="g4">
+      <div class="panel"><i class="ic" data-lucide="building-2" aria-hidden="true"></i><h3>Branch performance</h3><p>Finds why a branch is behind and the one or two things to fix first.</p><span class="tag">Runs on its own</span></div>
+      <div class="panel"><i class="ic" data-lucide="graduation-cap" aria-hidden="true"></i><h3>Employee coach</h3><p>The Target Guide: each person’s daily list of customers, and the result of each contact.</p><span class="tag">Runs on its own</span></div>
+      <div class="panel"><i class="ic" data-lucide="megaphone" aria-hidden="true"></i><h3>Customer outreach</h3><p>WhatsApp and AI-call reminders for renewals, interest and top-ups.</p><span class="tag">Branch manager approves</span></div>
+      <div class="panel"><i class="ic" data-lucide="target" aria-hidden="true"></i><h3>Target</h3><p>Proposes a mid-month rebalance when the cause is outside a branch’s control.</p><span class="tag">Region or zone head approves</span></div>
+      <div class="panel"><i class="ic" data-lucide="shield-alert" aria-hidden="true"></i><h3>Integrity</h3><p>Flags KPI gaming: close-and-reopen loans, wrong credit, month-end spikes.</p><span class="tag">Audit team reviews</span></div>
+      <div class="panel"><i class="ic" data-lucide="clipboard-check" aria-hidden="true"></i><h3>Appraisal</h3><p>Prepares the evidence and a suggested rating, with the reasons.</p><span class="tag">The manager decides</span></div>
+      <div class="panel"><i class="ic" data-lucide="briefcase" aria-hidden="true"></i><h3>Leadership brief</h3><p>A morning brief with the decisions needed, and whether last week’s actions worked.</p><span class="tag">For business heads</span></div>
+      <div class="panel hero"><i class="ic" data-lucide="lock" aria-hidden="true"></i><h3>Guardrails</h3><p>Never changes loan terms, rates or customer records. Every action is logged.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>06</b></div>
+</div></section>
+
+<!-- 7 · custom AI models -->
+<section class="slide dark models" aria-label="Slide 7"><div class="in">
+  <p class="eyebrow">Under the hood · Custom AI models</p>
+  <h2>Custom AI models, trained only on your data</h2>
+  <div class="body">
+    <div class="g4">
+      <div class="panel"><i class="ic" data-lucide="brain-circuit" aria-hidden="true"></i><h3>Customer behaviour</h3><p>Each customer’s loans, renewals and payments over the years <span class="to">→</span> chance to renew, top up or leave</p><span class="tag">Sequence neural network</span></div>
+      <div class="panel"><i class="ic" data-lucide="user-cog" aria-hidden="true"></i><h3>Employee patterns</h3><p>Activity, follow-ups, conversions and quality <span class="to">→</span> strengths, gaps and what top performers do</p><span class="tag">Neural network + clustering</span></div>
+      <div class="panel"><i class="ic" data-lucide="magnet" aria-hidden="true"></i><h3>Sales and lead conversion</h3><p>Lead source, area, gold weight and contact history <span class="to">→</span> chance each lead converts</p><span class="tag">Gradient-boosted trees</span></div>
+      <div class="panel"><i class="ic" data-lucide="line-chart" aria-hidden="true"></i><h3>Target forecasting</h3><p>Run rate, renewals due, festivals and the gold price <span class="to">→</span> month and quarter ranges</p><span class="tag">Time-series neural network</span></div>
+      <div class="panel"><i class="ic" data-lucide="shuffle" aria-hidden="true"></i><h3>Target reassignment</h3><p>Forecasts, branch potential, staff capacity and leave <span class="to">→</span> a fair rebalance to approve</p><span class="tag">Optimisation engine</span></div>
+      <div class="panel"><i class="ic" data-lucide="gauge" aria-hidden="true"></i><h3>Loan risk</h3><p>Payment trend, LTV at today’s gold price, renewal habit <span class="to">→</span> overdue and auction risk</p><span class="tag">Risk scoring model</span></div>
+      <div class="panel"><i class="ic" data-lucide="scan-search" aria-hidden="true"></i><h3>Integrity</h3><p>Normal patterns of loans, credit and timing <span class="to">→</span> flags for gaming and wrong credit</p><span class="tag">Anomaly detection</span></div>
+      <div class="panel hero"><i class="ic" data-lucide="languages" aria-hidden="true"></i><h3>Language</h3><p>Your approved offers and scripts <span class="to">→</span> messages and briefs in Indian languages</p><span class="tag">Self-hosted language model</span></div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Trained and run in India · one set of models per client, never shared · back-tested on your history before go-live</span><b>07</b></div>
+</div></section>
+
+<!-- 8 · model lifecycle -->
+<section class="slide light" aria-label="Slide 8"><i class="wm" data-lucide="brain-circuit" aria-hidden="true"></i><div class="in">
+  <p class="eyebrow">Model lifecycle</p>
+  <h2>How the models learn, and keep learning</h2>
+  <div class="body">
+    <ol class="pipe">
+      <li><span class="node">1</span><div class="card"><b>Your history</b><span>24–36 months of loans, renewals, payments, leads and staff</span></div></li>
+      <li><span class="node">2</span><div class="card"><b>Signals</b><span>Customer, employee, branch, season and gold-rate features</span></div></li>
+      <li><span class="node">3</span><div class="card"><b>Train</b><span>Models for your company only, on servers in India</span></div></li>
+      <li><span class="node">4</span><div class="card"><b>Back-test</b><span>Scored on months already closed and checked against your MIS</span></div></li>
+      <li><span class="node">5</span><div class="card"><b>Go live</b><span>Every score shows its top reasons, in plain words</span></div></li>
+      <li><span class="node">6</span><div class="card"><b>Keep learning</b><span>The result of every contact retrains the models each month</span></div></li>
+    </ol>
+    <p class="loopnote"><i class="ic" data-lucide="repeat" aria-hidden="true"></i>Outcomes flow back into training every month</p>
+    <div class="gov">
+      <div><b>Yours alone</b><span>Trained only on your data, never on or with another lender’s data.</span></div>
+      <div><b>Explainable</b><span>Staff, managers and auditors see why each score is what it is.</span></div>
+      <div><b>Fair</b><span>No religion, caste or gender; regular bias checks on every model.</span></div>
+      <div><b>Monitored</b><span>Accuracy reported to you monthly; a model that drifts is retrained or paused.</span></div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>08</b></div>
+</div></section>
+
+<!-- 9 · target guide -->
+<section class="slide dark" aria-label="Slide 9"><div class="in">
+  <p class="eyebrow">Module · Target Guide</p>
+  <h2>Each morning, every employee knows whom to call</h2>
+  <div class="body">
+    <div class="guide">
+      <ol class="steps">
+        <li><span><b>Measures the gap:</b> target minus achieved, and what’s needed each working day left.</span></li>
+        <li><span><b>Finds and values opportunities</b> in their own customers and leads: likely amount × chance of success.</span></li>
+        <li><span><b>Sends a daily list</b> of 10–15 customers, each with the reason, the allowed offer and a message.</span></li>
+        <li><span><b>Helps them act:</b> one tap to call, send an approved WhatsApp message, or ask the AI to call.</span></li>
+        <li><span><b>Checks results</b> in the gold loan system and updates tomorrow’s plan.</span></li>
+        <li><span><b>Escalates:</b> behind for a week? The branch manager gets the reason and a suggested fix.</span></li>
+      </ol>
+      <div class="phone" aria-label="Target Guide example"><div class="screen">
+        <small>Target Guide · example</small>
+        <div class="bubble">
+          <span>Good morning Anu. Target ₹40 L, done ₹26 L, 9 days left: ₹1.6 L a day.</span>
+          <b>Today:</b>
+          <span class="it">4 renewals due: ₹6.2 L, call before 12</span>
+          <span class="it">3 top-ups, gold rate up: ₹2.1 L</span>
+          <span class="it">2 closed in August, invite back: ₹1.5 L</span>
+          <span class="it">1 new WhatsApp enquiry: call back</span>
+          <span class="hint">Tap a name to call, message, or ask me to call.</span>
+        </div>
+      </div></div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Sent in the employee’s own language · figures in the example are illustrative</span><b>09</b></div>
+</div></section>
+
+<!-- 10 · sources -->
+<section class="slide light" aria-label="Slide 10"><i class="wm" data-lucide="coins" aria-hidden="true"></i><div class="in">
+  <p class="eyebrow">Where the business comes from</p>
+  <h2>Eight sources the Target Guide works every day</h2>
+  <div class="body">
+    <div class="g4">
+      <div class="panel hero"><i class="ic" data-lucide="refresh-cw" aria-hidden="true"></i><h3>Renewals due</h3><p>Own customers due in the next 7–30 days, renewed in your app or at the branch.</p></div>
+      <div class="panel"><i class="ic" data-lucide="trending-up" aria-hidden="true"></i><h3>Top-ups</h3><p>Pledged gold is worth more after a rate rise, within the RBI LTV cap. Triggered automatically.</p></div>
+      <div class="panel"><i class="ic" data-lucide="alarm-clock" aria-hidden="true"></i><h3>Overdue interest</h3><p>Protects loan quality, and often leads to a renewal.</p></div>
+      <div class="panel"><i class="ic" data-lucide="undo-2" aria-hidden="true"></i><h3>Latent customers</h3><p>Closed a loan in the last 3–12 months and not returned: invite them back.</p></div>
+      <div class="panel"><i class="ic" data-lucide="unlock" aria-hidden="true"></i><h3>Released gold</h3><p>Released gold recently: a natural moment for a new loan.</p></div>
+      <div class="panel"><i class="ic" data-lucide="arrow-right-left" aria-hidden="true"></i><h3>Takeovers</h3><p>Gold pledged at another lender, offered better value per gram.</p></div>
+      <div class="panel"><i class="ic" data-lucide="user-plus" aria-hidden="true"></i><h3>New leads</h3><p>Walk-ins, phone, app, WhatsApp, referrals and local campaigns, by area.</p></div>
+      <div class="panel"><i class="ic" data-lucide="layers" aria-hidden="true"></i><h3>Cross-sell</h3><p>Gold customers for your other loans (MSME, home, microfinance), and the reverse.</p></div>
+    </div>
+    <p class="note">The plan picks the mix that closes the gap with the fewest, likeliest contacts: usually renewals first, then top-ups, win-backs and new leads.</p>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>10</b></div>
+</div></section>
+
+<!-- 11 · sales tracking -->
+<section class="slide dark" aria-label="Slide 11"><div class="in">
+  <p class="eyebrow">Module · Sales Tracking</p>
+  <h2>Every lead tracked from enquiry to loan</h2>
+  <div class="body">
+    <div class="funnel">
+      <span class="h">Stage</span><span class="h">Leak the agents flag</span>
+      <span class="stage" style="width:100%;background:linear-gradient(90deg,var(--navy-800),var(--mid))">Lead received</span><span class="leak">Unassigned leads; areas no one covers</span>
+      <span class="stage" style="width:90%;background:linear-gradient(90deg,var(--mid),var(--accent-deep))">Contacted</span><span class="leak">Not contacted within the agreed time</span>
+      <span class="stage" style="width:80%;background:linear-gradient(90deg,var(--accent-deep),var(--blue))">Visit and gold appraised</span><span class="leak">Loan not taken, and why: rate, value per gram, went elsewhere</span>
+      <span class="stage" style="width:70%;background:linear-gradient(90deg,var(--blue),var(--teal))">Loan disbursed</span><span class="leak">Ticket size below the branch average for similar gold</span>
+      <span class="stage" style="width:60%;background:linear-gradient(90deg,var(--teal),var(--cyan));color:var(--navy-950);box-shadow:0 0 2cqw rgba(34,211,238,.4)">Repeat business</span><span class="leak">Customers who never return after their first loan</span>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Calls and WhatsApp through our inbox are logged automatically; visits and loans come from your system</span><b>11</b></div>
+</div></section>
+
+<!-- 12 · customer intelligence -->
+<section class="slide light pat" aria-label="Slide 12"><i class="wm" data-lucide="fingerprint" aria-hidden="true"></i><div class="in">
+  <p class="eyebrow">Module · Customer Intelligence</p>
+  <h2>Patterns that become named opportunities</h2>
+  <div class="body">
+    <div class="g3">
+      <div class="panel"><i class="ic" data-lucide="calendar-range" aria-hidden="true"></i><h3>Borrowing cycle</h3><p>Festivals, harvest, school reopening <span class="to">→</span> call before their usual time</p></div>
+      <div class="panel"><i class="ic" data-lucide="repeat" aria-hidden="true"></i><h3>Renewal habit</h3><p>Renews late or runs to auction <span class="to">→</span> start earlier, flag the risk</p></div>
+      <div class="panel"><i class="ic" data-lucide="trending-down" aria-hidden="true"></i><h3>Interest trend</h3><p>Paying later each month <span class="to">→</span> warn the employee before it’s overdue</p></div>
+      <div class="panel"><i class="ic" data-lucide="arrow-big-up" aria-hidden="true"></i><h3>Top-up response</h3><p>Took top-ups before <span class="to">→</span> first on the list after a rate rise</p></div>
+      <div class="panel"><i class="ic" data-lucide="bar-chart-3" aria-hidden="true"></i><h3>Loan size trend</h3><p>Borrowing more or less over time <span class="to">→</span> offer more, or ask why</p></div>
+      <div class="panel"><i class="ic" data-lucide="shuffle" aria-hidden="true"></i><h3>Gold movement</h3><p>Part releases and quick re-pledges <span class="to">→</span> may be using another lender</p></div>
+      <div class="panel"><i class="ic" data-lucide="log-out" aria-hidden="true"></i><h3>Signs of leaving</h3><p>Quiet past their usual cycle <span class="to">→</span> win-back list, with the reason</p></div>
+      <div class="panel"><i class="ic" data-lucide="users-round" aria-hidden="true"></i><h3>Referrals</h3><p>Brings family and neighbours <span class="to">→</span> ask for introductions</p></div>
+      <div class="panel"><i class="ic" data-lucide="message-circle" aria-hidden="true"></i><h3>Contact preference</h3><p>WhatsApp or call, and what time <span class="to">→</span> reach them the way that works</p></div>
+    </div>
+    <div class="band"><b>Fair use</b><span>Built only from loan and contact behaviour, never religion, caste or gender. Patterns guide outreach; they never decide a loan or a rate.</span></div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>12</b></div>
+</div></section>
+
+<!-- 13 · employee intelligence -->
+<section class="slide dark pat" aria-label="Slide 13"><div class="in">
+  <p class="eyebrow">Module · Employee Intelligence</p>
+  <h2>What each employee does well, and what to coach</h2>
+  <div class="body">
+    <div class="g3">
+      <div class="panel"><i class="ic" data-lucide="pie-chart" aria-hidden="true"></i><h3>Strengths by product</h3><p>Strong at renewals, weak at new customers <span class="to">→</span> a daily list mix that builds the weak side</p></div>
+      <div class="panel"><i class="ic" data-lucide="timer" aria-hidden="true"></i><h3>Follow-up speed</h3><p>Calls new leads late <span class="to">→</span> a nudge within the hour; the manager sees repeat delays</p></div>
+      <div class="panel"><i class="ic" data-lucide="trophy" aria-hidden="true"></i><h3>What top performers do</h3><p>Timing, offers and order of contacts that win <span class="to">→</span> next best action for everyone</p></div>
+      <div class="panel"><i class="ic" data-lucide="signpost" aria-hidden="true"></i><h3>Lead source fit</h3><p>Converts walk-ins well, phone leads poorly <span class="to">→</span> route leads to whoever converts them</p></div>
+      <div class="panel"><i class="ic" data-lucide="users" aria-hidden="true"></i><h3>Workload</h3><p>More customers than time allows <span class="to">→</span> rebalance lists and targets</p></div>
+      <div class="panel"><i class="ic" data-lucide="shield-check" aria-hidden="true"></i><h3>Quality and consistency</h3><p>Appraisal errors, overdue or month-end spikes <span class="to">→</span> coaching, and counted in appraisal</p></div>
+    </div>
+    <div class="band lite"><b>Fair use</b><span>For coaching and fair targets, never automatic penalties. Each employee sees their own data; managers see the reasons.</span></div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>13</b></div>
+</div></section>
+
+<!-- 14 · loan risk -->
+<section class="slide light risk" aria-label="Slide 14"><svg class="gauge" viewBox="0 0 200 120" aria-hidden="true">
+    <path d="M20 105 A80 80 0 0 1 60.7 35.3" fill="none" stroke="#1fbf8f" stroke-width="16" stroke-linecap="round"/>
+    <path d="M70 29.8 A80 80 0 0 1 130 29.8" fill="none" stroke="#f5b544" stroke-width="16" stroke-linecap="round"/>
+    <path d="M139.3 35.3 A80 80 0 0 1 180 105" fill="none" stroke="#e5484d" stroke-width="16" stroke-linecap="round"/>
+    <g class="needle"><line x1="100" y1="105" x2="152" y2="58" stroke="#0b1640" stroke-width="5" stroke-linecap="round"/></g><circle cx="100" cy="105" r="9" fill="#0b1640"/><circle cx="100" cy="105" r="3.5" fill="#f2c55c"/>
+    <text x="22" y="118" class="gl">LOW</text><text x="100" y="20" text-anchor="middle" class="gl">WATCH</text><text x="178" y="118" text-anchor="end" class="gl">HIGH</text>
+  </svg><div class="in">
+  <p class="eyebrow">Module · Loan Risk</p>
+  <h2>Every active loan gets a risk band</h2>
+  <p class="lead">The chance of interest going overdue in 30, 60 or 90 days, and of the loan reaching auction.</p>
+  <div class="body">
+    <div class="g3">
+      <div class="panel"><span class="chip" style="background:#dff5ec;color:#0f7a59">Low</span><p>Normal reminders before the due date.</p></div>
+      <div class="panel"><span class="chip" style="background:#fdf0d5;color:#9a6200">Watch</span><p>The employee calls before interest falls overdue, offering part payment or renewal.</p></div>
+      <div class="panel"><span class="chip" style="background:#fde3e4;color:#b42328">High</span><p>On the branch manager’s high-risk list. If the gold price falls, these get a margin call first.</p></div>
+    </div>
+    <div class="signals"><b>Signals</b><span>Payment trend</span><span>Past renewal habit</span><span>Loan age against tenure</span><span>LTV, with interest due, against the RBI cap</span><span>Ticket size and scheme</span><span>Repayments on other loans</span><span>Overdue among similar loans nearby</span></div>
+    <div class="band"><b>RBI 2025 rules</b><span>Tracks every loan against the LTV caps (85%, 80% or 75% by ticket size) as the gold price moves. It guides follow-up only; it does not refuse or price loans.</span></div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>14</b></div>
+</div></section>
+
+<!-- 15 · forecasting -->
+<section class="slide dark" aria-label="Slide 15"><div class="in">
+  <p class="eyebrow">Module · Forecasting</p>
+  <h2>By day 10, you see which branches will miss</h2>
+  <div class="body">
+    <div class="fc">
+      <div>
+        <h4>Month-end forecast, as a range</h4>
+        <!-- scale: 60% → 0, 120% → 100%; target 100% at 66.667% -->
+        <div class="br"><div class="br-t"><b>Branch A</b> · likely 84–91% of target · <span class="st" style="color:#ff7a7e">will miss</span></div>
+          <div class="track"><span class="rg" style="left:40%;width:11.667%;background:var(--red)"></span><span class="tg"></span></div></div>
+        <div class="br"><div class="br-t"><b>Branch B</b> · likely 97–104% · <span class="st" style="color:var(--amber)">on track</span></div>
+          <div class="track"><span class="rg" style="left:61.667%;width:11.667%;background:var(--amber)"></span><span class="tg"></span></div></div>
+        <div class="br"><div class="br-t"><b>Branch C</b> · likely 108–116% · <span class="st" style="color:var(--green)">ahead</span></div>
+          <div class="track"><span class="rg" style="left:80%;width:13.333%;background:var(--green)"></span><span class="tg"></span></div></div>
+        <div class="axis"><span>60%</span><span class="t" style="left:66.667%">Target</span><span style="left:100%">120%</span></div>
+        <p class="cap">Example branches · the forecast updates every day</p>
+      </div>
+      <div class="panel">
+        <h3>What it forecasts</h3>
+        <ul><li>Disbursals, loan book, renewals, collections, overdue</li><li>For each employee, branch, region, zone and the company</li><li>Built from run rate, renewals due, seasons and the gold price</li></ul>
+        <h3>What-if, before you commit</h3>
+        <ul><li>Gold price up or down 5% or 10%</li><li>A scheme or rate change</li><li>A competitor opening nearby</li><li>A local campaign, or staff on leave</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Every model is back-tested on your own past data before go-live; accuracy is reported to you monthly</span><b>15</b></div>
+</div></section>
+
+<!-- 16 · target planner -->
+<section class="slide light" aria-label="Slide 16"><i class="wm" data-lucide="split" aria-hidden="true"></i><div class="in">
+  <p class="eyebrow">Module · Target Planner</p>
+  <h2>Fair targets, from the company plan to each employee</h2>
+  <div class="body">
+    <div class="tp">
+      <div class="cascade">
+        <div class="lv top" style="--x:0"><b>Company</b><span>Annual plan, split into months and seasons</span></div>
+        <div class="lv" style="--x:1"><b>Zone</b><span>By the zone’s book, growth and potential</span></div>
+        <div class="lv" style="--x:2"><b>Region</b><span>By branch mix and local market</span></div>
+        <div class="lv" style="--x:3"><b>Branch</b><span>By catchment, age, book and renewals due</span></div>
+        <div class="lv end" style="--x:4"><b>Employee</b><span>By role, customers owned and leave</span></div>
+      </div>
+      <div class="panel">
+        <h3>What each share is based on</h3>
+        <ul><li>Loan book and renewals falling due</li><li>Branch age, catchment and footfall</li><li>Last year’s run rate and the season</li><li>Staff strength, transfers and leave</li></ul>
+        <h3>Target reassignment, mid-month</h3>
+        <ul><li>The reassignment model moves targets and customer lists when leave, a transfer or a local event is outside a branch’s control</li><li>The region or zone head approves; every change is logged</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>A new branch is never measured against a branch with a 15-year-old book</span><b>16</b></div>
+</div></section>
+
+<!-- 17 · KPI scorecard -->
+<section class="slide dark" aria-label="Slide 17"><div class="in">
+  <p class="eyebrow">Gold loan KPI scorecard</p>
+  <h2>Six KPI groups, weighted by role</h2>
+  <div class="body">
+    <div class="kpiwrap"><table class="kpi">
+      <thead><tr><th>KPI group</th><th>What is measured</th><th class="w">Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Customer acquisition</td><td>New customers, leads, conversion, takeovers won</td><td><span class="wbar"><i style="width:calc(20 * .3cqw)"></i><b>20%</b></span></td></tr>
+        <tr><td>Business volume</td><td>Loans disbursed (count, ₹, grams), growth, ticket size</td><td><span class="wbar"><i style="width:calc(30 * .3cqw)"></i><b>30%</b></span></td></tr>
+        <tr><td>Retention</td><td>Renewals and top-ups, loans closed, customers lost</td><td><span class="wbar"><i style="width:calc(15 * .3cqw)"></i><b>15%</b></span></td></tr>
+        <tr><td>Loan quality</td><td>Interest on time; overdue 30/60/90+ days; auctions</td><td><span class="wbar"><i style="width:calc(20 * .3cqw)"></i><b>20%</b></span></td></tr>
+        <tr><td>Cross-sell</td><td>Your other loans, insurance and services</td><td><span class="wbar"><i style="width:calc(5 * .3cqw)"></i><b>5%</b></span></td></tr>
+        <tr><td>Compliance</td><td>Gold appraisal errors, KYC errors, audit findings</td><td><span class="wbar"><i style="width:calc(10 * .3cqw)"></i><b>10%</b></span></td></tr>
+      </tbody>
+    </table>
+    <figure class="donut" aria-label="KPI weights: Customer acquisition 20%, Business volume 30%, Retention 15%, Loan quality 20%, Cross-sell 5%, Compliance 10%"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="40" fill="none" stroke="rgba(190,200,255,.12)" stroke-width="16"/><circle cx="60" cy="60" r="40" fill="none" stroke="#4a74f0" stroke-width="16" stroke-dasharray="49.07 251.33" stroke-dashoffset="0.00" transform="rotate(-90 60 60)"><title>Customer acquisition · 20%</title></circle><circle cx="60" cy="60" r="40" fill="none" stroke="#2952d9" stroke-width="16" stroke-dasharray="74.20 251.33" stroke-dashoffset="-50.27" transform="rotate(-90 60 60)"><title>Business volume · 30%</title></circle><circle cx="60" cy="60" r="40" fill="none" stroke="#7b9cff" stroke-width="16" stroke-dasharray="36.50 251.33" stroke-dashoffset="-125.66" transform="rotate(-90 60 60)"><title>Retention · 15%</title></circle><circle cx="60" cy="60" r="40" fill="none" stroke="#f2c55c" stroke-width="16" stroke-dasharray="49.07 251.33" stroke-dashoffset="-163.36" transform="rotate(-90 60 60)"><title>Loan quality · 20%</title></circle><circle cx="60" cy="60" r="40" fill="none" stroke="#c9962e" stroke-width="16" stroke-dasharray="11.37 251.33" stroke-dashoffset="-213.63" transform="rotate(-90 60 60)"><title>Cross-sell · 5%</title></circle><circle cx="60" cy="60" r="40" fill="none" stroke="#ffe2a0" stroke-width="16" stroke-dasharray="23.93 251.33" stroke-dashoffset="-226.19" transform="rotate(-90 60 60)"><title>Compliance · 10%</title></circle><text x="60" y="58" text-anchor="middle" class="d1">100%</text><text x="60" y="71" text-anchor="middle" class="d2">6 KPI groups</text></svg>
+      <figcaption><span><i style="background:#4a74f0"></i>Customer acquisition<b>20%</b></span><span><i style="background:#2952d9"></i>Business volume<b>30%</b></span><span><i style="background:#7b9cff"></i>Retention<b>15%</b></span><span><i style="background:#f2c55c"></i>Loan quality<b>20%</b></span><span><i style="background:#c9962e"></i>Cross-sell<b>5%</b></span><span><i style="background:#ffe2a0"></i>Compliance<b>10%</b></span></figcaption></figure></div>
+    <div class="pill3">
+      <div><b>Set by role</b><span>Managers weigh loan book and quality; field staff weigh new customers.</span></div>
+      <div><b>Quality guards growth</b><span>Loans that later go bad never count as wins.</span></div>
+      <div><b>Credit to the right person</b><span>Each loan goes to the employee who brought the customer.</span></div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Example weights · you set the final KPI list and weights during setup</span><b>17</b></div>
+</div></section>
+
+<!-- 18 · command centre -->
+<section class="slide light" aria-label="Slide 18"><i class="wm" data-lucide="layout-dashboard" aria-hidden="true"></i><div class="in">
+  <p class="eyebrow">Module · Command Centre</p>
+  <h2>One product, the right view for every role</h2>
+  <div class="body">
+    <div class="cc">
+      <div class="mock" role="img" aria-label="Command Centre, region view, with illustrative figures">
+        <div class="mock-top"><i></i><i></i><i></i><span>Command Centre · Region view · illustrative</span></div>
+        <div class="mock-body">
+          <div class="tiles">
+            <div class="tile"><small>Disbursal pace</small><b>87%</b><em class="dn">of target pace</em></div>
+            <div class="tile"><small>Renewals due · 7 days</small><b>1,240</b><em>₹16.5 Cr</em></div>
+            <div class="tile"><small>High-risk loans</small><b>312</b><em class="dn">+18 this week</em></div>
+            <div class="tile"><small>Leads not called · 2 h</small><b>46</b><em class="dn">in 9 branches</em></div>
+          </div>
+          <div class="mrows">
+            <div class="mrow"><b>Branch A</b><span class="mbar"><i style="width:62%;background:var(--red)"></i></span><em class="pill r">Will miss</em></div>
+            <div class="mrow"><b>Branch B</b><span class="mbar"><i style="width:80%;background:var(--amber)"></i></span><em class="pill a">On track</em></div>
+            <div class="mrow"><b>Branch C</b><span class="mbar"><i style="width:94%;background:var(--green)"></i></span><em class="pill g">Ahead</em></div>
+          </div>
+          <div class="agentcard"><i class="ic" data-lucide="sparkles" aria-hidden="true"></i><div><b>Branch performance agent</b><span>Branch A has 41 renewals due this week and 12 not yet called. Move them to two staff with time free today?</span></div><span class="btn">Approve</span></div>
+        </div>
+      </div>
+      <div class="rolelist">
+        <div class="role"><i class="ic" data-lucide="smartphone" aria-hidden="true"></i><div><b>Employee</b><span>Daily list on WhatsApp and a light mobile page</span></div></div>
+        <div class="role"><i class="ic" data-lucide="store" aria-hidden="true"></i><div><b>Branch manager</b><span>Team board, who needs help, approvals</span></div></div>
+        <div class="role"><i class="ic" data-lucide="map" aria-hidden="true"></i><div><b>Region and zone heads</b><span>Branch pace, forecasts, risk lists</span></div></div>
+        <div class="role"><i class="ic" data-lucide="briefcase" aria-hidden="true"></i><div><b>Leadership</b><span>Morning brief, decisions, what worked</span></div></div>
+        <div class="role"><i class="ic" data-lucide="shield-check" aria-hidden="true"></i><div><b>Audit</b><span>Integrity flags with the evidence</span></div></div>
+        <div class="role"><i class="ic" data-lucide="contact" aria-hidden="true"></i><div><b>HR</b><span>Appraisal evidence and incentive sheets</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Each person sees only their own branch, region, zone or company</span><b>18</b></div>
+</div></section>
+
+<!-- 19 · appraisal -->
+<section class="slide dark" aria-label="Slide 19"><div class="in">
+  <p class="eyebrow">Module · Appraisal &amp; Incentives</p>
+  <h2>Fair appraisals, with the reasons written down</h2>
+  <div class="body">
+    <div class="ap">
+      <div class="rules">
+        <div><b>Fair peer groups:</b> compared with the same role at similar branches, by age, size and location.</div>
+        <div><b>Consistency counts:</b> a steady quarter scores better than one big month.</div>
+        <div><b>Quality can cap the rating:</b> high overdue, auctions or audit findings limit it.</div>
+        <div><b>Transfers and leave handled:</b> scores split by time at each branch; leave lowers the target.</div>
+        <div><b>Managers decide:</b> they can override with a reason, and the override is recorded.</div>
+      </div>
+      <div class="sug">
+        <small>Example suggestion</small>
+        <h4>One step below the top rating</h4>
+        <span class="why">Why</span>
+        <ul><li>Top 10% in renewals in the region</li><li>Business at 112% of target</li><li>3 audit findings on gold appraisal cap the rating</li></ul>
+        <p>Manager: accept, or change it with a reason</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Optional: incentives calculated from the same scores under your rules, always approved before payment</span><b>19</b></div>
+</div></section>
+
+<!-- 20 · security -->
+<section class="slide light" aria-label="Slide 20"><svg class="shield" viewBox="0 0 120 140" aria-hidden="true">
+    <defs><linearGradient id="shg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2952d9"/><stop offset="1" stop-color="#0a1747"/></linearGradient><linearGradient id="shr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe2a0"/><stop offset="1" stop-color="#c9962e"/></linearGradient></defs>
+    <path d="M60 6 L108 24 V66 C108 98 87 122 60 134 C33 122 12 98 12 66 V24 Z" fill="url(#shg)" stroke="url(#shr)" stroke-width="4"/>
+    <rect x="42" y="64" width="36" height="30" rx="5" fill="url(#shr)"/><path d="M48 64 V54 a12 12 0 0 1 24 0 V64" fill="none" stroke="url(#shr)" stroke-width="5"/><circle cx="60" cy="77" r="4" fill="#0a1747"/><rect x="58.5" y="78" width="3" height="8" rx="1.5" fill="#0a1747"/>
+    <text x="60" y="114" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="11" fill="#ffe2a0" letter-spacing="2">INDIA</text>
+  </svg><div class="in">
+  <p class="eyebrow">Data and security</p>
+  <h2>Your data and the AI stay in India</h2>
+  <div class="body">
+    <div class="g3">
+      <div class="panel"><i class="ic" data-lucide="eye" aria-hidden="true"></i><h3>Read-only</h3><p>We read a replica, a reporting copy or your API. We never write to your system.</p></div>
+      <div class="panel"><i class="ic" data-lucide="network" aria-hidden="true"></i><h3>Private connection</h3><p>A VPN or IP allowlist between your servers and ours. Nothing is opened to the internet.</p></div>
+      <div class="panel hero"><i class="ic" data-lucide="map-pin" aria-hidden="true"></i><h3>AI hosted in India</h3><p>The AI runs on dedicated servers for your company. No data goes to any outside AI provider.</p></div>
+      <div class="panel"><i class="ic" data-lucide="filter" aria-hidden="true"></i><h3>Only what’s needed</h3><p>No Aadhaar, PAN, addresses or photos. Names and consented phones only for the Target Guide.</p></div>
+      <div class="panel"><i class="ic" data-lucide="key-round" aria-hidden="true"></i><h3>Access by role</h3><p>Each person sees only their branch, region or company. Every login and change is logged.</p></div>
+      <div class="panel"><i class="ic" data-lucide="file-signature" aria-hidden="true"></i><h3>Agreements first</h3><p>NDA and data processing agreement before we connect, in line with RBI outsourcing guidance and the DPDP Act.</p></div>
+    </div>
+    <p class="note">A full security and architecture pack is available for your IT team under NDA.</p>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>20</b></div>
+</div></section>
+
+<!-- 21 · platform -->
+<section class="slide dark" aria-label="Slide 21"><div class="in">
+  <p class="eyebrow">Platform</p>
+  <h2>Connects to the systems you already run</h2>
+  <div class="body">
+    <div class="arch">
+      <div class="col">
+        <p class="colh">Your systems · read-only</p>
+        <div class="src"><i class="ic" data-lucide="database" aria-hidden="true"></i>Gold loan core system</div>
+        <div class="src"><i class="ic" data-lucide="inbox" aria-hidden="true"></i>Lead sources and call centre</div>
+        <div class="src"><i class="ic" data-lucide="contact" aria-hidden="true"></i>HRMS: staff, leave, transfers</div>
+        <div class="src"><i class="ic" data-lucide="coins" aria-hidden="true"></i>Gold rate and scheme master</div>
+      </div>
+      <svg class="arrow" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg>
+      <div class="core">
+        <b>Bheem Gold AI</b>
+        <div class="layer"><b>Connectors</b><span>Replica, reporting copy, API or file drop; moves with you to a new core</span></div>
+        <div class="layer"><b>Custom AI models</b><span>Neural networks and ML trained on your history: patterns, forecasts, risk</span></div>
+        <div class="layer"><b>AI agents</b><span>Seven agents and a self-hosted language model</span></div>
+        <div class="layer"><b>Control</b><span>Role access, approvals, full audit log</span></div>
+      </div>
+      <svg class="arrow" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg>
+      <div class="col">
+        <p class="colh">Where people use it</p>
+        <div class="src"><i class="ic" data-lucide="message-circle" aria-hidden="true"></i>WhatsApp</div>
+        <div class="src"><i class="ic" data-lucide="smartphone" aria-hidden="true"></i>Light mobile page</div>
+        <div class="src"><i class="ic" data-lucide="layout-dashboard" aria-hidden="true"></i>Web Command Centre</div>
+        <div class="src"><i class="ic" data-lucide="phone-call" aria-hidden="true"></i>AI voice calls (optional)</div>
+        <div class="src"><i class="ic" data-lucide="file-spreadsheet" aria-hidden="true"></i>Reports, exports and API to your BI</div>
+      </div>
+    </div>
+    <div class="band lite"><b>In India</b><span>Dedicated database and AI servers for your company. No customer or employee data goes to any outside AI provider.</span></div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Plugs in beside your app, chatbot and call centre, and moves with you if you change your core system</span><b>21</b></div>
+</div></section>
+
+<!-- 22 · deployment -->
+<section class="slide light" aria-label="Slide 22"><i class="wm" data-lucide="server" aria-hidden="true"></i><div class="in">
+  <p class="eyebrow">Deployment</p>
+  <h2>Run by us or in your data centre, always in India</h2>
+  <div class="body">
+    <div class="g2 dep">
+      <div class="panel hero"><i class="ic" data-lucide="cloud" aria-hidden="true"></i><h3>Managed by Bheemverse</h3><span class="tag">Fastest to start</span><p>Dedicated servers and AI in an Indian data centre, used only by your company.</p>
+        <ul><li>We run updates, monitoring, backups and the standby server</li><li>A private connection to your systems</li><li>Your IT team reviews and audits the setup</li></ul></div>
+      <div class="panel"><i class="ic" data-lucide="server" aria-hidden="true"></i><h3>In your data centre or private cloud</h3><span class="tag">Full control for your IT team</span><p>The same product installed on your own servers or your India cloud account.</p>
+        <ul><li>Your IT controls the network, access and keys</li><li>We support and update it under your change process</li><li>Data never leaves your environment</li></ul></div>
+    </div>
+    <div class="band"><b>Both options</b><span>Same modules and agents · read-only connection · role access and audit log · NDA and data processing agreement · your data returned on exit</span></div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Commercials are shared separately for the option you choose</span><b>22</b></div>
+</div></section>
+
+<!-- 23 · rollout -->
+<section class="slide dark" aria-label="Slide 23"><div class="in">
+  <p class="eyebrow">Rollout</p>
+  <h2>Built for branch staff, with no new app to learn</h2>
+  <div class="body">
+    <div class="g3">
+      <div class="panel"><i class="ic" data-lucide="globe" aria-hidden="true"></i><h3>Their own language</h3><p>Malayalam, Tamil, Telugu, Kannada, Hindi, Marathi, English and more, chosen by each employee.</p></div>
+      <div class="panel"><i class="ic" data-lucide="message-circle" aria-hidden="true"></i><h3>No app to install</h3><p>WhatsApp and a light mobile page that loads on a weak connection.</p></div>
+      <div class="panel"><i class="ic" data-lucide="graduation-cap" aria-hidden="true"></i><h3>New staff, day one</h3><p>New joiners and new branches get a ready daily list from day one, plus a champion in each branch.</p></div>
+      <div class="panel"><i class="ic" data-lucide="star" aria-hidden="true"></i><h3>Motivation</h3><p>Leaderboards within fair peer groups, streaks, and recognition in the leadership’s weekly brief.</p></div>
+      <div class="panel"><i class="ic" data-lucide="badge-check" aria-hidden="true"></i><h3>Pilot first</h3><p>One branch cluster for 4–6 weeks, measured against matched control branches and your MIS.</p></div>
+      <div class="panel"><i class="ic" data-lucide="life-buoy" aria-hidden="true"></i><h3>Support</h3><p>A WhatsApp help desk for staff and a monthly review with your business heads.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Each language is tested with your own staff before the pilot starts</span><b>23</b></div>
+</div></section>
+
+<!-- 24 · plan -->
+<section class="slide light" aria-label="Slide 24"><i class="wm" data-lucide="calendar-clock" aria-hidden="true"></i><div class="in">
+  <p class="eyebrow">The plan</p>
+  <h2>Pilot first, then roll out in waves</h2>
+  <div class="body">
+    <!-- scale: 18 equal week columns; a bar for weeks a–b spans (a-1)/18 → b/18 of the lane -->
+    <div class="gantt">
+      <div class="grid" aria-hidden="true"></div>
+      <span class="mis" style="left:calc(28% + 72% * 9 / 18)"><span>Pilot checked against your MIS</span></span>
+      <span class="lbl">Discovery and data connection</span><div class="lane"><i style="left:0;width:calc(3 / 18 * 100%);background:var(--accent-deep)">Weeks 1–3</i></div>
+      <span class="lbl">AI infrastructure in India</span><div class="lane"><i style="left:0;width:calc(4 / 18 * 100%);background:var(--accent-deep)">Weeks 1–4</i></div>
+      <span class="lbl">1 · Sales Tracking, Target Guide</span><div class="lane"><i style="left:calc(3 / 18 * 100%);width:calc(6 / 18 * 100%);background:linear-gradient(90deg,var(--navy-800),var(--mid))">Weeks 4–9 · pilot</i></div>
+      <span class="lbl">2 · Patterns, forecasts, targets</span><div class="lane"><i style="left:calc(7 / 18 * 100%);width:calc(7 / 18 * 100%);background:linear-gradient(90deg,var(--blue),var(--teal))">Weeks 8–14</i></div>
+      <span class="lbl">3 · Appraisal and incentives</span><div class="lane"><i style="left:calc(13 / 18 * 100%);width:calc(5 / 18 * 100%);background:linear-gradient(90deg,var(--teal),var(--cyan));color:var(--navy-950)">Weeks 14–18</i></div>
+      <span class="lbl">All branches, in waves</span><div class="lane"><i style="left:calc(9 / 18 * 100%);width:calc(9 / 18 * 100%);background:linear-gradient(90deg,var(--navy-900),var(--blue))">Weeks 10–18 · region by region</i></div>
+      <span></span>
+      <div class="wk"><span style="left:calc(.5 / 18 * 100%)">Week 1</span><span style="left:calc(3.5 / 18 * 100%)">Week 4</span><span style="left:calc(7.5 / 18 * 100%)">Week 8</span><span style="left:calc(13.5 / 18 * 100%)">Week 14</span><span style="left:calc(17.5 / 18 * 100%)">Week 18</span></div>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Pilot: one branch cluster for 4–6 weeks against matched control branches · weeks count from data access</span><b>24</b></div>
+</div></section>
+
+<!-- 25 · next steps -->
+<section class="slide dark nx" aria-label="Slide 25"><div class="in">
+  <div class="nx-top"><div><p class="eyebrow">Next steps</p><h2>What we need to start</h2></div>
+    <span class="bv nx-logo" role="img" aria-label="Bheemverse Innovation"></span></div>
+  <div class="body">
+    <ol class="road">
+      <li><span class="road-node">1</span><div class="road-card"><i class="ic" data-lucide="clipboard-list" aria-hidden="true"></i><b>Review</b><p>Your business and HR heads review the KPI list and the suggested weights.</p></div></li>
+      <li><span class="road-node">2</span><div class="road-card"><i class="ic" data-lucide="server" aria-hidden="true"></i><b>Connect</b><p>Your IT team answers five questions about the gold loan system.</p></div></li>
+      <li><span class="road-node">3</span><div class="road-card"><i class="ic" data-lucide="file-signature" aria-hidden="true"></i><b>Agree</b><p>We sign an NDA and a data processing agreement, and you pick the deployment option.</p></div></li>
+      <li><span class="road-node">4</span><div class="road-card"><i class="ic" data-lucide="rocket" aria-hidden="true"></i><b>Pilot</b><p>A read-only connection and a pilot in one branch cluster, measured against matched control branches.</p></div></li>
+    </ol>
+    <div class="score">
+      <div class="score-h"><h3>How we’ll measure success</h3><p>Baseline taken in discovery; targets agreed with you.</p></div>
+      <ul class="score-g"><li><i class="ic" data-lucide="refresh-cw" aria-hidden="true"></i><span>Renewal rate on loans falling due</span></li><li><i class="ic" data-lucide="trending-up" aria-hidden="true"></i><span>Top-up conversion after a gold rate rise</span></li><li><i class="ic" data-lucide="undo-2" aria-hidden="true"></i><span>Win-back rate of customers who closed</span></li><li><i class="ic" data-lucide="timer" aria-hidden="true"></i><span>Lead response time and conversion</span></li><li><i class="ic" data-lucide="alarm-clock" aria-hidden="true"></i><span>Loans overdue 30+ days and auctions</span></li><li><i class="ic" data-lucide="target" aria-hidden="true"></i><span>Forecast accuracy against month-end</span></li><li><i class="ic" data-lucide="list-checks" aria-hidden="true"></i><span>Share of staff acting on their daily list</span></li><li><i class="ic" data-lucide="store" aria-hidden="true"></i><span>Ramp-up of new branches and new staff</span></li></ul>
+    </div>
+  </div>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Thank you · Bheemverse Innovation Pvt Ltd</span><b>25</b></div>
+</div></section>
+
+</main>
+
+<div class="pv" id="pv" hidden role="dialog" aria-label="Presentation">
+  <div class="pv-stage" id="stage"></div>
+  <div class="pv-ui"><button type="button" id="prev" aria-label="Previous slide">‹</button><span class="n" id="cnt">1 / 25</span><button type="button" id="next" aria-label="Next slide">›</button>
+    <span class="prog"><i id="bar"></i></span><button type="button" id="exit" aria-label="Exit presentation">✕</button></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+<script>
+(() => {
+  try { window.lucide && window.lucide.createIcons({ attrs: { 'stroke-width': 1.8 } }) } catch (e) { /* icons are decoration; the deck reads without them */ }
+  const slides = [...document.querySelectorAll('#deck .slide')]
+  const pv = document.getElementById('pv'), stage = document.getElementById('stage')
+
+
+  // ── motion: split headlines into words; tag the elements that stagger in; play when a slide comes into view
+  const STAGGER = '.panel, .pill3 > div, .steps li, .rules > div, .ns li, .signals span, .loop span, .kpi tbody tr, .leak, .funnel .h, .flow .arrow, .br, .stack > .panel, .lv, .role, .src, .layer, .tile, .mrow, .agentcard, .pipe li, .gov > div'
+  const isGradientText = (el) => { const cs = getComputedStyle(el); return (cs.backgroundClip || cs.webkitBackgroundClip) === 'text' || cs.webkitBackgroundClip === 'text' }
+  const split = (el, counter) => {
+    for (const node of [...el.childNodes]) {
+      if (node.nodeType === 3) {
+        const frag = document.createDocumentFragment()
+        node.textContent.split(/(\s+)/).forEach((part) => {
+          if (!part) return
+          if (/^\s+$/.test(part)) { frag.append(part); return }
+          const w = document.createElement('span'); w.className = 'w'; w.style.setProperty('--d', counter.n++); w.textContent = part; frag.append(w)
+        })
+        node.replaceWith(frag)
+      } else if (node.nodeType === 1) {
+        if (isGradientText(node)) { node.classList.add('w'); node.style.setProperty('--d', counter.n++) } else split(node, counter)
+      }
+    }
+  }
+  slides.forEach((s) => {
+    s.querySelectorAll('h1, h2').forEach((h) => split(h, { n: 0 }))
+    s.querySelectorAll(STAGGER).forEach((el, n) => { el.setAttribute('data-st', ''); el.style.setProperty('--i', n) })
+    s.querySelectorAll('.wbar i, .lane i, .track .rg, .stage').forEach((el, n) => el.style.setProperty('--i', n))
+  })
+
+  // ── neural network: nodes, synapses and travelling pulses on each dark slide; only visible slides animate
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+  const nets = new Set()
+  const glow = () => (getComputedStyle(document.body).getPropertyValue('--glow-rgb').trim() || '243, 207, 122')
+  const accent = () => (getComputedStyle(document.body).getPropertyValue('--accent-rgb').trim() || '184, 134, 43')
+  const attachNet = (slide) => {
+    if (!slide.classList.contains('dark')) return
+    slide.querySelector('canvas.net')?.remove()
+    const cv = document.createElement('canvas'); cv.className = 'net'; cv.setAttribute('aria-hidden', 'true'); slide.prepend(cv)
+    let seed = [...(slide.getAttribute('aria-label') || 'x')].reduce((a, c) => a * 31 + c.charCodeAt(0), 7) >>> 0
+    const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296)
+    // nodes in layers, like a network diagram, drifting gently
+    const layers = 6, per = [4, 6, 7, 7, 6, 4], nodes = []
+    for (let L = 0; L < layers; L++) for (let k = 0; k < per[L]; k++)
+      nodes.push({ L, x: .36 + (L / (layers - 1)) * .6 + (rnd() - .5) * .04, y: (k + .5) / per[L] * .86 + .07 + (rnd() - .5) * .05, ph: rnd() * 6.28, r: 1.4 + rnd() * 1.6 })
+    const edges = []
+    nodes.forEach((a, i) => nodes.forEach((b, j) => { if (b.L === a.L + 1 && rnd() < .42) edges.push([i, j]) }))
+    const pulses = Array.from({ length: 14 }, () => ({ e: Math.floor(rnd() * edges.length), t: rnd(), v: .004 + rnd() * .006 }))
+    const st = { cv, nodes, edges, pulses, visible: false, t: 0 }
+    const draw = () => {
+      const w = cv.clientWidth, h = cv.clientHeight; if (!w || !h) return
+      const dpr = Math.min(2, devicePixelRatio || 1)
+      if (cv.width !== Math.round(w * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr) }
+      const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, w, h)
+      const G = glow(), A = accent(), u = w / 100
+      const pos = (n) => [n.x * w + Math.sin(st.t * .6 + n.ph) * u * .25, n.y * h + Math.cos(st.t * .5 + n.ph) * u * .25]
+      g.lineWidth = Math.max(.6, u * .05)
+      edges.forEach(([i, j]) => { const [x1, y1] = pos(nodes[i]), [x2, y2] = pos(nodes[j])
+        g.strokeStyle = `rgba(${A}, .22)`; g.beginPath(); g.moveTo(x1, y1); g.lineTo(x2, y2); g.stroke() })
+      pulses.forEach((p) => { const [i, j] = edges[p.e] || [0, 0]; const [x1, y1] = pos(nodes[i]), [x2, y2] = pos(nodes[j])
+        const x = x1 + (x2 - x1) * p.t, y = y1 + (y2 - y1) * p.t
+        const grad = g.createRadialGradient(x, y, 0, x, y, u * .9); grad.addColorStop(0, `rgba(${G}, .95)`); grad.addColorStop(1, `rgba(${G}, 0)`)
+        g.fillStyle = grad; g.beginPath(); g.arc(x, y, u * .9, 0, 6.29); g.fill() })
+      nodes.forEach((n) => { const [x, y] = pos(n); const b = .55 + .45 * Math.sin(st.t * 1.4 + n.ph)
+        const grad = g.createRadialGradient(x, y, 0, x, y, u * 1.2); grad.addColorStop(0, `rgba(${G}, ${.35 * b})`); grad.addColorStop(1, `rgba(${G}, 0)`)
+        g.fillStyle = grad; g.beginPath(); g.arc(x, y, u * 1.2, 0, 6.29); g.fill()
+        g.fillStyle = `rgba(${G}, ${.6 + .4 * b})`; g.beginPath(); g.arc(x, y, n.r * u * .12, 0, 6.29); g.fill() })
+    }
+    st.draw = draw; st.step = () => { st.t += .016; st.pulses.forEach((p) => { p.t += p.v; if (p.t > 1) { p.t = 0; p.e = Math.floor(Math.random() * edges.length) } }); draw() }
+    nets.add(st)
+    if ('IntersectionObserver' in window) new IntersectionObserver((es) => es.forEach((e) => { st.visible = e.isIntersecting })).observe(slide)
+    else st.visible = true
+    requestAnimationFrame(draw)
+    return st
+  }
+  slides.forEach(attachNet)
+  const tick = () => { nets.forEach((n) => { if (!n.cv.isConnected) { nets.delete(n); return } if (n.visible) n.step() }); requestAnimationFrame(tick) }
+  if (!reduce) requestAnimationFrame(tick)
+  addEventListener('resize', () => nets.forEach((n) => n.draw()))
+  const play = (el) => { el.classList.remove('play'); void el.offsetWidth; el.classList.add('play') }
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { play(e.target); io.unobserve(e.target) } }), { threshold: .35 })
+    slides.forEach((s) => io.observe(s))
+  }
+  let i = 0
+  const show = (n) => {
+    i = Math.max(0, Math.min(slides.length - 1, n))
+    const c = slides[i].cloneNode(true); c.classList.remove('play'); stage.replaceChildren(c); void c.offsetWidth; c.classList.add('play')
+    const net = attachNet(c); if (net) net.visible = true
+    document.getElementById('cnt').textContent = `${i + 1} / ${slides.length}`
+    document.getElementById('bar').style.width = `${((i + 1) / slides.length) * 100}%`
+  }
+  const open = (n = 0) => { pv.hidden = false; show(n); document.getElementById('next').focus()
+    try { pv.requestFullscreen?.().catch(() => {}) } catch (e) { /* the frame may refuse full screen; the overlay still fills it */ } }
+  const close = () => { pv.hidden = true; try { if (document.fullscreenElement) document.exitFullscreen() } catch (e) {} ; slides[i].scrollIntoView({ block: 'center' }) }
+  document.getElementById('present').addEventListener('click', () => {
+    const mid = slides.findIndex((s) => { const r = s.getBoundingClientRect(); return r.bottom > innerHeight * .4 })
+    open(Math.max(0, mid))
+  })
+  document.getElementById('prev').addEventListener('click', () => show(i - 1))
+  document.getElementById('next').addEventListener('click', () => show(i + 1))
+  document.getElementById('exit').addEventListener('click', close)
+  stage.addEventListener('click', (e) => show(e.clientX < innerWidth / 3 ? i - 1 : i + 1))
+  slides.forEach((s, n) => s.addEventListener('dblclick', () => open(n)))
+  document.addEventListener('keydown', (e) => {
+    if (pv.hidden) return
+    if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); show(i + 1) }
+    else if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); show(i - 1) }
+    else if (e.key === 'Home') show(0)
+    else if (e.key === 'End') show(slides.length - 1)
+    else if (e.key === 'Escape') close()
+  })
+  document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && !pv.hidden) { /* left full screen with Esc: stay in the overlay */ } })
+})()
+</script>
+
+</body></html>
