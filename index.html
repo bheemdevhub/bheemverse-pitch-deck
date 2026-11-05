@@ -116,6 +116,9 @@ button{font:inherit}
 .foot{display:flex;justify-content:space-between;align-items:center;gap:var(--g2);font-family:var(--f-mono);font-size:var(--fs-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut);border-top:1px solid var(--line);padding-top:var(--g1)}
 .foot .r{display:flex;gap:var(--g2)}
 .num{font-variant-numeric:tabular-nums;color:var(--fg)}
+.foot a.home,.cta a,a.url,a.cw{color:inherit;text-decoration:none;transition:color .2s}
+.foot a.home:hover,.cta a:hover,a.url:hover,a.cw:hover{color:var(--acc, #4C8DFF);text-decoration:underline;text-underline-offset:.25em}
+a.url{color:var(--fg)}
 
 /* ---------- type ---------- */
 .eyebrow{font-family:var(--f-mono);font-size:var(--fs-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-bottom:var(--g1)}
@@ -619,7 +622,7 @@ body:not(.present) .pbar{display:none}
 <body>
 
 <header class="chrome">
-  <div class="id"><span class="lg lg-bv" role="img" aria-label="Bheemverse logo"></span><span class="cw">BHEEMVERSE</span><span class="ct">Corporate presentation · 17 slides</span></div>
+  <div class="id"><span class="lg lg-bv" role="img" aria-label="Bheemverse logo"></span><a class="cw" href="https://bheemverse.com" target="_blank" rel="noopener">BHEEMVERSE</a><span class="ct">Corporate presentation · 17 slides</span></div>
   <button class="btn" id="present" type="button">Present <kbd>P</kbd></button>
 </header>
 
@@ -666,7 +669,7 @@ body:not(.present) .pbar{display:none}
         <li>Enterprise software</li>
       </ul>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>Who we are</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Who we are</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -701,7 +704,7 @@ body:not(.present) .pbar{display:none}
         <li><span class="f word">In-house</span><span class="l">Models, agents, and platforms built by our own AI team</span></li>
       </ul>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>At a glance</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>At a glance</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -725,7 +728,7 @@ body:not(.present) .pbar{display:none}
         <div class="layer" style="--i:0" role="listitem"><span class="role">Infrastructure</span><span><b>Bheem Cloud</b><span class="d">Secure, scalable, private AI hosting.</span></span></div>
       </div>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>Our technology</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Our technology</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -746,7 +749,7 @@ body:not(.present) .pbar{display:none}
         <li><span class="who"><span class="tile lg-bv t-bvbg" role="img" aria-label="Bheemverse logo"></span><span class="mono">Bheemverse Engineering</span></span><b>Build AI for your process</b><span class="dsc">Custom models, agents, and integrations engineered around your workflows.</span></li>
       </ul>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>What we do for you</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>What we do for you</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -774,7 +777,7 @@ body:not(.present) .pbar{display:none}
         </div>
       </div>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>Product ecosystem</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Product ecosystem</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -845,7 +848,7 @@ body:not(.present) .pbar{display:none}
         </svg>
       </figure>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>Agent Bheem</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Agent Bheem</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -871,7 +874,7 @@ body:not(.present) .pbar{display:none}
         <span class="act-phone" role="img" aria-label="Agent Bheem answering business questions on WhatsApp"></span>
       </figure>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>Agent Bheem in action</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Agent Bheem in action</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -900,7 +903,7 @@ body:not(.present) .pbar{display:none}
         </ol>
       </div>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>SocialSelling.AI</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>SocialSelling.AI</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -955,7 +958,7 @@ body:not(.present) .pbar{display:none}
         <div class="ph-bar"><span>Inbound</span><span class="on">Outbound</span><span class="end" aria-hidden="true"></span></div>
       </figure>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>Conversational AI</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Conversational AI</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -985,7 +988,7 @@ body:not(.present) .pbar{display:none}
         <ul class="pills"><li>Social media management</li><li>SEO</li><li>AEO</li><li>Blogs</li><li>Posts &amp; reels</li><li>Auto-posting</li><li>Meta &amp; Google ads</li><li>Campaign management</li><li>Brand audit &amp; gap fixing</li><li>30-day content calendar</li><li>Competitor analysis</li><li>ROI tracking</li></ul>
       </div>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>Ranko · Sales growth engine</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Ranko · Sales growth engine</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -1034,7 +1037,7 @@ body:not(.present) .pbar{display:none}
         <li><span class="n">04</span>You approve. Nothing executes until you do.</li>
       </ol>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>CA Fino · HR Stephy</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>CA Fino · HR Stephy</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -1063,7 +1066,7 @@ body:not(.present) .pbar{display:none}
       </div>
       <p class="closing">From AI Strategy to Enterprise Deployment.</p>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>Enterprise expertise</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Enterprise expertise</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -1096,7 +1099,7 @@ body:not(.present) .pbar{display:none}
       </div>
       <p class="lead">From <b>Travel CRM</b> to industry-specific AI workflows, Bheemverse builds intelligent solutions around real business requirements.</p>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>Industries &amp; clients</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Industries &amp; clients</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -1120,10 +1123,10 @@ body:not(.present) .pbar{display:none}
       </ol>
       <div class="cta">
         <b>Let&rsquo;s put AI to work in your business.</b>
-        <span class="mono">Book an AI demo · support@bheemverse.com · www.bheemverse.com</span>
+        <span class="mono">Book an AI demo · <a href="mailto:support@bheemverse.com">support@bheemverse.com</a> · <a href="https://bheemverse.com" target="_blank" rel="noopener">www.bheemverse.com</a></span>
       </div>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>How we work with you</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>How we work with you</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -1140,7 +1143,7 @@ body:not(.present) .pbar{display:none}
         <div><h3 class="mono">Our mission</h3><p class="v">To engineer accessible, scalable, and innovative AI technologies that transform how enterprises operate, engage customers, and grow.</p></div>
       </div>
     </div>
-    <footer class="foot"><span>Bheemverse</span><span class="r"><span>Vision &amp; mission</span><span class="num"></span></span></footer>
+    <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Vision &amp; mission</span><span class="num"></span></span></footer>
   </div>
 </section>
 
@@ -1160,7 +1163,7 @@ body:not(.present) .pbar{display:none}
       <div class="sign">
         <span class="co">BHEEMVERSE INNOVATION PVT. LTD.</span>
         <span class="mono">AI Development · Agentic Intelligence · Enterprise Innovation</span>
-        <span class="url">www.bheemverse<span>.com</span></span>
+        <a class="url" href="https://bheemverse.com" target="_blank" rel="noopener">www.bheemverse<span>.com</span></a>
       </div>
     </div>
     <footer class="foot"><span>Engineering Intelligence.</span><span class="num"></span></footer>
@@ -1225,7 +1228,7 @@ body:not(.present) .pbar{display:none}
   document.getElementById('exit').addEventListener('click', exit);
   document.getElementById('prev').addEventListener('click', () => go(cur - 1));
   document.getElementById('next').addEventListener('click', () => go(cur + 1));
-  slides.forEach(s => s.addEventListener('click', () => { if (isPresent()) go(cur + 1); }));
+  slides.forEach(s => s.addEventListener('click', e => { if (e.target.closest('a')) return; if (isPresent()) go(cur + 1); }));
   document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && isPresent()) exit(); });
 
   document.addEventListener('keydown', e => {
