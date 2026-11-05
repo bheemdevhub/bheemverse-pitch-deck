@@ -178,7 +178,7 @@ button{font:inherit}
 
 /* capabilities map */
 .s-cap .content{gap:var(--g3)}
-.capcols{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--g3)}
+.capcols{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--g3) * 1.6)}
 .capcol{display:flex;flex-direction:column;gap:var(--g1);min-width:0}
 .capcol .grp{color:var(--acc);border-bottom:1px solid var(--line);padding-bottom:var(--g1)}
 .mods{display:flex;flex-direction:column;gap:.8cqw}
@@ -186,12 +186,10 @@ button{font:inherit}
 .mods .tile{width:100%}
 .plate{aspect-ratio:1;width:100%;background:#FFFFFF;border-radius:22%;display:flex;align-items:center;justify-content:center;padding:.45cqw;overflow:hidden}
 .plate .lg{width:100%;height:100%}
-.wm.stk{display:flex;flex-direction:column;align-items:center;font-size:1.02cqw;line-height:1.02}
-.wm.stk i{font-size:.78em}
 .mods b{display:block;font-size:var(--fs-sm);font-weight:600;letter-spacing:-.012em;margin-bottom:.2em}
 .mods .mono{font-size:.78cqw;letter-spacing:.1em}
 .capcol .grp2{margin-top:var(--g2)}
-.cs-lead{font-size:var(--fs-lead);line-height:1.4;letter-spacing:-.014em;color:var(--fg);text-wrap:pretty}
+.cs-lead{max-width:34ch;font-size:var(--fs-lead);line-height:1.4;letter-spacing:-.014em;color:var(--fg);text-wrap:pretty}
 .fnlist{display:flex;flex-wrap:wrap;gap:.6cqw;margin-top:var(--g1)}
 .fnlist li{border:1px solid var(--line-2);border-radius:999px;padding:.35cqw .95cqw;font-size:.98cqw;font-weight:500;white-space:nowrap}
 
@@ -332,7 +330,6 @@ body.present .slide.on{display:block}
   body:not(.present) .mods li{grid-template-columns:84px 1fr}
   body:not(.present) .mods .mono{font-size:10px}
   body:not(.present) .mods li{grid-template-columns:46px 1fr}
-  body:not(.present) .wm.stk{font-size:11px}
   body:not(.present) .prod .visual{height:150px}
   body:not(.present) .rk-logo{width:130px}
   body:not(.present) .asks li{font-size:14px;padding:7px 12px;border-radius:14px 14px 14px 4px}
@@ -582,19 +579,12 @@ body.present .slide.on{display:block}
             <li><span class="tile t-stephy" role="img" aria-label="HR Stephy logo"></span><span><b>HR Stephy</b><span class="mono">Agentic HR manager</span></span></li>
           </ul>
         </div>
-        <div class="capcol">
-          <p class="mono grp">Industry suites</p>
-          <ul class="mods">
-            <li><span class="plate"><span class="wm stk"><i>bheem</i>pro</span></span><span><b>Bheem Pro</b><span class="mono">Academy management</span></span></li>
-            <li><span class="plate"><span class="wm stk"><i>bheem</i>legal</span></span><span><b>Bheem Legal</b><span class="mono">Law practice management</span></span></li>
-          </ul>
-          <p class="mono grp grp2">Infrastructure</p>
+        <div class="capcol capstate">
+          <p class="mono grp">Infrastructure</p>
           <ul class="mods">
             <li><span class="plate"><span class="lg lg-cloud" role="img" aria-label="Bheem Cloud logo"></span></span><span><b>Bheem Cloud</b><span class="mono">AI infrastructure</span></span></li>
           </ul>
-        </div>
-        <div class="capcol capstate">
-          <p class="mono grp">One unified platform</p>
+          <p class="mono grp grp2">One unified platform</p>
           <p class="cs-lead">Bheemverse deploys AI agents across every core business function, orchestrated by Agent Bheem.</p>
           <ul class="fnlist">
             <li>Sales</li><li>Marketing</li><li>Operations</li><li>HR</li><li>Finance</li><li>Customer support</li>
