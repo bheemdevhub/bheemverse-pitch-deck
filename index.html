@@ -205,6 +205,11 @@ a.url{color:var(--fg)}
 .layer .d{display:block;font-size:var(--fs-body);color:var(--mut);line-height:1.42}
 .layer.hl{border-color:rgba(76,141,255,.6);background:rgba(76,141,255,.13)}
 .layer.hl .role{color:var(--acc)}
+.layer.cloud{background:#FFFFFF;border-color:rgba(124,77,255,.45);box-shadow:0 .8cqw 2cqw rgba(91,58,200,.12)}
+.layer.cloud .role{color:#6D3FE6}
+.cloud-row{display:flex;align-items:center;gap:1.4cqw}
+.cloud-logo{flex:none;height:2.9cqw;width:calc(2.9cqw * 2.864)}
+.cloud-row .d{margin:0}
 
 /* agent bheem */
 .s-agent.dark{--bg:radial-gradient(55% 75% at 74% 52%, #11245C 0%, rgba(17,36,92,0) 70%), var(--navy-deep)}
@@ -545,6 +550,8 @@ body.present .slide.on{display:block}
   body:not(.present) .pills{gap:6px}
   body:not(.present) .pills li{font-size:12.5px;padding:4px 10px}
   body:not(.present) .who-head{grid-template-columns:1fr}
+  body:not(.present) .cloud-row{flex-direction:column;align-items:flex-start;gap:6px}
+  body:not(.present) .cloud-logo{height:30px;width:86px}
   body:not(.present) .nn{height:120px}
   body:not(.present) .nn-fig .mono{text-align:left}
   body:not(.present) .ind{grid-template-columns:1fr 1fr;row-gap:10px}
@@ -725,7 +732,7 @@ body:not(.present) .pbar{display:none}
         <div class="layer" style="--i:3" role="listitem"><span class="role">Interfaces</span><span><b>Conversational Intelligence</b><span class="d">Multilingual voice AI, calling, and chat.</span></span></div>
         <div class="layer" style="--i:2" role="listitem"><span class="role">Orchestration</span><span><b>Multi-Agent Orchestration</b><span class="d">Agents, workflows, and apps working as one.</span></span></div>
         <div class="layer hl" style="--i:1" role="listitem"><span class="role">Models</span><span><b>AI Model Engineering</b><span class="d">Our own domain-trained and customized models.</span></span></div>
-        <div class="layer" style="--i:0" role="listitem"><span class="role">Infrastructure</span><span><b>Bheem Cloud</b><span class="d">Secure, scalable, private AI hosting.</span></span></div>
+        <div class="layer cloud" style="--i:0" role="listitem"><span class="role">Infrastructure</span><span class="cloud-row"><span class="lg lg-cloud cloud-logo" role="img" aria-label="Bheem Cloud"></span><span class="d">Our own AI cloud: secure, scalable, private hosting for every model and agent we run.</span></span></div>
       </div>
     </div>
     <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Our technology</span><span class="num"></span></span></footer>
