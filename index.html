@@ -210,6 +210,23 @@ a.url{color:var(--fg)}
 .cloud-row{display:flex;align-items:center;gap:1.4cqw}
 .cloud-logo{display:block;flex:none;height:2.9cqw;width:calc(2.9cqw * 2.864)}
 .cloud-row .d{margin:0}
+.tile-a{display:block;flex:none;border-radius:22%;transition:transform .25s ease}
+.tile-a:hover{transform:translateY(-.15cqw)}
+.tiles .tile-a .tile{width:2.7cqw}
+.idrow .tile-a .tile{width:3.8cqw}
+.plink{font-family:var(--f-mono);font-size:var(--fs-mono);letter-spacing:.08em;color:var(--fg);opacity:.75;text-decoration:none;border-bottom:1px solid rgba(127,176,255,.45);white-space:nowrap;margin-left:.4cqw;transition:opacity .2s,color .2s}
+.plink:hover{opacity:1;color:var(--acc)}
+.stretch{color:inherit;text-decoration:none}
+.stretch::after{content:"";position:absolute;inset:0;border-radius:inherit;z-index:1}
+li.linked{position:relative;cursor:pointer}
+li.linked::before{content:"\2197";position:absolute;top:.9cqw;right:1cqw;font-size:1.1cqw;line-height:1;color:var(--acc);opacity:.7;transition:opacity .2s,transform .2s}
+li.linked:hover::before{opacity:1;transform:translate(.1cqw,-.1cqw)}
+.prod .name.stretch{color:var(--fg)}
+.os a.name{color:#F4F7FF;text-decoration:none}
+.os a.name:hover{text-decoration:underline;text-underline-offset:.2em}
+.os-link{color:#8FB4FF;text-decoration:none;border-bottom:1px solid rgba(143,180,255,.4)}
+.os-link:hover{color:#FFFFFF}
+.rk-logo-a{display:block;border-radius:1.4cqw}
 .cloud-a{display:block;flex:none;border-radius:.4cqw;transition:transform .25s ease}
 .cloud-a:hover{transform:translateY(-.15cqw)}
 .cloud-link{font-family:var(--f-mono);font-size:.82em;letter-spacing:.04em;color:#6D3FE6;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(109,63,230,.35)}
@@ -697,7 +714,7 @@ body:not(.present) .pbar{display:none}
           <p class="mono">Ready-to-deploy AI agents</p>
           <b>A specialist AI agent for every department.</b>
           <span class="tiles" aria-label="Agent Bheem, SocialSelling.AI, Ranko, CA Fino and HR Stephy">
-            <span class="tile t-agent" style="--k:0"></span><span class="tile t-ss" style="--k:1"></span><span class="tile t-ranko" style="--k:2"></span><span class="tile t-fino" style="--k:3"></span><span class="tile t-stephy" style="--k:4"></span>
+            <a class="tile-a" href="https://agentbheem.com/" target="_blank" rel="noopener" aria-label="Agent Bheem website"><span class="tile t-agent" style="--k:0"></span></a><a class="tile-a" href="https://socialselling.ai/" target="_blank" rel="noopener" aria-label="SocialSelling.AI website"><span class="tile t-ss" style="--k:1"></span></a><a class="tile-a" href="https://bheem.marketing/" target="_blank" rel="noopener" aria-label="Ranko website"><span class="tile t-ranko" style="--k:2"></span></a><span class="tile t-fino" style="--k:3"></span><span class="tile t-stephy" style="--k:4"></span>
             <span class="tl">Agent Bheem · SocialSelling.AI · Ranko · CA Fino · HR Stephy</span>
           </span>
         </div>
@@ -751,12 +768,12 @@ body:not(.present) .pbar{display:none}
         <h2 class="h">We Put AI to Work in Your Business.</h2>
       </div>
       <ul class="outs">
-        <li><span class="who"><span class="tile t-agent" role="img" aria-label="Agent Bheem logo"></span><span class="mono">Agent Bheem</span></span><b>Ask your business anything</b><span class="dsc">Live answers on sales, stock, profit, and people, in plain conversation.</span></li>
-        <li><span class="who"><span class="tile t-ss" role="img" aria-label="SocialSelling.AI logo"></span><span class="mono">SocialSelling.AI</span></span><b>Never miss a lead</b><span class="dsc">Capture, call, qualify, and follow up on every lead automatically.</span></li>
-        <li><span class="who"><span class="tile t-ranko" role="img" aria-label="Ranko logo"></span><span class="mono">Ranko</span></span><b>Turn marketing into sales</b><span class="dsc">Ranko attracts, captures, calls, and converts leads like a lead magnet.</span></li>
+        <li class="linked"><span class="who"><span class="tile t-agent" role="img" aria-label="Agent Bheem logo"></span><a class="mono stretch" href="https://agentbheem.com/" target="_blank" rel="noopener">Agent Bheem</a></span><b>Ask your business anything</b><span class="dsc">Live answers on sales, stock, profit, and people, in plain conversation.</span></li>
+        <li class="linked"><span class="who"><span class="tile t-ss" role="img" aria-label="SocialSelling.AI logo"></span><a class="mono stretch" href="https://socialselling.ai/" target="_blank" rel="noopener">SocialSelling.AI</a></span><b>Never miss a lead</b><span class="dsc">Capture, call, qualify, and follow up on every lead automatically.</span></li>
+        <li class="linked"><span class="who"><span class="tile t-ranko" role="img" aria-label="Ranko logo"></span><a class="mono stretch" href="https://bheem.marketing/" target="_blank" rel="noopener">Ranko</a></span><b>Turn marketing into sales</b><span class="dsc">Ranko attracts, captures, calls, and converts leads like a lead magnet.</span></li>
         <li><span class="who"><span class="tile t-fino" role="img" aria-label="CA Fino logo"></span><span class="mono">CA Fino</span></span><b>Keep your books audit-ready</b><span class="dsc">Bills, ledgers, GST, and TDS handled, with every entry approved by you.</span></li>
         <li><span class="who"><span class="tile t-stephy" role="img" aria-label="HR Stephy logo"></span><span class="mono">HR Stephy</span></span><b>Run HR on autopilot</b><span class="dsc">Hiring, attendance, payroll, and compliance, answered and automated.</span></li>
-        <li><span class="who"><span class="tile lg-bv t-bvbg" role="img" aria-label="Bheemverse logo"></span><span class="mono">Bheemverse Engineering</span></span><b>Build AI for your process</b><span class="dsc">Custom models, agents, and integrations engineered around your workflows.</span></li>
+        <li class="linked"><span class="who"><span class="tile lg-bv t-bvbg" role="img" aria-label="Bheemverse logo"></span><a class="mono stretch" href="https://bheemverse.com/" target="_blank" rel="noopener">Bheemverse Engineering</a></span><b>Build AI for your process</b><span class="dsc">Custom models, agents, and integrations engineered around your workflows.</span></li>
       </ul>
     </div>
     <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>What we do for you</span><span class="num"></span></span></footer>
@@ -776,14 +793,14 @@ body:not(.present) .pbar{display:none}
       </div>
       <div class="eco">
         <ul class="products">
-          <li class="prod"><div class="visual"><span class="tile t-ss vis-tile" role="img" aria-label="SocialSelling.AI logo"></span></div><span class="name">SocialSelling.ai</span><span class="mono">AI Sales &amp; Customer Engagement</span></li>
-          <li class="prod"><div class="visual"><span class="v v-ranko" role="img" aria-label="Ranko logo: Your AI Marketing Brain"></span></div><span class="name">Ranko</span><span class="mono">AI Sales Growth Engine</span></li>
+          <li class="prod linked"><div class="visual"><span class="tile t-ss vis-tile" role="img" aria-label="SocialSelling.AI logo"></span></div><a class="name stretch" href="https://socialselling.ai/" target="_blank" rel="noopener">SocialSelling.ai</a><span class="mono">AI Sales &amp; Customer Engagement</span></li>
+          <li class="prod linked"><div class="visual"><span class="v v-ranko" role="img" aria-label="Ranko logo: Your AI Marketing Brain"></span></div><a class="name stretch" href="https://bheem.marketing/" target="_blank" rel="noopener">Ranko</a><span class="mono">AI Sales Growth Engine</span></li>
           <li class="prod"><div class="visual"><span class="v v-fino" role="img" aria-label="CA Fino logo"></span></div><span class="name">CA Fino</span><span class="mono">AI Finance &amp; Accounting</span></li>
           <li class="prod"><div class="visual"><span class="v v-stephy" role="img" aria-label="HR Stephy logo: Agentic HR Manager"></span></div><span class="name">HR Stephy</span><span class="mono">AI Workforce &amp; HR</span></li>
         </ul>
         <div class="os">
-          <span class="l"><span class="tile t-agent" role="img" aria-label="Agent Bheem logo"></span><span class="name">Agent Bheem</span><span class="mono">Agentic Business OS &amp; Orchestration</span></span>
-          <span class="mono">Orchestration layer</span>
+          <span class="l"><span class="tile t-agent" role="img" aria-label="Agent Bheem logo"></span><a class="name" href="https://agentbheem.com/" target="_blank" rel="noopener">Agent Bheem</a><span class="mono">Agentic Business OS &amp; Orchestration</span></span>
+          <a class="mono os-link" href="https://agentbheem.com/" target="_blank" rel="noopener">agentbheem.com&nbsp;&#8599;</a>
         </div>
       </div>
     </div>
@@ -797,7 +814,7 @@ body:not(.present) .pbar{display:none}
     <div class="content">
       <div class="stack-v">
         <div>
-          <div class="idrow"><span class="tile t-agent" role="img" aria-label="Agent Bheem logo"></span><p class="eyebrow">Agent Bheem</p></div>
+          <div class="idrow"><a class="tile-a" href="https://agentbheem.com/" target="_blank" rel="noopener" aria-label="agentbheem.com"><span class="tile t-agent" role="img" aria-label="Agent Bheem logo"></span></a><p class="eyebrow">Agent Bheem</p><a class="plink" href="https://agentbheem.com/" target="_blank" rel="noopener">agentbheem.com&nbsp;&#8599;</a></div>
           <h2 class="h">The Agentic Business OS.</h2>
         </div>
         <p class="body">One intelligent operating ecosystem connecting business applications, people, AI agents, and workflows.</p>
@@ -868,7 +885,7 @@ body:not(.present) .pbar{display:none}
     <div class="content">
       <div class="stack-v">
         <div>
-          <div class="idrow"><span class="tile t-agent" role="img" aria-label="Agent Bheem logo"></span><p class="eyebrow">Agent Bheem in action</p></div>
+          <div class="idrow"><a class="tile-a" href="https://agentbheem.com/" target="_blank" rel="noopener" aria-label="agentbheem.com"><span class="tile t-agent" role="img" aria-label="Agent Bheem logo"></span></a><p class="eyebrow">Agent Bheem in action</p><a class="plink" href="https://agentbheem.com/" target="_blank" rel="noopener">agentbheem.com&nbsp;&#8599;</a></div>
           <h2 class="h">From Reports to Conversations.</h2>
         </div>
         <p class="body">Instead of opening dashboards, business owners simply ask. Agent Bheem runs ERP, CRM, HR, and finance through simple conversation and answers with live business numbers.</p>
@@ -895,7 +912,7 @@ body:not(.present) .pbar{display:none}
       <div class="ss-top">
         <div class="stack-v">
           <div>
-            <div class="idrow"><span class="tile t-ss" role="img" aria-label="SocialSelling.AI logo"></span><p class="eyebrow">SocialSelling.AI · AI sales, CRM &amp; marketing automation</p></div>
+            <div class="idrow"><a class="tile-a" href="https://socialselling.ai/" target="_blank" rel="noopener" aria-label="socialselling.ai"><span class="tile t-ss" role="img" aria-label="SocialSelling.AI logo"></span></a><p class="eyebrow">SocialSelling.AI</p><a class="plink" href="https://socialselling.ai/" target="_blank" rel="noopener">socialselling.ai&nbsp;&#8599;</a></div>
             <h2 class="h">Capture. Qualify. Convert. Automatically.</h2>
           </div>
           <p class="body">SocialSelling.AI combines CRM, social media automation, AI calling, content generation, performance marketing, customer engagement, and lead management into one intelligent growth platform.</p>
@@ -978,11 +995,11 @@ body:not(.present) .pbar{display:none}
     <div class="content">
       <div class="rk-top">
         <div>
-          <div class="idrow"><span class="tile t-ranko" role="img" aria-label="Ranko logo"></span><p class="eyebrow">Ranko · AI sales growth engine</p></div>
+          <div class="idrow"><a class="tile-a" href="https://bheem.marketing/" target="_blank" rel="noopener" aria-label="bheem.marketing"><span class="tile t-ranko" role="img" aria-label="Ranko logo"></span></a><p class="eyebrow">Ranko · AI sales growth engine</p><a class="plink" href="https://bheem.marketing/" target="_blank" rel="noopener">bheem.marketing&nbsp;&#8599;</a></div>
           <h2 class="h">Your AI Sales Growth Engine.</h2>
           <p class="lead rk-lead">Ranko works like a lead magnet. It studies your competitors, plans and creates your campaigns, runs your posts and Meta ads, then captures, calls, and converts every lead into a customer.</p>
         </div>
-        <span class="v v-ranko rk-logo" role="img" aria-label="Ranko logo: Your AI Marketing Brain"></span>
+        <a class="rk-logo-a" href="https://bheem.marketing/" target="_blank" rel="noopener" aria-label="Visit Ranko at bheem.marketing"><span class="v v-ranko rk-logo"></span></a>
       </div>
       <ol class="engine" aria-label="How Ranko grows sales">
           <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><span class="n">01</span><b>Analyze competitors</b></li>
