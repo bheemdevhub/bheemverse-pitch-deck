@@ -315,6 +315,10 @@ button{font:inherit}
 /* closing */
 .s-close .hero{font-size:calc(var(--fs-hero) * .82)}
 .s-close .hero .dim{display:block;color:var(--mut)}
+.close-cta{display:inline-flex;align-items:center;gap:1.4cqw;margin-top:var(--g3);padding:.9cqw 1.6cqw;border:1px solid rgba(76,141,255,.55);background:rgba(76,141,255,.12);border-radius:999px;flex-wrap:wrap}
+.close-cta .mono{color:var(--acc)}
+.close-cta .mail{font-size:var(--fs-lead);font-weight:600;letter-spacing:-.01em;color:var(--fg);text-decoration:none}
+.close-cta .mail:hover{text-decoration:underline;text-underline-offset:.2em}
 .sign{display:grid;grid-template-columns:auto 1fr auto;gap:var(--g3);align-items:baseline}
 .sign .co{font-weight:600;letter-spacing:.22em;font-size:calc(var(--fs-mono) * 1.25)}
 .sign .url{font-size:var(--fs-lead);font-weight:500;letter-spacing:-.01em;color:var(--fg)}
@@ -390,6 +394,7 @@ body.present .slide.on{display:block}
   body:not(.present) .steps5 .n{font-size:30px}
   body:not(.present) .cta{padding:16px;border-radius:10px}
   body:not(.present) .rk-logo{border-radius:14px}
+  body:not(.present) .close-cta{padding:10px 16px;gap:10px;border-radius:14px}
   body:not(.present) .fnlist{gap:6px}
   body:not(.present) .fnlist li{font-size:12.5px;padding:4px 10px}
   body:not(.present) .pipe{grid-template-columns:1fr;border-left:1px solid var(--line-2);margin-left:6px}
@@ -411,9 +416,51 @@ body.present .slide.on{display:block}
   body:not(.present) .s-vm .h{max-width:none}
   body:not(.present) .foot{flex-wrap:wrap}
 }
+/* ---------- voice + motion (slide 3) ---------- */
+@property --ang{syntax:"<angle>";initial-value:0deg;inherits:false}
+.listen{position:absolute;z-index:3;top:calc(var(--pad) * .62);right:var(--pad);display:inline-flex;align-items:center;gap:.7cqw;
+  background:rgba(76,141,255,.14);color:var(--fg);border:1px solid rgba(76,141,255,.5);border-radius:999px;
+  padding:.55cqw 1.2cqw .55cqw .9cqw;font:500 var(--fs-sm) var(--f-body);letter-spacing:-.005em;cursor:pointer;transition:background .2s,border-color .2s}
+.listen:hover{background:rgba(76,141,255,.26)}
+.listen[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#FFFFFF}
+.listen .eq{display:inline-flex;align-items:center;gap:.18cqw;height:1.2cqw}
+.listen .eq i{display:block;width:.2cqw;min-width:2px;height:40%;border-radius:2px;background:currentColor}
+.listen .eq i:nth-child(2){height:75%}.listen .eq i:nth-child(3){height:100%}.listen .eq i:nth-child(4){height:55%}
+.listen[aria-pressed="true"] .eq i{animation:eq .9s ease-in-out infinite}
+.listen[aria-pressed="true"] .eq i:nth-child(2){animation-delay:-.3s}.listen[aria-pressed="true"] .eq i:nth-child(3){animation-delay:-.6s}.listen[aria-pressed="true"] .eq i:nth-child(4){animation-delay:-.15s}
+@keyframes eq{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+
+/* narration spotlight: the spoken block stays bright, the rest dims */
+[data-nar]{transition:opacity .45s ease, box-shadow .45s ease, transform .45s ease}
+.slide.narrating [data-nar]{opacity:.32}
+.slide.narrating [data-nar].speaking{opacity:1}
+.slide.narrating .offer.speaking{box-shadow:0 0 0 1px var(--blue), 0 1.2cqw 3cqw rgba(76,141,255,.28);transform:translateY(-.3cqw)}
+.slide.narrating .h.speaking,.slide.narrating .gl-sub.speaking{text-shadow:0 0 2.4cqw rgba(76,141,255,.35)}
+
+/* entrance: blocks rise in, starting from a visible state */
+.s-gl.enter [data-nar]{animation:rise .9s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--d, 0) * 110ms)}
+@keyframes rise{from{opacity:.2;transform:translateY(1.6cqw)}to{opacity:1;transform:none}}
+
+/* ambient: a glow passes across the agent tiles; a light circles the automation card */
+.tiles .tile{animation:tilepulse 5s ease-in-out infinite;animation-delay:calc(var(--k, 0) * .45s + 1s)}
+@keyframes tilepulse{0%,22%,100%{transform:none;box-shadow:0 0 0 1px rgba(150,175,235,.28)}
+  9%{transform:translateY(-.35cqw) scale(1.08);box-shadow:0 0 0 1.5px #7FB0FF,0 .7cqw 1.6cqw rgba(76,141,255,.5)}}
+.offer.hl{position:relative;isolation:isolate}
+.offer.hl::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;pointer-events:none;
+  background:conic-gradient(from var(--ang), rgba(127,176,255,0) 0deg, #9CC2FF 50deg, rgba(127,176,255,0) 110deg, rgba(127,176,255,0) 360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;
+  animation:orbit 5.5s linear infinite}
+@keyframes orbit{to{--ang:360deg}}
+
+@media (max-width: 799px){
+  body:not(.present) .listen{top:14px;right:14px;padding:6px 12px 6px 10px;gap:8px;font-size:13px}
+  body:not(.present) .listen .eq{height:13px;gap:2px}
+  body:not(.present) .s-gl .content > div:first-child{padding-top:30px}
+}
 @media (prefers-reduced-motion: reduce){
   .flow line{animation:none}
-  .btn{transition:none}
+  .btn,.listen,[data-nar]{transition:none}
+  .tiles .tile,.offer.hl::before,.s-gl.enter [data-nar],.listen[aria-pressed="true"] .eq i{animation:none}
 }
 </style>
 </head>
@@ -466,33 +513,41 @@ body.present .slide.on{display:block}
 </section>
 
 <!-- At a glance -->
-<section class="slide dark s-gl" aria-label="Bheemverse at a glance">
+<section class="slide dark s-gl" aria-label="Bheemverse at a glance" data-narration="gl">
+  <button class="listen" type="button" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="lbl">Listen</span></button>
+  <script type="application/json" id="nar-gl">[
+    {"t":"h","say":"Bheemverse builds AI agents that scale your business."},
+    {"t":"sub","say":"We build, deploy, and run AI agents and end-to-end AI automation across sales, marketing, finance, H R, and operations, so your business can scale without scaling manual work."},
+    {"t":"o1","say":"Choose ready-to-deploy AI agents: a specialist agent for every department. Agent Bheem, Social Selling A I, Ranko, C A Fino, and H R Stephy."},
+    {"t":"o2","say":"Or let us automate your business from start to finish. We design, build, integrate, and run custom A I for your processes, from the first lead to the final report."},
+    {"t":"figs","say":"Five ready-to-deploy agents. Solutions for eight industries. Agents working twenty-four seven. And every model, agent, and platform is built in-house, by our own A I team."}
+  ]</script>
   <div class="frame">
     <div class="content">
       <div>
         <p class="eyebrow">Bheemverse at a glance</p>
-        <h2 class="h">AI Agents That Scale Your Business.</h2>
-        <p class="lead gl-sub">We build, deploy, and run AI agents and end-to-end AI automation across sales, marketing, finance, HR, and operations, so your business can scale without scaling manual work.</p>
+        <h2 class="h" data-nar="h" style="--d:0">AI Agents That Scale Your Business.</h2>
+        <p class="lead gl-sub" data-nar="sub" style="--d:1">We build, deploy, and run AI agents and end-to-end AI automation across sales, marketing, finance, HR, and operations, so your business can scale without scaling manual work.</p>
       </div>
       <div class="offers">
-        <div class="offer">
+        <div class="offer" data-nar="o1" style="--d:2">
           <p class="mono">Ready-to-deploy AI agents</p>
           <b>A specialist AI agent for every department.</b>
           <span class="tiles" aria-label="Agent Bheem, SocialSelling.AI, Ranko, CA Fino and HR Stephy">
-            <span class="tile t-agent"></span><span class="tile t-ss"></span><span class="tile t-ranko"></span><span class="tile t-fino"></span><span class="tile t-stephy"></span>
+            <span class="tile t-agent" style="--k:0"></span><span class="tile t-ss" style="--k:1"></span><span class="tile t-ranko" style="--k:2"></span><span class="tile t-fino" style="--k:3"></span><span class="tile t-stephy" style="--k:4"></span>
             <span class="tl">Agent Bheem · SocialSelling.AI · Ranko · CA Fino · HR Stephy</span>
           </span>
         </div>
-        <div class="offer hl">
+        <div class="offer hl" data-nar="o2" style="--d:3">
           <p class="mono">End-to-end AI automation</p>
           <b>We automate your business, start to finish.</b>
           <span class="dsc">We design, build, integrate, and run custom AI for your processes, from the first lead to the final report.</span>
         </div>
       </div>
-      <ul class="figs">
-        <li><span class="f">5</span><span class="l">Ready-to-deploy AI agents</span></li>
-        <li><span class="f">8</span><span class="l">Industries with tailored AI solutions</span></li>
-        <li><span class="f">24/7</span><span class="l">Agents that work around the clock</span></li>
+      <ul class="figs" data-nar="figs" style="--d:4">
+        <li><span class="f" data-count="5">5</span><span class="l">Ready-to-deploy AI agents</span></li>
+        <li><span class="f" data-count="8">8</span><span class="l">Industries with tailored AI solutions</span></li>
+        <li><span class="f" data-count="24" data-suffix="/7">24/7</span><span class="l">Agents that work around the clock</span></li>
         <li><span class="f word">In-house</span><span class="l">Models, agents, and platforms built by our own AI team</span></li>
       </ul>
     </div>
@@ -908,7 +963,13 @@ body.present .slide.on{display:block}
   <div class="frame">
     <div class="content">
       <div class="lg lg-bv brandmark" role="img" aria-label="Bheemverse logo"></div>
-      <h2 class="hero">The Future Is Intelligent.<span class="dim">We Are Engineering It.</span></h2>
+      <div>
+        <h2 class="hero">The Future Is Intelligent.<span class="dim">We Are Engineering It.</span></h2>
+        <div class="close-cta">
+          <span class="mono">Book an AI demo</span>
+          <a class="mail" href="mailto:support@bheemverse.com">support@bheemverse.com</a>
+        </div>
+      </div>
       <div class="sign">
         <span class="co">BHEEMVERSE INNOVATION PVT. LTD.</span>
         <span class="mono">AI Development · Agentic Intelligence · Enterprise Innovation</span>
@@ -948,6 +1009,7 @@ body.present .slide.on{display:block}
     return best;
   }
   function go(i) {
+    stopNarration();
     cur = Math.max(0, Math.min(total - 1, i));
     if (isPresent()) {
       slides.forEach((s, k) => s.classList.toggle('on', k === cur));
@@ -964,6 +1026,7 @@ body.present .slide.on{display:block}
     try { const p = document.documentElement.requestFullscreen?.(); if (p) p.catch(() => {}); } catch (e) {}
   }
   function exit() {
+    stopNarration();
     body.classList.remove('present');
     pctl.hidden = true;
     slides.forEach(s => s.classList.remove('on'));
@@ -975,13 +1038,15 @@ body.present .slide.on{display:block}
   document.getElementById('exit').addEventListener('click', exit);
   document.getElementById('prev').addEventListener('click', () => go(cur - 1));
   document.getElementById('next').addEventListener('click', () => go(cur + 1));
-  slides.forEach(s => s.addEventListener('click', () => { if (isPresent()) go(cur + 1); }));
+  slides.forEach(s => s.addEventListener('click', e => { if (e.target.closest('.listen')) return; if (isPresent()) go(cur + 1); }));
   document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && isPresent()) exit(); });
 
   document.addEventListener('keydown', e => {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     if (e.target.closest && e.target.closest('input,textarea,select')) return;
     const k = e.key;
+    if ((k === ' ' || k === 'Enter') && e.target.closest && e.target.closest('button')) return;
+    if (k === 'v' || k === 'V') { const s = isPresent() ? slides[cur] : slides[nearest()]; if (s.dataset.narration) { e.preventDefault(); toggleNarration(s); } return; }
     if (isPresent()) {
       if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].includes(k)) { e.preventDefault(); go(cur + 1); }
       else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(k)) { e.preventDefault(); go(cur - 1); }
@@ -994,6 +1059,94 @@ body.present .slide.on{display:block}
       else if (k === 'ArrowLeft') { e.preventDefault(); go(nearest() - 1); }
     }
   });
+
+  /* ---------- narration (browser speech) ---------- */
+  const synth = 'speechSynthesis' in window ? window.speechSynthesis : null;
+  let narrating = null, voice = null;
+  function pickVoice() {
+    if (!synth) return null;
+    const vs = synth.getVoices();
+    let best = null, bs = -1;
+    for (const v of vs) {
+      const l = (v.lang || '').toLowerCase(), n = v.name.toLowerCase();
+      if (!l.startsWith('en')) continue;
+      let s = 1;
+      if (l === 'en-in' || l === 'en_in') s += 4;
+      if (/natural|online|neural|premium|enhanced/.test(n)) s += 3;
+      if (/google/.test(n)) s += 2;
+      if (l === 'en-gb' || l === 'en-us') s += 1;
+      if (s > bs) { bs = s; best = v; }
+    }
+    return best;
+  }
+  if (synth) { voice = pickVoice(); synth.addEventListener?.('voiceschanged', () => { voice = pickVoice(); }); }
+  function setSpeaking(slide, key) {
+    slide.querySelectorAll('[data-nar]').forEach(el => el.classList.toggle('speaking', el.dataset.nar === key));
+  }
+  function stopNarration() {
+    if (!narrating) return;
+    const s = narrating; narrating = null;
+    try { synth && synth.cancel(); } catch (e) {}
+    s.classList.remove('narrating');
+    s.querySelectorAll('[data-nar].speaking').forEach(el => el.classList.remove('speaking'));
+    const b = s.querySelector('.listen'); if (b) { b.setAttribute('aria-pressed', 'false'); b.querySelector('.lbl').textContent = 'Listen'; }
+  }
+  function toggleNarration(slide) {
+    if (narrating === slide) { stopNarration(); return; }
+    stopNarration();
+    const b = slide.querySelector('.listen');
+    if (!synth) { if (b) b.querySelector('.lbl').textContent = 'Voice not supported in this browser'; return; }
+    let steps = [];
+    try { steps = JSON.parse(document.getElementById('nar-' + slide.dataset.narration).textContent); } catch (e) { return; }
+    narrating = slide;
+    slide.classList.add('narrating');
+    if (b) { b.setAttribute('aria-pressed', 'true'); b.querySelector('.lbl').textContent = 'Stop'; }
+    synth.cancel();
+    let i = 0;
+    const next = () => {
+      if (narrating !== slide) return;
+      if (i >= steps.length) { stopNarration(); return; }
+      const st = steps[i++];
+      setSpeaking(slide, st.t);
+      const u = new SpeechSynthesisUtterance(st.say);
+      if (voice) { u.voice = voice; u.lang = voice.lang; } else u.lang = 'en-IN';
+      u.rate = 0.98; u.pitch = 1;
+      u.onend = () => setTimeout(next, 260);
+      u.onerror = () => { if (narrating === slide) stopNarration(); };
+      synth.speak(u);
+    };
+    next();
+  }
+  document.querySelectorAll('.slide[data-narration] .listen').forEach(b => {
+    b.addEventListener('click', e => { e.stopPropagation(); toggleNarration(b.closest('.slide')); });
+  });
+  window.addEventListener('pagehide', () => { try { synth && synth.cancel(); } catch (e) {} });
+
+  /* ---------- slide-3 entrance + count-up ---------- */
+  function countUp(el) {
+    const end = +el.dataset.count, suf = el.dataset.suffix || '', t0 = performance.now(), dur = 1100;
+    const tick = now => {
+      const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(end * e) + suf;
+      if (p < 1) requestAnimationFrame(tick); else el.textContent = end + suf;
+    };
+    requestAnimationFrame(tick);
+  }
+  if (!reduce && 'IntersectionObserver' in window) {
+    const gl = document.querySelector('.s-gl');
+    let shown = false;
+    const io2 = new IntersectionObserver(entries => {
+      for (const en of entries) {
+        const vis = en.intersectionRatio >= 0.45;
+        if (vis && !shown) {
+          shown = true;
+          gl.classList.remove('enter'); void gl.offsetWidth; gl.classList.add('enter');
+          gl.querySelectorAll('[data-count]').forEach(countUp);
+        } else if (en.intersectionRatio < 0.05) { shown = false; }
+      }
+    }, { threshold: [0, 0.05, 0.45] });
+    if (gl) io2.observe(gl);
+  }
 
   /* ---------- canvases ---------- */
   function mulberry32(a) { return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
