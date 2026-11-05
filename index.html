@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@500&amp;family=Noto+Sans+Devanagari:wght@500&amp;family=Noto+Sans+Tamil:wght@500&amp;family=Noto+Sans+Kannada:wght@500&amp;family=Noto+Sans+Arabic:wght@500&amp;display=swap&amp;text=EFaghilnoprs%C3%A7%C3%B1%D8%A7%D8%A8%D8%A9%D8%B1%D8%B9%D9%84%D9%8A%E0%A4%A6%E0%A4%A8%E0%A4%B9%E0%A4%BF%E0%A5%80%E0%A5%8D%E0%AE%A4%E0%AE%AE%E0%AE%B4%E0%AE%BF%E0%AF%8D%E0%B2%95%E0%B2%A1%E0%B2%A8%E0%B3%8D%E0%B4%82%E0%B4%AE%E0%B4%AF%E0%B4%B2%E0%B4%B3%E0%B4%BE">
 <style>
 /* Layout: a stack of 16:9 keynote frames alternating deep navy and white; each frame scales with its own width (container units). Present mode shows one frame at a time. */
 :root{
@@ -252,17 +253,23 @@ button{font:inherit}
 
 /* conversational: actionable calling */
 .s-conv .content{display:grid;grid-template-columns:1fr auto;gap:calc(var(--g3) * 1.3);align-items:center}
-.cv-left{display:flex;flex-direction:column;gap:var(--g2);min-width:0}
+.cv-left{display:flex;flex-direction:column;gap:1.45cqw;min-width:0}
 .act-callout{display:grid;grid-template-columns:auto 1fr;gap:1.1cqw;align-items:start;padding:1.2cqw 1.4cqw;border:1px solid rgba(76,141,255,.55);background:rgba(76,141,255,.12);border-radius:.9cqw}
 .act-callout .bolt{width:2.4cqw;height:2.4cqw;border-radius:50%;display:grid;place-items:center;background:#4C8DFF;color:#FFFFFF;box-shadow:0 0 1.6cqw rgba(76,141,255,.55)}
 .act-callout .bolt svg{width:1.3cqw;height:1.3cqw}
 .act-callout p{font-size:var(--fs-sm);line-height:1.5;color:var(--mut);text-wrap:pretty}
 .act-callout b{color:var(--fg);font-weight:600}
 .cv-caps{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--g2)}
-.cv-caps li{position:relative;border-top:1px solid var(--line);padding:.8cqw 0 .8cqw 1.4cqw;font-size:var(--fs-sm);font-weight:500;letter-spacing:-.01em;line-height:1.3}
-.cv-caps li::before{content:"";position:absolute;left:0;top:calc(.8cqw + .65em);width:.5cqw;height:.5cqw;border-radius:50%;background:var(--acc);transform:translateY(-50%)}
+.cv-caps li{position:relative;border-top:1px solid var(--line);padding:.68cqw 0 .68cqw 1.4cqw;font-size:var(--fs-sm);font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.cv-caps li::before{content:"";position:absolute;left:0;top:calc(.68cqw + .65em);width:.5cqw;height:.5cqw;border-radius:50%;background:var(--acc);transform:translateY(-50%)}
 .kicker{font-size:var(--fs-item);font-weight:600;letter-spacing:-.015em;color:var(--fg)}
-.wave canvas{display:block;width:100%;height:6.4cqw}
+.wave canvas{display:block;width:100%;height:5.2cqw}
+.langs{display:flex;align-items:center;gap:1.2cqw;flex-wrap:wrap}
+.langs .mono{color:var(--acc);white-space:nowrap}
+.lang-chips{display:flex;flex-wrap:wrap;gap:.5cqw}
+.lang-chips li{font-family:var(--f-body),"Noto Sans Malayalam","Noto Sans Devanagari","Noto Sans Tamil","Noto Sans Kannada","Noto Sans Arabic",system-ui,sans-serif;
+  font-size:1cqw;font-weight:500;line-height:1.5;color:var(--fg);padding:.22cqw .85cqw;border-radius:999px;border:1px solid rgba(127,176,255,.42);background:rgba(76,141,255,.1);white-space:nowrap}
+.lang-chips li.more{border-style:dashed;color:var(--acc);background:transparent}
 .stages{display:grid;grid-template-columns:repeat(3,1fr);margin-top:.8cqw}
 .stages span:nth-child(2){text-align:center}
 .stages span:nth-child(3){text-align:right;color:var(--acc)}
@@ -485,6 +492,8 @@ body.present .slide.on{display:block}
   body:not(.present) .cv-left{width:100%}
   body:not(.present) .cv-caps{grid-template-columns:1fr}
   body:not(.present) .wave canvas{height:70px}
+  body:not(.present) .lang-chips{gap:6px}
+  body:not(.present) .lang-chips li{font-size:13px;padding:3px 10px}
   body:not(.present) .act-callout{padding:14px;border-radius:12px;gap:12px}
   body:not(.present) .act-callout .bolt{width:30px;height:30px}
   body:not(.present) .act-callout .bolt svg{width:16px;height:16px}
@@ -891,6 +900,10 @@ body:not(.present) .pbar{display:none}
           <canvas class="wavecv" aria-hidden="true"></canvas>
           <div class="stages mono"><span>Understand</span><span>Engage</span><span>Act</span></div>
         </div>
+        <div class="langs">
+          <p class="mono">Indian &amp; international languages</p>
+          <ul class="lang-chips" aria-label="Languages: Malayalam, Hindi, English, Tamil, Kannada, Arabic, Spanish, French and more"><li lang="ml">മലയാളം</li><li lang="hi">हिन्दी</li><li lang="en">English</li><li lang="ta">தமிழ்</li><li lang="kn">ಕನ್ನಡ</li><li lang="ar" dir="rtl">العربية</li><li lang="es">Español</li><li lang="fr">Français</li><li class="more">+ more</li></ul>
+        </div>
         <ul class="cv-caps">
           <li>Inbound &amp; outbound AI calling</li>
           <li>WhatsApp voice calls</li>
@@ -1213,7 +1226,7 @@ body:not(.present) .pbar{display:none}
   });
 
   /* ---------- entrance animation + count-up for every slide ---------- */
-  const STG = ['.engineer', '.stack', '.products', '.outs', '.figs', '.offers', '.caps', '.pipe', '.rk-caps', '.rk-list', '.engine', '.pills', '.cv-caps', '.desks', '.approve', '.ind', '.track', '.steps5', '.vm', '.claims', '.asks', '.duo'];
+  const STG = ['.engineer', '.stack', '.products', '.outs', '.figs', '.offers', '.caps', '.pipe', '.rk-caps', '.rk-list', '.engine', '.pills', '.cv-caps', '.lang-chips', '.desks', '.approve', '.ind', '.track', '.steps5', '.vm', '.claims', '.asks', '.duo'];
   slides.forEach(s => {
     s.querySelectorAll('.content > *').forEach((el, i) => el.style.setProperty('--d', i));
     s.querySelectorAll(STG.join(',')).forEach(g => {
