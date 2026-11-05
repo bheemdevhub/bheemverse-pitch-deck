@@ -208,8 +208,12 @@ a.url{color:var(--fg)}
 .layer.cloud{background:#FFFFFF;border-color:rgba(124,77,255,.45);box-shadow:0 .8cqw 2cqw rgba(91,58,200,.12)}
 .layer.cloud .role{color:#6D3FE6}
 .cloud-row{display:flex;align-items:center;gap:1.4cqw}
-.cloud-logo{flex:none;height:2.9cqw;width:calc(2.9cqw * 2.864)}
+.cloud-logo{display:block;flex:none;height:2.9cqw;width:calc(2.9cqw * 2.864)}
 .cloud-row .d{margin:0}
+.cloud-a{display:block;flex:none;border-radius:.4cqw;transition:transform .25s ease}
+.cloud-a:hover{transform:translateY(-.15cqw)}
+.cloud-link{font-family:var(--f-mono);font-size:.82em;letter-spacing:.04em;color:#6D3FE6;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(109,63,230,.35)}
+.cloud-link:hover{border-bottom-color:#6D3FE6}
 
 /* agent bheem */
 .s-agent.dark{--bg:radial-gradient(55% 75% at 74% 52%, #11245C 0%, rgba(17,36,92,0) 70%), var(--navy-deep)}
@@ -731,7 +735,7 @@ body:not(.present) .pbar{display:none}
         <div class="layer" style="--i:3" role="listitem"><span class="role">Interfaces</span><span><b>Conversational Intelligence</b><span class="d">Multilingual voice AI, calling, and chat.</span></span></div>
         <div class="layer" style="--i:2" role="listitem"><span class="role">Orchestration</span><span><b>Multi-Agent Orchestration</b><span class="d">Agents, workflows, and apps working as one.</span></span></div>
         <div class="layer hl" style="--i:1" role="listitem"><span class="role">Models</span><span><b>AI Model Engineering</b><span class="d">Our own domain-trained and customized models.</span></span></div>
-        <div class="layer cloud" style="--i:0" role="listitem"><span class="role">Infrastructure</span><span class="cloud-row"><span class="lg lg-cloud cloud-logo" role="img" aria-label="Bheem Cloud"></span><span class="d">Our own AI cloud: secure, scalable, private hosting for every model and agent we run.</span></span></div>
+        <div class="layer cloud" style="--i:0" role="listitem"><span class="role">Infrastructure</span><span class="cloud-row"><a class="cloud-a" href="https://bheem.cloud" target="_blank" rel="noopener" aria-label="Visit Bheem Cloud at bheem.cloud"><span class="lg lg-cloud cloud-logo"></span></a><span class="d">Our own AI cloud: secure, scalable, private hosting for every model and agent we run. <a class="cloud-link" href="https://bheem.cloud" target="_blank" rel="noopener">bheem.cloud&nbsp;&#8599;</a></span></span></div>
       </div>
     </div>
     <footer class="foot"><a class="home" href="https://bheemverse.com" target="_blank" rel="noopener">bheemverse.com</a><span class="r"><span>Our technology</span><span class="num"></span></span></footer>
