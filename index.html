@@ -122,15 +122,22 @@ button{font:inherit}
 .engineer li.mono{font-size:var(--fs-mono);font-weight:400;letter-spacing:.12em;color:var(--acc)}
 
 /* at a glance */
-.s-gl .content{justify-content:space-between}
+.s-gl .content{justify-content:space-between;gap:var(--g2)}
+.gl-sub{color:var(--mut);max-width:60ch;margin-top:var(--g1)}
+.offers{display:grid;grid-template-columns:1fr 1fr;gap:var(--g1)}
+.offer{background:var(--panel);border:1px solid var(--line);border-radius:.8cqw;padding:1.4cqw 1.7cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.offer.hl{border-color:rgba(76,141,255,.55);background:rgba(76,141,255,.12)}
+.offer .mono{color:var(--acc)}
+.offer b{font-size:var(--fs-big);font-weight:600;letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
+.offer .dsc{font-size:var(--fs-sm);color:var(--mut);line-height:1.5;text-wrap:pretty}
+.tiles{display:flex;align-items:center;gap:.55cqw;flex-wrap:wrap}
+.tiles .tile{width:2.7cqw}
+.tiles .tl{font-size:var(--fs-sm);color:var(--mut);margin-left:.5cqw}
 .figs{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--g2)}
-.figs li{border-top:1px solid var(--line-2);padding-top:var(--g2);display:flex;flex-direction:column;gap:var(--g1);min-width:0}
-.figs .f{display:flex;align-items:flex-end;min-height:6cqw;font-family:var(--f-display);font-weight:600;font-size:6.4cqw;line-height:.9;letter-spacing:-.055em;color:var(--fg);font-variant-numeric:tabular-nums;white-space:nowrap}
-.figs .f.word{font-size:4.1cqw;letter-spacing:-.045em;color:var(--acc)}
-.figs .l{font-size:var(--fs-sm);color:var(--mut);line-height:1.45;max-width:24ch;text-wrap:pretty}
-.specline{display:flex;flex-wrap:wrap;gap:.6cqw 1.6cqw;border-top:1px solid var(--line);padding-top:var(--g2);font-family:var(--f-mono);font-size:var(--fs-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--fg)}
-.specline li{display:flex;align-items:center;gap:1.6cqw}
-.specline li+li::before{content:"";width:.4cqw;height:.4cqw;border-radius:50%;background:var(--acc);margin-left:-.8cqw;margin-right:-.8cqw}
+.figs li{border-top:1px solid var(--line-2);padding-top:var(--g1);display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.figs .f{display:flex;align-items:flex-end;min-height:4.6cqw;font-family:var(--f-display);font-weight:600;font-size:4.9cqw;line-height:.9;letter-spacing:-.055em;color:var(--fg);font-variant-numeric:tabular-nums;white-space:nowrap}
+.figs .f.word{font-size:3.4cqw;letter-spacing:-.045em;color:var(--acc)}
+.figs .l{font-size:var(--fs-sm);color:var(--mut);line-height:1.4;max-width:26ch;text-wrap:pretty}
 
 /* what we do */
 .s-do .content{gap:var(--g3)}
@@ -372,11 +379,12 @@ body.present .slide.on{display:block}
   body:not(.present) .act-phone{position:static;height:320px}
   body:not(.present) .tile{border-radius:22%}
   body:not(.present) .figs{grid-template-columns:1fr 1fr;row-gap:24px}
-  body:not(.present) .figs .f{font-size:48px;min-height:44px}
-  body:not(.present) .figs .f.word{font-size:32px}
-  body:not(.present) .specline{gap:8px 18px}
-  body:not(.present) .specline li{gap:18px}
-  body:not(.present) .specline li+li::before{width:4px;height:4px;margin:0 -9px}
+  body:not(.present) .figs .f{font-size:44px;min-height:40px}
+  body:not(.present) .figs .f.word{font-size:30px}
+  body:not(.present) .offers{grid-template-columns:1fr}
+  body:not(.present) .offer{padding:16px;border-radius:10px}
+  body:not(.present) .tiles .tile{width:32px}
+  body:not(.present) .tiles .tl{flex-basis:100%;margin:4px 0 0}
   body:not(.present) .outs li{padding:16px;border-radius:10px}
   body:not(.present) .outs .who .tile{width:36px}
   body:not(.present) .steps5 .n{font-size:30px}
@@ -463,16 +471,29 @@ body.present .slide.on{display:block}
     <div class="content">
       <div>
         <p class="eyebrow">Bheemverse at a glance</p>
-        <h2 class="h">An AI Company, End to End.</h2>
+        <h2 class="h">AI Agents That Scale Your Business.</h2>
+        <p class="lead gl-sub">We build, deploy, and run AI agents and end-to-end AI automation across sales, marketing, finance, HR, and operations, so your business can scale without scaling manual work.</p>
+      </div>
+      <div class="offers">
+        <div class="offer">
+          <p class="mono">Ready-to-deploy AI agents</p>
+          <b>A specialist AI agent for every department.</b>
+          <span class="tiles" aria-label="Agent Bheem, SocialSelling.AI, Ranko, CA Fino and HR Stephy">
+            <span class="tile t-agent"></span><span class="tile t-ss"></span><span class="tile t-ranko"></span><span class="tile t-fino"></span><span class="tile t-stephy"></span>
+            <span class="tl">Agent Bheem · SocialSelling.AI · Ranko · CA Fino · HR Stephy</span>
+          </span>
+        </div>
+        <div class="offer hl">
+          <p class="mono">End-to-end AI automation</p>
+          <b>We automate your business, start to finish.</b>
+          <span class="dsc">We design, build, integrate, and run custom AI for your processes, from the first lead to the final report.</span>
+        </div>
       </div>
       <ul class="figs">
-        <li><span class="f">5</span><span class="l">AI products for sales, marketing, finance, HR, and operations</span></li>
+        <li><span class="f">5</span><span class="l">Ready-to-deploy AI agents</span></li>
         <li><span class="f">8</span><span class="l">Industries with tailored AI solutions</span></li>
-        <li><span class="f">24/7</span><span class="l">AI agents that keep working around the clock</span></li>
-        <li><span class="f word">In-house</span><span class="l">Models, agents, and platforms engineered by our own team</span></li>
-      </ul>
-      <ul class="specline" aria-label="Core capabilities">
-        <li>Domain-trained models</li><li>Multi-agent orchestration</li><li>Multilingual voice AI</li><li>Enterprise integrations</li><li>Private cloud deployment</li>
+        <li><span class="f">24/7</span><span class="l">Agents that work around the clock</span></li>
+        <li><span class="f word">In-house</span><span class="l">Models, agents, and platforms built by our own AI team</span></li>
       </ul>
     </div>
     <footer class="foot"><span>Bheemverse</span><span class="r"><span>At a glance</span><span class="num"></span></span></footer>
