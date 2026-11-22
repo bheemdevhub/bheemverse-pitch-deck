@@ -478,6 +478,132 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
 @media (prefers-reduced-motion: no-preference) {
   .play .mrow .mbar i { transform-origin: left center; animation: grow 1s cubic-bezier(.2, .8, .2, 1) both; animation-delay: .9s; }
 }
+/* ── illustrations: one picture tile per module slide, drawn in the deck's palette ── */
+.hero-car { position: absolute; right: 1cqw; top: 50%; translate: 0 -40%; width: 50cqw; z-index: 0; overflow: visible; }
+.cover h1, .cover .lead { position: relative; z-index: 1; }
+.art { position: absolute; z-index: 2; right: 5cqw; top: 2.6cqw; width: 27.6cqw; height: 10.6cqw; border-radius: 1.1cqw; overflow: hidden;
+  border: 1px solid rgba(var(--glow-rgb), .45); box-shadow: 0 1.4cqw 2.8cqw -1.6cqw rgba(var(--ground-rgb), .75), 0 0 0 .3cqw rgba(255, 255, 255, .04); }
+.light .art { box-shadow: 0 1.4cqw 2.8cqw -1.4cqw rgba(10, 23, 71, .45); }
+.art svg { display: block; width: 100%; height: 100%; }
+.has-art h2 { max-width: 58cqw; }
+.has-art > .wm { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .play .art { animation: artIn 1s cubic-bezier(.2, .8, .2, 1) both; animation-delay: .3s; }
+  @keyframes artIn { from { opacity: 0; transform: translateY(-1cqw) scale(.97); } }
+  .play .hero-car .car { animation: driveIn 1.6s cubic-bezier(.2, .8, .2, 1) both; animation-delay: .25s; }
+  @keyframes driveIn { from { transform: translateX(18%); opacity: 0; } }
+  .play .hero-car .streaks { animation: fIn 1.2s ease both; animation-delay: .9s; }
+  .hero-car .beam { animation: beam 3.6s ease-in-out infinite; }
+  @keyframes beam { 50% { opacity: .45; } }
+  .art .flow, .hero-car .spin, .art .spin { animation: flowDash 1.4s linear infinite; }
+  @keyframes flowDash { to { stroke-dashoffset: -14; } }
+  .art .twinkle { animation: twinkle 2.8s ease-in-out infinite; }
+  @keyframes twinkle { 50% { opacity: .35; } }
+  .art .drip { animation: drip 2.6s ease-in infinite; }
+  @keyframes drip { 0% { transform: translateY(-4px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(3px); opacity: 0; } }
+  .art .lift { animation: lift 4s ease-in-out infinite; }
+  @keyframes lift { 50% { transform: translateY(-1.5px); } }
+}
+
+/* ── visual layouts: same words, drawn as journeys, loops, lanes and flows ── */
+.lane-h { display: flex; align-items: center; gap: .6cqw; margin: 0; font: 600 .92cqw var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); }
+.dark .lane-h { color: var(--cyan); }
+.lane-h svg { width: 1.2cqw; height: 1.2cqw; }
+/* 2 · journey with leaks */
+.journey { position: relative; height: 5.6cqw; margin: 0 0 -.6cqw; }
+.journey::before { content: ""; position: absolute; left: 0; right: 0; top: 1.4cqw; height: .55cqw; border-radius: 1cqw; background: linear-gradient(90deg, var(--accent-deep), var(--blue) 50%, var(--teal)); }
+.ms { position: absolute; top: 0; left: calc(var(--p) * 1%); display: grid; justify-items: center; gap: .5cqw; translate: -50% 0; }
+.ms:first-child { translate: 0 0; justify-items: start; } .ms:nth-child(5) { translate: -100% 0; justify-items: end; }
+.ms i { width: 1.6cqw; height: 1.6cqw; margin-top: .9cqw; border-radius: 50%; background: var(--white); border: .3cqw solid var(--accent-deep); }
+.ms em { font: 600 .85cqw var(--f-mono); font-style: normal; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap; }
+.drop { position: absolute; left: calc(var(--p) * 1%); top: .3cqw; translate: -50% 0; width: 2.8cqw; height: 2.8cqw; border-radius: 50%; display: grid; place-items: center; background: var(--red); color: #fff; box-shadow: 0 0 0 .35cqw rgba(229, 72, 77, .18); }
+.drop::after { content: ""; position: absolute; top: 100%; left: 50%; width: 0; height: 2.6cqw; border-left: 2px dashed rgba(229, 72, 77, .6); }
+.drop svg { width: 1.4cqw; height: 1.4cqw; }
+.leaks .panel { border-top: .3cqw solid var(--red); }
+/* 4 · lifecycle row + foundation */
+.lc { gap: 1cqw; justify-content: flex-start; padding-block: 1.2cqw 0; }
+.lc-row { display: grid; grid-template-columns: 1fr 1.6cqw 1fr 1.6cqw 1fr 1.6cqw 1fr 1.6cqw 1fr; align-items: stretch; }
+.lc-st { padding: 1.2cqw; } .lc-st h3 { font-size: 1.15cqw; } .lc-st p { font-size: .95cqw; }
+.chev { align-self: center; justify-self: center; width: 1cqw; height: 1cqw; border-top: .3cqw solid var(--teal); border-right: .3cqw solid var(--teal); rotate: 45deg; }
+.lc-loop { height: 1.8cqw; margin: -.4cqw 8% 0; border: 2px dashed rgba(var(--glow-rgb), .7); border-top: 0; border-radius: 0 0 1.4cqw 1.4cqw; position: relative; }
+.lc-loop span { position: absolute; left: 50%; bottom: -.9cqw; translate: -50% 0; display: inline-flex; align-items: center; gap: .5cqw; padding: .2cqw 1cqw; border-radius: 999px; background: var(--paper-2); font: 600 .9cqw var(--f-mono); color: var(--teal); white-space: nowrap; }
+.lc-loop svg { width: 1.1cqw; height: 1.1cqw; }
+.lc-base { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2cqw; }
+.lc-base .panel { display: grid; grid-template-columns: auto 1fr; gap: 1cqw; align-items: start; padding: 1.1cqw 1.3cqw; }
+.lc-base .ic { margin: 0; } .lc-base h3 { font-size: 1.15cqw; } .lc-base p { font-size: .95cqw; }
+/* 6 · agent lanes */
+.lanes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4cqw; align-items: start; }
+.lane-c { display: grid; gap: .8cqw; padding: 1.1cqw; border-radius: 1cqw; background: rgba(var(--accent-rgb), .05); border: 1px dashed rgba(var(--accent-rgb), .3); }
+.ag { display: grid; grid-template-columns: auto 1fr; gap: 1cqw; align-items: start; padding: 1cqw 1.2cqw; background: var(--white) !important; }
+.ag.hero { background: linear-gradient(150deg, var(--navy-800), var(--navy-950)) !important; }
+.ag .ic { margin: 0; } .ag h3 { font-size: 1.15cqw; margin-bottom: .3cqw; } .ag p { font-size: .95cqw; } .ag .tag { margin-top: .5cqw; font-size: .85cqw; }
+/* 7 · model table */
+.mtab { display: grid; gap: .45cqw; }
+.mt-h, .mt-r { display: grid; grid-template-columns: 17cqw 1fr 2.4cqw 1fr 15cqw; gap: 1.2cqw; align-items: center; }
+.mt-h span { font: 600 .85cqw var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); padding: 0 1cqw .3cqw; }
+.mt-r { padding: .55cqw 1cqw; border-radius: .7cqw; background: rgba(var(--deep-rgb), .6); border: 1px solid rgba(var(--line-rgb), .12); font-size: 1cqw; line-height: 1.35; }
+.mt-n { display: flex; align-items: center; gap: .8cqw; font: 700 1.1cqw var(--f-display); color: #fff; }
+.mt-n .ic { margin: 0; width: 2.1cqw; height: 2.1cqw; } .mt-n svg.ic { width: 1.1cqw; height: 1.1cqw; padding: .5cqw; }
+.mt-in { color: var(--mute); } .mt-out { color: #fff; font-weight: 600; }
+.mt-r .arw { width: 2.4cqw; height: 1cqw; color: var(--cyan); }
+.mt-t { justify-self: start; padding: .25cqw .8cqw; border-radius: 999px; border: 1px solid rgba(var(--glow-rgb), .45); background: rgba(var(--glow-rgb), .08); font: 600 .8cqw var(--f-mono); color: var(--cyan); }
+/* 10 · sources feeding the Target Guide */
+.feed { display: grid; grid-template-columns: 1fr 4cqw 20cqw; gap: 1.2cqw; align-items: center; }
+.feed-g { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8cqw; }
+.panel.sm { display: grid; grid-template-columns: auto 1fr; gap: .9cqw; align-items: start; padding: .85cqw 1.1cqw; }
+.panel.sm .ic { margin: 0; width: 2.2cqw; height: 2.2cqw; } .panel.sm h3 { font-size: 1.08cqw; margin-bottom: .2cqw; } .panel.sm p { font-size: .92cqw; line-height: 1.4; }
+.feed-ar { position: relative; height: 100%; display: grid; place-items: center; color: var(--teal); }
+.feed-ar i { position: absolute; left: 0; top: 6%; bottom: 6%; width: 1.2cqw; border: 2px solid rgba(var(--glow-rgb), .6); border-left: 0; border-radius: 0 1cqw 1cqw 0; }
+.feed-ar .arw { width: 2.6cqw; height: 1.4cqw; margin-left: 1.2cqw; }
+.feed-out { padding: 1.8cqw; } .feed-out h3 { font-size: 1.6cqw; } .feed-out p { font-size: 1.05cqw; }
+/* 12 · zig-zag timeline */
+.zz { position: relative; height: 27cqw; }
+.zz-line { position: absolute; left: 0; right: 0; top: 12.5cqw; height: .45cqw; border-radius: 1cqw; background: linear-gradient(90deg, var(--accent-deep), var(--blue) 50%, var(--teal)); }
+.zz-n { position: absolute; top: 12.72cqw; left: calc(var(--p) * 1%); translate: -50% -50%; width: 2.4cqw; height: 2.4cqw; border-radius: 50%; display: grid; place-items: center; font: 700 1cqw var(--f-display); color: #fff; background: var(--navy-900); box-shadow: 0 0 0 .3cqw var(--paper); z-index: 1; }
+.zz-n:nth-last-of-type(1) { background: var(--teal); }
+.zz-n::before { content: ""; position: absolute; left: 50%; width: 2px; height: 1.4cqw; background: rgba(var(--accent-rgb), .45); }
+.zz-n.up::before { bottom: 100%; } .zz-n.dn::before { top: 100%; }
+.zz-c { position: absolute; width: 16.4cqw; left: clamp(0cqw, calc(var(--p) * 1% - 8.2cqw), calc(100% - 16.4cqw)); padding: 1cqw 1.2cqw; border-radius: .8cqw; background: var(--white); border: 1px solid var(--hair); box-shadow: 0 1cqw 2cqw -1.6cqw rgba(25, 27, 32, .4); }
+.zz-c.up { bottom: 16.9cqw; } .zz-c.dn { top: 15.3cqw; }
+.zz-c h3 { display: flex; align-items: center; gap: .7cqw; margin: 0 0 .5cqw; font: 700 1.1cqw/1.2 var(--f-display); color: var(--navy-900); }
+.zz-c h3 .ic, .zz-c h3 svg.ic { margin: 0; flex: none; width: 1.1cqw; height: 1.1cqw; padding: .45cqw; }
+.zz-c p { margin: 0; font-size: .95cqw; line-height: 1.45; color: var(--ink-2); }
+.zz-c p b { color: var(--navy-900); font-weight: 600; } .zz-c .to { color: var(--teal); font-weight: 700; }
+/* when → then cards (13, 15, 16, 17) */
+.panel.wt { display: grid; grid-template-rows: 1fr auto; gap: .8cqw; padding: 1.1cqw 1.2cqw 0; overflow: hidden; }
+.wt-top { display: grid; grid-template-columns: auto 1fr; gap: .9cqw; align-items: start; }
+.wt-top .ic, .pat .wt-top .ic { float: none; margin: 0; width: 2.2cqw; height: 2.2cqw; }
+.panel.wt h3 { font-size: 1.15cqw; margin-bottom: .25cqw; } .panel.wt .wt-top p { font-size: .95cqw; line-height: 1.4; }
+.panel .wt-then { display: flex; align-items: flex-start; gap: .6cqw; margin: 0 -1.2cqw; padding: .7cqw 1.2cqw; font-size: .95cqw !important; line-height: 1.4; font-weight: 600; }
+.light .wt-then { background: rgba(var(--glow-rgb), .14); color: var(--navy-900) !important; border-top: 1px solid rgba(var(--glow-rgb), .35); }
+.dark .wt-then { background: rgba(var(--glow-rgb), .1); color: #fff !important; border-top: 1px solid rgba(var(--glow-rgb), .3); }
+.wt-then svg { flex: none; width: 1.1cqw; height: 1.1cqw; margin-top: .1cqw; color: var(--teal); }
+.dark .wt-then svg { color: var(--cyan); }
+.pat .body { gap: 1.4cqw; } .pat .g3 { gap: 1cqw; }
+/* 13 · service loop */
+.lp { display: grid; grid-template-columns: 1fr 2.6cqw 1fr 2.6cqw 1fr; grid-template-rows: auto 3.2cqw auto; align-items: stretch; }
+.lp-a { display: grid; place-items: center; color: var(--cyan); }
+.lp-a svg { width: 1.7cqw; height: 1.7cqw; }
+.lp-up, .lp-down { grid-column: span 1; } .lp-mid { grid-column: 2 / 5; display: flex; align-items: center; justify-content: center; gap: .7cqw; font: 600 .95cqw var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--cyan); }
+.lp-mid svg { width: 1.3cqw; height: 1.3cqw; }
+.lp-mid::before, .lp-mid::after { content: ""; flex: 1; height: 0; border-top: 2px dashed rgba(var(--glow-rgb), .4); margin: 0 1cqw; }
+/* 22 · data path */
+.sec { display: grid; grid-template-columns: 1fr 1.15fr 1fr 1.15fr 1fr; gap: 1cqw; align-items: center; }
+.sec-n { padding: 1.2cqw; } .sec-n h3 { font-size: 1.2cqw; } .sec-n p { font-size: .95cqw; }
+.sec-l { position: relative; text-align: center; padding-top: 3.2cqw; }
+.sec-l h3 { display: inline-flex; align-items: center; gap: .5cqw; margin: 0 0 .3cqw; font: 700 1.05cqw var(--f-display); color: var(--navy-900); }
+.sec-l h3 .ic, .sec-l h3 svg.ic { margin: 0; width: 1cqw; height: 1cqw; padding: .35cqw; }
+.sec-l p { margin: 0; font-size: .9cqw; line-height: 1.4; color: var(--ink-2); }
+.sec-pipe { position: absolute; left: -1cqw; right: -1cqw; top: 1.1cqw; height: .5cqw; border-radius: 1cqw; background: linear-gradient(90deg, var(--accent-deep), var(--teal)); }
+.sec-pipe::after { content: ""; position: absolute; right: -.2cqw; top: 50%; width: .9cqw; height: .9cqw; border-top: .3cqw solid var(--teal); border-right: .3cqw solid var(--teal); translate: 0 -50%; rotate: 45deg; }
+.sec-pipe svg { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 2.2cqw; height: 2.2cqw; padding: .45cqw; border-radius: 50%; background: var(--navy-900); color: var(--cyan); }
+.shield ~ .in h2 { max-width: 72cqw; }
+.sec-r { display: grid; grid-template-columns: auto 1fr; gap: 1cqw; align-items: start; padding: 1.1cqw 1.3cqw; } .sec-r .ic { margin: 0; }
+
+.hero-car .car { transform-box: fill-box; }
+.lanes.four { grid-template-columns: repeat(4, 1fr); gap: 1cqw; } .lanes.four .lane-c { padding: .9cqw; }
+.has-art h2 { min-height: 2.16em; }
+.lanes .lane-c .ag.hero h3 { color: var(--cyan); } .lanes .lane-c .ag.hero p { color: var(--mute-2); }
 </style>
 </head>
 <body>
@@ -488,6 +614,112 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
 </header>
 
 <main class="deck" id="deck">
+<svg class="art-defs" aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden">
+<defs>
+  <linearGradient id="g-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d9dff"/><stop offset=".4" stop-color="#2952d9"/><stop offset="1" stop-color="#0a1747"/></linearGradient>
+  <linearGradient id="g-body-gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff1c8"/><stop offset=".42" stop-color="#f2c55c"/><stop offset="1" stop-color="#8a5f12"/></linearGradient>
+  <linearGradient id="g-body-ivory" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#d9dbe6"/><stop offset="1" stop-color="#5d6380"/></linearGradient>
+  <linearGradient id="g-glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d6e3ff"/><stop offset=".5" stop-color="#5b7fe0"/><stop offset="1" stop-color="#0b1640"/></linearGradient>
+  <radialGradient id="g-rim"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#cfcabb"/><stop offset="1" stop-color="#6d7390"/></radialGradient>
+  <linearGradient id="g-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a3590"/><stop offset=".7" stop-color="#0a1747"/><stop offset="1" stop-color="#050c2b"/></linearGradient>
+  <linearGradient id="g-floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#12246b"/><stop offset="1" stop-color="#030820"/></linearGradient>
+  <radialGradient id="g-spot"><stop offset="0" stop-color="#f2c55c" stop-opacity=".6"/><stop offset="1" stop-color="#f2c55c" stop-opacity="0"/></radialGradient>
+  <radialGradient id="g-bluespot"><stop offset="0" stop-color="#4a74f0" stop-opacity=".55"/><stop offset="1" stop-color="#4a74f0" stop-opacity="0"/></radialGradient>
+  <linearGradient id="g-cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe2a0" stop-opacity=".32"/><stop offset="1" stop-color="#ffe2a0" stop-opacity="0"/></linearGradient>
+  <linearGradient id="g-beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffe2a0" stop-opacity=".8"/><stop offset="1" stop-color="#ffe2a0" stop-opacity="0"/></linearGradient>
+  <linearGradient id="g-streak" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f2c55c" stop-opacity="0"/><stop offset="1" stop-color="#f2c55c" stop-opacity=".9"/></linearGradient>
+  <linearGradient id="g-gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe2a0"/><stop offset="1" stop-color="#c9962e"/></linearGradient>
+  <linearGradient id="g-wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3fb8"/><stop offset="1" stop-color="#0a1747"/></linearGradient>
+  <linearGradient id="g-glasswall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a74f0" stop-opacity=".6"/><stop offset="1" stop-color="#050c2b" stop-opacity=".95"/></linearGradient>
+  <clipPath id="c-floor" clipPathUnits="userSpaceOnUse"><rect y="92" width="300" height="23"/></clipPath>
+  <clipPath id="c-cover-floor" clipPathUnits="userSpaceOnUse"><rect y="236" width="480" height="64"/></clipPath>
+  <g id="wheel"><circle r="12" fill="#070b1f"/><circle r="10.6" fill="none" stroke="#2a3566"/><circle r="7.5" fill="url(#g-rim)"/><circle r="5" fill="none" stroke="#464c66" stroke-width="2.2" stroke-dasharray="2.6 2.6"/><circle r="2.2" fill="#0a1747"/></g>
+  <symbol id="suv" viewBox="0 0 200 72" overflow="visible">
+    <ellipse cx="102" cy="70" rx="94" ry="3.2" fill="#000" opacity=".45"/>
+    <path d="M12 56 L12 30 C12 24 15 20 21 19 L120 17 C128 17 133 19 138 23 L156 37 L182 41 C189 42 193 46 193 52 L193 57 C193 60 191 61 188 61 L170 61 A16 16 0 0 0 138 61 L62 61 A16 16 0 0 0 30 61 L16 61 C13 61 12 59 12 56 Z" style="fill:var(--body,url(#g-body))" stroke="#ffe2a0" stroke-opacity=".4" stroke-width=".8"/>
+    <path d="M30 17.4 L112 15.8" stroke="#cfcabb" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M20 23 C20 22 21 21 23 21 L56 20.5 L56 35 L19 35.5 Z M60 20.4 L104 19.6 L104 35 L60 35 Z M108 19.5 L119 19.4 C125 19.4 129 21 133 24 L147 35 L108 35 Z" fill="url(#g-glass)"/>
+    <path d="M26 34 L40 21.5 L46 21.4 L31 34 Z M66 34 L80 20.2 L86 20.1 L71 34 Z" fill="#fff" opacity=".2"/>
+    <path d="M14 41 L184 44" stroke="#fff" stroke-opacity=".25" stroke-width=".9"/>
+    <path d="M58 37 V58 M106 36 V58 M64 54 H136" stroke="#050c2b" stroke-opacity=".45" stroke-width=".7"/>
+    <rect x="46" y="39" width="7" height="1.6" rx=".8" fill="#cfcabb"/><rect x="94" y="39" width="7" height="1.6" rx=".8" fill="#cfcabb"/>
+    <ellipse cx="193" cy="48" rx="7" ry="4.5" fill="url(#g-spot)"/>
+    <path d="M181 44.5 L192 47 L191.5 50.5 L182 49.5 Z" fill="#ffe2a0"/>
+    <path d="M12 31 L16 31 L16 42 L12 42 Z" fill="#e5484d"/>
+    <use href="#wheel" x="46" y="58"/><use href="#wheel" x="154" y="58"/>
+  </symbol>
+  <symbol id="sedan" viewBox="0 0 200 72" overflow="visible">
+    <ellipse cx="101" cy="70" rx="95" ry="3.2" fill="#000" opacity=".45"/>
+    <path d="M8 56 L8 54 C8 48 11 45 17 44 L44 41 L66 27 C70 24 75 23 81 23 L122 23 C128 23 132 25 136 28 L154 41 L184 44 C190 45 193 48 193 53 L193 57 C193 60 191 61 188 61 L170 61 A16 16 0 0 0 138 61 L62 61 A16 16 0 0 0 30 61 L12 61 C9 61 8 59 8 56 Z" style="fill:var(--body,url(#g-body))" stroke="#ffe2a0" stroke-opacity=".4" stroke-width=".8"/>
+    <path d="M70 30 C73 28 76 27 81 27 L99 27 L99 40 L53 40.5 Z M103 27 L121 27 C125 27 128 28 131 31 L143 40 L103 40 Z" fill="url(#g-glass)"/>
+    <path d="M62 39 L76 28 L82 28 L68 39 Z" fill="#fff" opacity=".2"/>
+    <path d="M12 45.5 L186 46" stroke="#fff" stroke-opacity=".25" stroke-width=".9"/>
+    <path d="M101 41 V58 M54 42 V58" stroke="#050c2b" stroke-opacity=".45" stroke-width=".7"/>
+    <rect x="86" y="44" width="7" height="1.6" rx=".8" fill="#cfcabb"/><rect x="128" y="44.5" width="7" height="1.6" rx=".8" fill="#cfcabb"/>
+    <ellipse cx="193" cy="49" rx="7" ry="4.5" fill="url(#g-spot)"/>
+    <path d="M182 45.5 L192 48 L191.5 51 L183 50 Z" fill="#ffe2a0"/>
+    <path d="M8 46 L13 45.5 L13 50 L8 50.5 Z" fill="#e5484d"/>
+    <use href="#wheel" x="46" y="58"/><use href="#wheel" x="154" y="58"/>
+  </symbol>
+  <symbol id="van" viewBox="0 0 200 72" overflow="visible">
+    <ellipse cx="102" cy="70" rx="94" ry="3.2" fill="#000" opacity=".45"/>
+    <path d="M10 56 L10 18 C10 14 13 12 17 12 L128 12 C134 12 138 14 142 19 L160 38 L182 41 C189 42 193 46 193 52 L193 57 C193 60 191 61 188 61 L170 61 A16 16 0 0 0 138 61 L62 61 A16 16 0 0 0 30 61 L14 61 C11 61 10 59 10 56 Z" fill="url(#g-body-ivory)" stroke="#ffe2a0" stroke-opacity=".4" stroke-width=".8"/>
+    <path d="M124 17 L133 17 C136 17 138 18 140 21 L152 36 L124 36 Z M100 17 L120 17 L120 36 L100 36 Z" fill="url(#g-glass)"/>
+    <rect x="16" y="32" width="78" height="4" fill="#2952d9"/><rect x="16" y="37" width="78" height="1.6" fill="#c9962e"/>
+    <text x="18" y="26" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="8" fill="#0a1747" letter-spacing=".6">PICKUP &amp; DROP</text>
+    <path d="M181 44.5 L192 47 L191.5 50.5 L182 49.5 Z" fill="#ffe2a0"/>
+    <use href="#wheel" x="46" y="58"/><use href="#wheel" x="154" y="58"/>
+  </symbol>
+  <g id="sky"><rect width="300" height="115" fill="url(#g-sky)"/><path d="M0 23H300M0 46H300M0 69H300M60 0V115M120 0V115M180 0V115M240 0V115" stroke="#bec8ff" stroke-opacity=".06"/></g>
+  <g id="floor"><rect y="92" width="300" height="23" fill="url(#g-floor)"/><path d="M0 92H300" stroke="#f2c55c" stroke-opacity=".4"/></g>
+</defs>
+</svg>
+<svg class="art-defs" aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden">
+<defs>
+  <linearGradient id="g-chartfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2c55c" stop-opacity=".28"/><stop offset="1" stop-color="#f2c55c" stop-opacity="0"/></linearGradient>
+  <linearGradient id="g-velvet" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3fb8"/><stop offset=".6" stop-color="#12246b"/><stop offset="1" stop-color="#050c2b"/></linearGradient>
+  <symbol id="necklace" viewBox="0 0 120 90" overflow="visible">
+    <path d="M10 6 C14 46 46 64 60 64 C74 64 106 46 110 6" fill="none" stroke="url(#g-gold)" stroke-width="3"/>
+    <path d="M10 6 C14 46 46 64 60 64 C74 64 106 46 110 6" fill="none" stroke="#ffe2a0" stroke-width="5.4" stroke-linecap="round" stroke-dasharray=".1 6.6"/>
+    <path d="M60 62 L69 73 L60 86 L51 73 Z" fill="url(#g-gold)" stroke="#8a5f12" stroke-width=".6"/>
+    <circle cx="60" cy="73.5" r="3" fill="#e5484d"/><circle cx="59" cy="72.5" r="1" fill="#fff" opacity=".7"/>
+  </symbol>
+  <symbol id="bangle" viewBox="0 0 60 24" overflow="visible">
+    <ellipse cx="30" cy="12" rx="27" ry="9.5" fill="none" stroke="url(#g-gold)" stroke-width="5"/>
+    <ellipse cx="30" cy="12" rx="27" ry="9.5" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="1" stroke-dasharray="22 200"/>
+  </symbol>
+  <symbol id="goldbar" viewBox="0 0 60 26" overflow="visible">
+    <path d="M6 25 L13 3 L47 3 L54 25 Z" fill="url(#g-gold)" stroke="#8a5f12" stroke-width=".8"/>
+    <path d="M13 3 L47 3 L43 8.5 L17 8.5 Z" fill="#fff" opacity=".32"/>
+    <text x="30" y="19.5" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="6.5" fill="#8a5f12">999</text>
+  </symbol>
+  <symbol id="coin" viewBox="-10 -10 20 20" overflow="visible">
+    <circle r="9.5" fill="url(#g-gold)" stroke="#8a5f12" stroke-width=".6"/><circle r="7" fill="none" stroke="#8a5f12" stroke-opacity=".5" stroke-width=".6"/>
+    <text y="3.3" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="9" fill="#8a5f12">₹</text>
+  </symbol>
+  <symbol id="person" viewBox="0 0 30 40" overflow="visible"><circle cx="15" cy="9" r="7" fill="currentColor"/><path d="M2 40 C2 26 8 20 15 20 C22 20 28 26 28 40 Z" fill="currentColor"/></symbol>
+  <symbol id="scale" viewBox="0 0 70 50" overflow="visible">
+    <path d="M17 27 C21 17 49 17 53 27 Z" fill="url(#g-gold)"/>
+    <path d="M24 20 C28 23 42 23 46 20" fill="none" stroke="#fff" stroke-opacity=".5"/>
+    <ellipse cx="35" cy="28" rx="27" ry="4" fill="#cfcabb"/>
+    <rect x="31" y="29" width="8" height="3" fill="#8e95b0"/>
+    <rect x="5" y="31" width="60" height="16" rx="3" fill="#0a1747" stroke="#cfcabb" stroke-opacity=".6"/>
+    <rect x="11" y="35" width="30" height="8" rx="1.2" fill="#1fbf8f" fill-opacity=".22" stroke="#1fbf8f"/>
+    <text x="26" y="41.3" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="5.6" fill="#8ff0cd">24.6 g</text>
+    <circle cx="52" cy="39" r="3" fill="#f2c55c"/>
+  </symbol>
+  <symbol id="branch" viewBox="0 0 120 70" overflow="visible">
+    <rect x="4" y="14" width="112" height="56" fill="url(#g-wall)" stroke="#f2c55c" stroke-opacity=".35"/>
+    <rect x="0" y="9" width="120" height="6" rx="1.5" fill="#0a1747" stroke="#f2c55c" stroke-opacity=".5"/>
+    <rect x="30" y="18" width="60" height="10" rx="1.5" fill="url(#g-gold)"/>
+    <text x="60" y="25.3" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="6.2" letter-spacing="1" fill="#0a1747">GOLD LOAN</text>
+    <rect x="12" y="34" width="30" height="24" fill="url(#g-glasswall)"/><rect x="78" y="34" width="30" height="24" fill="url(#g-glasswall)"/>
+    <rect x="50" y="38" width="20" height="32" fill="url(#g-glasswall)" stroke="#f2c55c" stroke-opacity=".5"/>
+    <path d="M27 34V58M93 34V58M60 38V70" stroke="#bec8ff" stroke-opacity=".25"/>
+  </symbol>
+</defs>
+</svg>
+
 
 <!-- 1 · cover -->
 <section class="slide dark cover" aria-label="Slide 1"><div class="in">
@@ -497,24 +729,53 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
   <h1>Every branch, every employee, <em>on target</em></h1>
   <p class="lead">Custom AI models trained on your own data for sales tracking, a daily Target Guide for every employee, forecasting and loan risk, all hosted in India.</p>
   <div class="meta"><span>Bheemverse Innovation Pvt Ltd</span><span>FOR NBFC GOLD LOAN LENDERS · NOVEMBER 2026</span></div>
-  <div class="orbit" aria-hidden="true"><i></i><i></i><i></i><b style="--a:-38deg"></b><b class="s" style="--a:140deg"></b><b class="s" style="--a:250deg"></b></div>
+  <svg class="hero-car" viewBox="0 0 480 300" aria-hidden="true">
+  <path d="M250 0 L130 240 L370 240 Z" fill="url(#g-cone)"/>
+  <path d="M20 200 L80 184 L130 192 L190 156 L250 166 L310 120 L380 104 L460 62 L460 240 L20 240 Z" fill="url(#g-chartfill)"/>
+  <path class="flow" d="M20 200 L80 184 L130 192 L190 156 L250 166 L310 120 L380 104 L460 62" fill="none" stroke="#f2c55c" stroke-opacity=".55" stroke-width="2" stroke-dasharray="6 5"/>
+  <g fill="#ffe2a0"><circle cx="80" cy="184" r="3"/><circle cx="190" cy="156" r="3"/><circle cx="310" cy="120" r="3"/><circle cx="460" cy="62" r="4"/></g>
+  <ellipse cx="250" cy="242" rx="220" ry="32" fill="url(#g-bluespot)"/>
+  <ellipse cx="250" cy="240" rx="185" ry="20" fill="#0a1747" fill-opacity=".8" stroke="#f2c55c" stroke-opacity=".6" stroke-width="1.2"/>
+  <ellipse class="spin" cx="250" cy="240" rx="155" ry="15" fill="none" stroke="#4a74f0" stroke-opacity=".5" stroke-dasharray="4 6"/>
+  <path class="car" d="M188 238 L204 124 C208 102 228 92 250 92 C272 92 292 102 296 124 L312 238 Z" fill="url(#g-velvet)" stroke="#f2c55c" stroke-opacity=".35"/>
+  <use class="car" href="#necklace" x="178" y="112" width="144" height="108"/>
+  <use href="#bangle" x="70" y="214" width="84" height="34"/><use href="#bangle" x="74" y="203" width="80" height="32"/><use href="#bangle" x="78" y="192" width="76" height="30"/>
+  <use href="#goldbar" x="338" y="210" width="76" height="33"/><use href="#goldbar" x="368" y="187" width="62" height="27"/>
+  <use href="#coin" x="414" y="216" width="26" height="26"/><use href="#coin" x="434" y="226" width="20" height="20"/>
+  <g class="twinkle" fill="#ffe2a0"><path d="M120 150 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z"/><path d="M330 168 l1.6 4.8 4.8 1.6 -4.8 1.6 -1.6 4.8 -1.6 -4.8 -4.8 -1.6 4.8 -1.6z"/><path d="M262 76 l1.4 4.2 4.2 1.4 -4.2 1.4 -1.4 4.2 -1.4 -4.2 -4.2 -1.4 4.2 -1.4z"/></g>
+</svg>
 </div></section>
 
 <!-- 2 · the problem -->
-<section class="slide light" aria-label="Slide 2"><i class="wm" data-lucide="target" aria-hidden="true"></i><div class="in">
+<section class="slide light has-art" aria-label="Slide 2"><div class="art" role="img" aria-label="A customer leaving the branch for another lender, with the month-end coming"><svg viewBox="0 0 300 115">
+  <use href="#sky"/><use href="#floor"/>
+  <use href="#branch" x="10" y="27.8" width="110" height="64.2"/>
+  <rect x="212" y="40" width="78" height="52" fill="#12246b" stroke="#bec8ff" stroke-opacity=".3"/>
+  <rect x="220" y="45" width="62" height="9" rx="1.5" fill="#1a3590"/>
+  <text x="251" y="51.4" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="5" letter-spacing=".8" fill="#e1e4f0">OTHER LENDER</text>
+  <rect x="242" y="64" width="18" height="28" fill="url(#g-glasswall)"/>
+  <path class="flow" d="M126 96 H204" stroke="#e5484d" stroke-opacity=".75" stroke-dasharray="3 4"/><path d="M200 92.5 L206 96 L200 99.5" fill="none" stroke="#e5484d" stroke-opacity=".8" stroke-width="1.2"/>
+  <use href="#person" x="164" y="58" width="22" height="29.3" style="color:#e1e4f0"/>
+  <use href="#bangle" x="178" y="73" width="16" height="6.4"/>
+  <g class="drip"><use href="#coin" x="140" y="99" width="8" height="8"/><use href="#coin" x="152" y="104" width="7" height="7" opacity=".6"/></g>
+  <rect x="134" y="10" width="36" height="32" rx="3" fill="#fdfcf8"/><rect x="134" y="10" width="36" height="9" rx="3" fill="#e5484d"/>
+  <text x="152" y="16.6" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="4.6" letter-spacing=".6" fill="#fff">MONTH END</text>
+  <text x="152" y="37" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="14" fill="#0a1747">30</text>
+  <circle cx="172" cy="12" r="6" fill="#e5484d" stroke="#fff" stroke-width="1"/><path d="M172 8.8 V12.6 M172 14.6 V15" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+</svg></div><i class="wm" data-lucide="target" aria-hidden="true"></i><div class="in">
   <p class="eyebrow">The problem</p>
   <h2>Targets are set for the month, but won or lost one customer at a time</h2>
   <div class="body">
-    <div class="g4">
-      <div class="panel"><span class="cardhead"><span class="num">1</span><i class="ic" data-lucide="calendar-x" aria-hidden="true"></i></span><h3>Misses show up too late</h3><p>Month-end MIS shows the gap when there is no time left to close it.</p></div>
-      <div class="panel"><span class="cardhead"><span class="num">2</span><i class="ic" data-lucide="phone-missed" aria-hidden="true"></i></span><h3>Easy business slips away</h3><p>Renewals due, top-ups after a gold rate rise, customers who closed: no one is told whom to call today.</p></div>
-      <div class="panel"><span class="cardhead"><span class="num">3</span><i class="ic" data-lucide="arrow-right-left" aria-hidden="true"></i></span><h3>Customers quietly move</h3><p>Takeovers by banks and other lenders are noticed only when the loan closes.</p></div>
-      <div class="panel"><span class="cardhead"><span class="num">4</span><i class="ic" data-lucide="scale" aria-hidden="true"></i></span><h3>Appraisals on volume alone</h3><p>Quality, consistency and each branch’s real potential are hard to see across a large network.</p></div>
+    <div class="journey" aria-hidden="true">
+      <span class="ms" style="--p:0"><i></i><em>Target set</em></span><span class="ms" style="--p:25"><i></i><em>Daily calls</em></span><span class="ms" style="--p:50"><i></i><em>Loan closes</em></span><span class="ms" style="--p:75"><i></i><em>Month-end MIS</em></span><span class="ms" style="--p:100"><i></i><em>Appraisal</em></span>
+      <span class="drop" style="--p:12.5"><i data-lucide="droplet"></i></span><span class="drop" style="--p:37.5"><i data-lucide="droplet"></i></span><span class="drop" style="--p:62.5"><i data-lucide="droplet"></i></span><span class="drop" style="--p:87.5"><i data-lucide="droplet"></i></span>
+    </div>
+    <div class="g4 leaks">
+      <div class="panel"><span class="cardhead"><span class="num">1</span><i class="ic" data-lucide="phone-missed" aria-hidden="true"></i></span><h3>Easy business slips away</h3><p>Renewals due, top-ups after a gold rate rise, customers who closed: no one is told whom to call today.</p></div><div class="panel"><span class="cardhead"><span class="num">2</span><i class="ic" data-lucide="arrow-right-left" aria-hidden="true"></i></span><h3>Customers quietly move</h3><p>Takeovers by banks and other lenders are noticed only when the loan closes.</p></div><div class="panel"><span class="cardhead"><span class="num">3</span><i class="ic" data-lucide="calendar-x" aria-hidden="true"></i></span><h3>Misses show up too late</h3><p>Month-end MIS shows the gap when there is no time left to close it.</p></div><div class="panel"><span class="cardhead"><span class="num">4</span><i class="ic" data-lucide="scale" aria-hidden="true"></i></span><h3>Appraisals on volume alone</h3><p>Quality, consistency and each branch’s real potential are hard to see across a large network.</p></div>
     </div>
     <p class="note">Bheem Gold AI turns the data already in your gold loan system into a daily plan for every person, from the branch counter to head office.</p>
   </div>
-  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>02</b></div>
-</div></section>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>02</b></div></div></section>
 
 <!-- 3 · the idea -->
 <section class="slide dark statement" aria-label="Slide 3"><div class="namelist" aria-hidden="true">
@@ -535,24 +796,46 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
 </div></section>
 
 <!-- 4 · the product -->
-<section class="slide light" aria-label="Slide 4"><i class="wm" data-lucide="boxes" aria-hidden="true"></i><div class="in">
+<section class="slide light has-art" aria-label="Slide 4"><div class="art" role="img" aria-label="A Bheem Gold branch: the appraisal counter with a gold scale, the jewellery case and the dashboard"><svg viewBox="0 0 300 115">
+  <use href="#sky"/><use href="#floor"/>
+  <rect x="12" y="24" width="276" height="7" rx="2" fill="#0a1747" stroke="#f2c55c" stroke-opacity=".5"/>
+  <rect x="104" y="10" width="92" height="13" rx="2" fill="url(#g-gold)"/>
+  <text x="150" y="19.2" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="7.4" fill="#0a1747" letter-spacing=".4">BHEEM GOLD</text>
+  <rect x="18" y="31" width="264" height="61" fill="url(#g-wall)" stroke="#f2c55c" stroke-opacity=".3"/>
+  <rect x="26" y="40" width="120" height="52" fill="url(#g-glasswall)"/>
+  <use href="#person" x="44" y="50" width="24" height="32" style="color:#c3c8dc"/>
+  <rect x="26" y="78" width="120" height="6" fill="#0a1747" stroke="#f2c55c" stroke-opacity=".6"/>
+  <use href="#scale" x="84" y="50.4" width="42" height="30"/>
+  <ellipse cx="105" cy="79" rx="22" ry="2" fill="url(#g-spot)"/>
+  <rect x="154" y="40" width="62" height="52" fill="#050c2b" stroke="#f2c55c" stroke-opacity=".4"/>
+  <rect x="158" y="44" width="54" height="44" fill="url(#g-glasswall)"/>
+  <use href="#necklace" x="166" y="45" width="38" height="28.5"/>
+  <use href="#bangle" x="166" y="77" width="18" height="7.2"/><use href="#bangle" x="186" y="77" width="18" height="7.2"/>
+  <rect x="224" y="40" width="52" height="40" rx="3" fill="#050c2b" stroke="#cfcabb" stroke-opacity=".6"/>
+  <g fill="#4a74f0"><rect x="231" y="64" width="6" height="10"/><rect x="240" y="58" width="6" height="16"/><rect x="249" y="54" width="6" height="20"/></g><rect x="258" y="47" width="6" height="27" fill="#f2c55c"/>
+  <path d="M231 56 L243 50 L252 47 L268 44" fill="none" stroke="#ffe2a0" stroke-width="1"/>
+  <rect x="246" y="80" width="8" height="6" fill="#cfcabb" opacity=".6"/>
+</svg></div><i class="wm" data-lucide="boxes" aria-hidden="true"></i><div class="in">
   <p class="eyebrow">The product</p>
   <h2>Eight modules on one platform</h2>
   <div class="body">
-    <div class="g4">
-      <div class="panel"><i class="ic" data-lucide="activity" aria-hidden="true"></i><h3>Sales Tracking</h3><p>Every lead and loan from enquiry to disbursal, credited to the right employee.</p></div>
-      <div class="panel hero"><i class="ic" data-lucide="list-checks" aria-hidden="true"></i><h3>Target Guide</h3><p>Each employee’s daily list of customers to contact, in their own language.</p></div>
-      <div class="panel"><i class="ic" data-lucide="split" aria-hidden="true"></i><h3>Target Planner</h3><p>The company plan split to zone, region, branch and employee by real potential.</p></div>
-      <div class="panel"><i class="ic" data-lucide="fingerprint" aria-hidden="true"></i><h3>Customer &amp; Employee Intelligence</h3><p>Customer cycles and signs of leaving; each employee’s strengths and gaps.</p></div>
-      <div class="panel"><i class="ic" data-lucide="line-chart" aria-hidden="true"></i><h3>Forecasting</h3><p>Month and quarter forecasts as ranges, with gold-price what-ifs.</p></div>
-      <div class="panel"><i class="ic" data-lucide="gauge" aria-hidden="true"></i><h3>Loan Risk</h3><p>A risk band for every active loan: overdue, NPA and auction.</p></div>
-      <div class="panel"><i class="ic" data-lucide="award" aria-hidden="true"></i><h3>Appraisal &amp; Incentives</h3><p>Quarterly rating suggestions with reasons; incentives under your rules.</p></div>
-      <div class="panel"><i class="ic" data-lucide="layout-dashboard" aria-hidden="true"></i><h3>Command Centre</h3><p>A view for every role, and a morning brief for leadership.</p></div>
+    <div class="lanes four">
+      <div class="lane-c"><p class="lane-h"><i data-lucide="search" aria-hidden="true"></i>Find the business</p>
+        <div class="panel ag"><i class="ic" data-lucide="activity" aria-hidden="true"></i><div><h3>Sales Tracking</h3><p>Every lead and loan from enquiry to disbursal, credited to the right employee.</p></div></div>
+        <div class="panel ag hero"><i class="ic" data-lucide="list-checks" aria-hidden="true"></i><div><h3>Target Guide</h3><p>Each employee’s daily list of customers to contact, in their own language.</p></div></div></div>
+      <div class="lane-c"><p class="lane-h"><i data-lucide="compass" aria-hidden="true"></i>Plan and predict</p>
+        <div class="panel ag"><i class="ic" data-lucide="split" aria-hidden="true"></i><div><h3>Target Planner</h3><p>The company plan split to zone, region, branch and employee by real potential.</p></div></div>
+        <div class="panel ag"><i class="ic" data-lucide="line-chart" aria-hidden="true"></i><div><h3>Forecasting</h3><p>Month and quarter forecasts as ranges, with gold-price what-ifs.</p></div></div>
+        <div class="panel ag"><i class="ic" data-lucide="fingerprint" aria-hidden="true"></i><div><h3>Customer &amp; Employee Intelligence</h3><p>Customer cycles and signs of leaving; each employee’s strengths and gaps.</p></div></div></div>
+      <div class="lane-c"><p class="lane-h"><i data-lucide="shield-check" aria-hidden="true"></i>Protect and reward</p>
+        <div class="panel ag"><i class="ic" data-lucide="gauge" aria-hidden="true"></i><div><h3>Loan Risk</h3><p>A risk band for every active loan: overdue, NPA and auction.</p></div></div>
+        <div class="panel ag"><i class="ic" data-lucide="award" aria-hidden="true"></i><div><h3>Appraisal &amp; Incentives</h3><p>Quarterly rating suggestions with reasons; incentives under your rules.</p></div></div></div>
+      <div class="lane-c"><p class="lane-h"><i data-lucide="monitor" aria-hidden="true"></i>See it all</p>
+        <div class="panel ag"><i class="ic" data-lucide="layout-dashboard" aria-hidden="true"></i><div><h3>Command Centre</h3><p>A view for every role, and a morning brief for leadership.</p></div></div></div>
     </div>
     <div class="band"><b>Models + agents</b><span>Custom AI models find the patterns and forecast; 7 AI agents act on them and check the result.</span></div>
   </div>
-  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>04</b></div>
-</div></section>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>04</b></div></div></section>
 
 <!-- 5 · how it works -->
 <section class="slide dark" aria-label="Slide 5"><div class="in">
@@ -577,42 +860,60 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
 </div></section>
 
 <!-- 6 · agents -->
-<section class="slide light" aria-label="Slide 6"><i class="wm" data-lucide="bot" aria-hidden="true"></i><div class="in">
+<section class="slide light has-art" aria-label="Slide 6"><div class="art" role="img" aria-label="AI agents: a WhatsApp chat feeding an AI hub that drives renewals, top-ups and win-backs"><svg viewBox="0 0 300 115">
+  <use href="#sky"/>
+  <rect x="22" y="12" width="48" height="92" rx="7" fill="#050c2b" stroke="#cfcabb" stroke-opacity=".6" stroke-width="1.2"/>
+  <rect x="26" y="18" width="40" height="80" rx="4" fill="#fdfcf8"/>
+  <rect x="29" y="23" width="28" height="9" rx="3" fill="#e3ddcc"/><rect x="37" y="36" width="26" height="9" rx="3" fill="#2952d9"/>
+  <rect x="29" y="49" width="30" height="13" rx="3" fill="#e3ddcc"/><rect x="40" y="66" width="23" height="9" rx="3" fill="#2952d9"/>
+  <path d="M40 40H58M43 70H58" stroke="#fff" stroke-opacity=".7" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M32 27H52M32 53H54M32 57H48" stroke="#7a7f94" stroke-width="1.3" stroke-linecap="round"/>
+  <circle cx="34" cy="86" r="1.6" fill="#7a7f94"/><circle cx="39" cy="86" r="1.6" fill="#7a7f94"/><circle cx="44" cy="86" r="1.6" fill="#7a7f94"/>
+  <path class="flow" d="M72 57 H128" stroke="#f2c55c" stroke-opacity=".7" stroke-dasharray="2 3"/>
+  <circle cx="150" cy="57" r="34" fill="url(#g-spot)"/>
+  <circle class="spin" cx="150" cy="57" r="30" fill="none" stroke="#4a74f0" stroke-opacity=".5" stroke-dasharray="2 3"/>
+  <circle cx="150" cy="57" r="20" fill="#12246b" stroke="#f2c55c" stroke-width="1.2"/>
+  <path d="M150 45 L153 54 L162 57 L153 60 L150 69 L147 60 L138 57 L147 54 Z" fill="url(#g-gold)"/>
+  <g class="flow" fill="none" stroke="#f2c55c" stroke-opacity=".6" stroke-dasharray="2 3"><path d="M170 50 C184 40 188 26 200 26"/><path d="M171 57 H200"/><path d="M170 64 C184 74 188 88 200 88"/></g>
+  <g font-family="IBM Plex Sans, sans-serif" font-weight="600" font-size="7" fill="#e1e4f0">
+    <rect x="200" y="15" width="88" height="22" rx="6" fill="#12246b" stroke="#f2c55c" stroke-opacity=".45"/>
+    <g transform="translate(208 19) scale(.58)" fill="none" stroke="#f2c55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16M8 16H3v5"/></g><text x="228" y="28.6">Renewal</text>
+    <rect x="200" y="46" width="88" height="22" rx="6" fill="#12246b" stroke="#f2c55c" stroke-opacity=".45"/>
+    <g transform="translate(208 50) scale(.58)" fill="none" stroke="#f2c55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7 13.5 15.5 8.5 10.5 2 17M16 7h6v6"/></g><text x="228" y="59.6">Top-up</text>
+    <rect x="200" y="77" width="88" height="22" rx="6" fill="#12246b" stroke="#f2c55c" stroke-opacity=".45"/>
+    <g transform="translate(208 81) scale(.58)" fill="none" stroke="#f2c55c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5H11"/></g><text x="228" y="90.6">Win-back</text>
+  </g>
+</svg></div><i class="wm" data-lucide="bot" aria-hidden="true"></i><div class="in">
   <p class="eyebrow">The AI agents</p>
   <h2>Seven agents that turn numbers into action</h2>
   <div class="body">
-    <div class="g4">
-      <div class="panel"><i class="ic" data-lucide="building-2" aria-hidden="true"></i><h3>Branch performance</h3><p>Finds why a branch is behind and the one or two things to fix first.</p><span class="tag">Runs on its own</span></div>
-      <div class="panel"><i class="ic" data-lucide="graduation-cap" aria-hidden="true"></i><h3>Employee coach</h3><p>The Target Guide: each person’s daily list of customers, and the result of each contact.</p><span class="tag">Runs on its own</span></div>
-      <div class="panel"><i class="ic" data-lucide="megaphone" aria-hidden="true"></i><h3>Customer outreach</h3><p>WhatsApp and AI-call reminders for renewals, interest and top-ups.</p><span class="tag">Branch manager approves</span></div>
-      <div class="panel"><i class="ic" data-lucide="target" aria-hidden="true"></i><h3>Target</h3><p>Proposes a mid-month rebalance when the cause is outside a branch’s control.</p><span class="tag">Region or zone head approves</span></div>
-      <div class="panel"><i class="ic" data-lucide="shield-alert" aria-hidden="true"></i><h3>Integrity</h3><p>Flags KPI gaming: close-and-reopen loans, wrong credit, month-end spikes.</p><span class="tag">Audit team reviews</span></div>
-      <div class="panel"><i class="ic" data-lucide="clipboard-check" aria-hidden="true"></i><h3>Appraisal</h3><p>Prepares the evidence and a suggested rating, with the reasons.</p><span class="tag">The manager decides</span></div>
-      <div class="panel"><i class="ic" data-lucide="briefcase" aria-hidden="true"></i><h3>Leadership brief</h3><p>A morning brief with the decisions needed, and whether last week’s actions worked.</p><span class="tag">For business heads</span></div>
-      <div class="panel hero"><i class="ic" data-lucide="lock" aria-hidden="true"></i><h3>Guardrails</h3><p>Never changes loan terms, rates or customer records. Every action is logged.</p></div>
+    <div class="lanes">
+      <div class="lane-c"><p class="lane-h"><i data-lucide="zap" aria-hidden="true"></i>Runs on its own</p>
+        <div class="panel ag"><i class="ic" data-lucide="building-2" aria-hidden="true"></i><div><h3>Branch performance</h3><p>Finds why a branch is behind and the one or two things to fix first.</p></div></div>
+        <div class="panel ag"><i class="ic" data-lucide="graduation-cap" aria-hidden="true"></i><div><h3>Employee coach</h3><p>The Target Guide: each person’s daily list of customers, and the result of each contact.</p></div></div></div>
+      <div class="lane-c"><p class="lane-h"><i data-lucide="user-check" aria-hidden="true"></i>A manager or head approves</p>
+        <div class="panel ag"><i class="ic" data-lucide="megaphone" aria-hidden="true"></i><div><h3>Customer outreach</h3><p>WhatsApp and AI-call reminders for renewals, interest and top-ups.</p><span class="tag">Branch manager approves</span></div></div>
+        <div class="panel ag"><i class="ic" data-lucide="target" aria-hidden="true"></i><div><h3>Target</h3><p>Proposes a mid-month rebalance when the cause is outside a branch’s control.</p><span class="tag">Region or zone head approves</span></div></div>
+        <div class="panel ag"><i class="ic" data-lucide="clipboard-check" aria-hidden="true"></i><div><h3>Appraisal</h3><p>Prepares the evidence and a suggested rating, with the reasons.</p><span class="tag">The manager decides</span></div></div></div>
+      <div class="lane-c"><p class="lane-h"><i data-lucide="eye" aria-hidden="true"></i>Oversight</p>
+        <div class="panel ag"><i class="ic" data-lucide="shield-alert" aria-hidden="true"></i><div><h3>Integrity</h3><p>Flags KPI gaming: close-and-reopen loans, wrong credit, month-end spikes.</p><span class="tag">Audit team reviews</span></div></div>
+        <div class="panel ag"><i class="ic" data-lucide="briefcase" aria-hidden="true"></i><div><h3>Leadership brief</h3><p>A morning brief with the decisions needed, and whether last week’s actions worked.</p><span class="tag">For business heads</span></div></div>
+        <div class="panel ag hero"><i class="ic" data-lucide="lock" aria-hidden="true"></i><div><h3>Guardrails</h3><p>Never changes loan terms, rates or customer records. Every action is logged.</p></div></div></div>
     </div>
   </div>
-  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>06</b></div>
-</div></section>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>06</b></div></div></section>
 
 <!-- 7 · custom AI models -->
 <section class="slide dark models" aria-label="Slide 7"><div class="in">
   <p class="eyebrow">Under the hood · Custom AI models</p>
   <h2>Custom AI models, trained only on your data</h2>
   <div class="body">
-    <div class="g4">
-      <div class="panel"><i class="ic" data-lucide="brain-circuit" aria-hidden="true"></i><h3>Customer behaviour</h3><p>Each customer’s loans, renewals and payments over the years <span class="to">→</span> chance to renew, top up or leave</p><span class="tag">Sequence neural network</span></div>
-      <div class="panel"><i class="ic" data-lucide="user-cog" aria-hidden="true"></i><h3>Employee patterns</h3><p>Activity, follow-ups, conversions and quality <span class="to">→</span> strengths, gaps and what top performers do</p><span class="tag">Neural network + clustering</span></div>
-      <div class="panel"><i class="ic" data-lucide="magnet" aria-hidden="true"></i><h3>Sales and lead conversion</h3><p>Lead source, area, gold weight and contact history <span class="to">→</span> chance each lead converts</p><span class="tag">Gradient-boosted trees</span></div>
-      <div class="panel"><i class="ic" data-lucide="line-chart" aria-hidden="true"></i><h3>Target forecasting</h3><p>Run rate, renewals due, festivals and the gold price <span class="to">→</span> month and quarter ranges</p><span class="tag">Time-series neural network</span></div>
-      <div class="panel"><i class="ic" data-lucide="shuffle" aria-hidden="true"></i><h3>Target reassignment</h3><p>Forecasts, branch potential, staff capacity and leave <span class="to">→</span> a fair rebalance to approve</p><span class="tag">Optimisation engine</span></div>
-      <div class="panel"><i class="ic" data-lucide="gauge" aria-hidden="true"></i><h3>Loan risk</h3><p>Payment trend, LTV at today’s gold price, renewal habit <span class="to">→</span> overdue and auction risk</p><span class="tag">Risk scoring model</span></div>
-      <div class="panel"><i class="ic" data-lucide="scan-search" aria-hidden="true"></i><h3>Integrity</h3><p>Normal patterns of loans, credit and timing <span class="to">→</span> flags for gaming and wrong credit</p><span class="tag">Anomaly detection</span></div>
-      <div class="panel hero"><i class="ic" data-lucide="languages" aria-hidden="true"></i><h3>Language</h3><p>Your approved offers and scripts <span class="to">→</span> messages and briefs in Indian languages</p><span class="tag">Self-hosted language model</span></div>
+    <div class="mtab">
+      <div class="mt-h"><span>Model</span><span>Learns from your data</span><span></span><span>Predicts</span><span>Method</span></div>
+      <div class="mt-r"><span class="mt-n"><i class="ic" data-lucide="brain-circuit" aria-hidden="true"></i>Customer behaviour</span><span class="mt-in">Each customer’s loans, renewals and payments over the years</span><svg class="arw" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg><span class="mt-out">chance to renew, top up or leave</span><span class="mt-t">Sequence neural network</span></div><div class="mt-r"><span class="mt-n"><i class="ic" data-lucide="user-cog" aria-hidden="true"></i>Employee patterns</span><span class="mt-in">Activity, follow-ups, conversions and quality</span><svg class="arw" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg><span class="mt-out">strengths, gaps and what top performers do</span><span class="mt-t">Neural network + clustering</span></div><div class="mt-r"><span class="mt-n"><i class="ic" data-lucide="magnet" aria-hidden="true"></i>Sales and lead conversion</span><span class="mt-in">Lead source, area, gold weight and contact history</span><svg class="arw" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg><span class="mt-out">chance each lead converts</span><span class="mt-t">Gradient-boosted trees</span></div><div class="mt-r"><span class="mt-n"><i class="ic" data-lucide="line-chart" aria-hidden="true"></i>Target forecasting</span><span class="mt-in">Run rate, renewals due, festivals and the gold price</span><svg class="arw" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg><span class="mt-out">month and quarter ranges</span><span class="mt-t">Time-series neural network</span></div><div class="mt-r"><span class="mt-n"><i class="ic" data-lucide="shuffle" aria-hidden="true"></i>Target reassignment</span><span class="mt-in">Forecasts, branch potential, staff capacity and leave</span><svg class="arw" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg><span class="mt-out">a fair rebalance to approve</span><span class="mt-t">Optimisation engine</span></div><div class="mt-r"><span class="mt-n"><i class="ic" data-lucide="gauge" aria-hidden="true"></i>Loan risk</span><span class="mt-in">Payment trend, LTV at today’s gold price, renewal habit</span><svg class="arw" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg><span class="mt-out">overdue and auction risk</span><span class="mt-t">Risk scoring model</span></div><div class="mt-r"><span class="mt-n"><i class="ic" data-lucide="scan-search" aria-hidden="true"></i>Integrity</span><span class="mt-in">Normal patterns of loans, credit and timing</span><svg class="arw" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg><span class="mt-out">flags for gaming and wrong credit</span><span class="mt-t">Anomaly detection</span></div><div class="mt-r"><span class="mt-n"><i class="ic" data-lucide="languages" aria-hidden="true"></i>Language</span><span class="mt-in">Your approved offers and scripts</span><svg class="arw" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg><span class="mt-out">messages and briefs in Indian languages</span><span class="mt-t">Self-hosted language model</span></div>
     </div>
   </div>
-  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Trained and run in India · one set of models per client, never shared · back-tested on your history before go-live</span><b>07</b></div>
-</div></section>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Trained and run in India · one set of models per client, never shared · back-tested on your history before go-live</span><b>07</b></div></div></section>
 
 <!-- 8 · model lifecycle -->
 <section class="slide light" aria-label="Slide 8"><i class="wm" data-lucide="brain-circuit" aria-hidden="true"></i><div class="in">
@@ -670,27 +971,51 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
 </div></section>
 
 <!-- 10 · sources -->
-<section class="slide light" aria-label="Slide 10"><i class="wm" data-lucide="coins" aria-hidden="true"></i><div class="in">
+<section class="slide light has-art" aria-label="Slide 10"><div class="art" role="img" aria-label="Business sources converging on the gold: renewals, top-ups, released gold and new leads"><svg viewBox="0 0 300 115">
+  <use href="#sky"/><use href="#floor"/>
+  <path d="M238 0 L200 90 L276 90 Z" fill="url(#g-cone)"/>
+  <ellipse cx="238" cy="92" rx="62" ry="10" fill="url(#g-spot)"/>
+  <ellipse cx="238" cy="92" rx="52" ry="6" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/>
+  <g class="flow" fill="none" stroke="#f2c55c" stroke-opacity=".55" stroke-dasharray="2 3"><path d="M86 18 C130 18 150 62 188 70"/><path d="M86 41 C124 41 150 70 188 74"/><path d="M86 64 C124 64 150 76 188 78"/><path d="M86 87 C124 87 156 82 188 82"/></g>
+  <g fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"><circle cx="24" cy="18" r="9"/><circle cx="24" cy="41" r="9"/><circle cx="24" cy="64" r="9"/><circle cx="24" cy="87" r="9"/></g>
+  <g fill="none" stroke="#ffe2a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(18.6 12.6) scale(.45)"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16M8 16H3v5"/></g>
+    <g transform="translate(18.6 35.6) scale(.45)"><path d="M22 7 13.5 15.5 8.5 10.5 2 17M16 7h6v6"/></g>
+    <g transform="translate(18.6 58.6) scale(.45)"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></g>
+    <g transform="translate(18.6 81.6) scale(.45)"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M19 8v6M22 11h-6"/><circle cx="9" cy="7" r="4"/></g>
+  </g>
+  <g font-family="IBM Plex Sans, sans-serif" font-weight="500" font-size="6.6" fill="#e1e4f0"><text x="38" y="20.3">Renewals due</text><text x="38" y="43.3">Top-ups</text><text x="38" y="66.3">Released gold</text><text x="38" y="89.3">New leads</text></g>
+  <use href="#goldbar" x="196" y="66" width="56" height="24.3"/><use href="#goldbar" x="232" y="66" width="56" height="24.3"/><use href="#goldbar" x="214" y="45" width="56" height="24.3"/>
+  <use href="#coin" x="186" y="80" width="13" height="13"/>
+  <circle cx="278" cy="28" r="8" fill="#1fbf8f"/><path d="M274 28 l3 3 l5 -6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div><i class="wm" data-lucide="coins" aria-hidden="true"></i><div class="in">
   <p class="eyebrow">Where the business comes from</p>
   <h2>Eight sources the Target Guide works every day</h2>
   <div class="body">
-    <div class="g4">
-      <div class="panel hero"><i class="ic" data-lucide="refresh-cw" aria-hidden="true"></i><h3>Renewals due</h3><p>Own customers due in the next 7–30 days, renewed in your app or at the branch.</p></div>
-      <div class="panel"><i class="ic" data-lucide="trending-up" aria-hidden="true"></i><h3>Top-ups</h3><p>Pledged gold is worth more after a rate rise, within the RBI LTV cap. Triggered automatically.</p></div>
-      <div class="panel"><i class="ic" data-lucide="alarm-clock" aria-hidden="true"></i><h3>Overdue interest</h3><p>Protects loan quality, and often leads to a renewal.</p></div>
-      <div class="panel"><i class="ic" data-lucide="undo-2" aria-hidden="true"></i><h3>Latent customers</h3><p>Closed a loan in the last 3–12 months and not returned: invite them back.</p></div>
-      <div class="panel"><i class="ic" data-lucide="unlock" aria-hidden="true"></i><h3>Released gold</h3><p>Released gold recently: a natural moment for a new loan.</p></div>
-      <div class="panel"><i class="ic" data-lucide="arrow-right-left" aria-hidden="true"></i><h3>Takeovers</h3><p>Gold pledged at another lender, offered better value per gram.</p></div>
-      <div class="panel"><i class="ic" data-lucide="user-plus" aria-hidden="true"></i><h3>New leads</h3><p>Walk-ins, phone, app, WhatsApp, referrals and local campaigns, by area.</p></div>
-      <div class="panel"><i class="ic" data-lucide="layers" aria-hidden="true"></i><h3>Cross-sell</h3><p>Gold customers for your other loans (MSME, home, microfinance), and the reverse.</p></div>
+    <div class="feed">
+      <div class="feed-g"><div class="panel sm"><i class="ic" data-lucide="refresh-cw" aria-hidden="true"></i><div><h3>Renewals due</h3><p>Own customers due in the next 7–30 days, renewed in your app or at the branch.</p></div></div><div class="panel sm"><i class="ic" data-lucide="trending-up" aria-hidden="true"></i><div><h3>Top-ups</h3><p>Pledged gold is worth more after a rate rise, within the RBI LTV cap. Triggered automatically.</p></div></div><div class="panel sm"><i class="ic" data-lucide="alarm-clock" aria-hidden="true"></i><div><h3>Overdue interest</h3><p>Protects loan quality, and often leads to a renewal.</p></div></div><div class="panel sm"><i class="ic" data-lucide="undo-2" aria-hidden="true"></i><div><h3>Latent customers</h3><p>Closed a loan in the last 3–12 months and not returned: invite them back.</p></div></div><div class="panel sm"><i class="ic" data-lucide="unlock" aria-hidden="true"></i><div><h3>Released gold</h3><p>Released gold recently: a natural moment for a new loan.</p></div></div><div class="panel sm"><i class="ic" data-lucide="arrow-right-left" aria-hidden="true"></i><div><h3>Takeovers</h3><p>Gold pledged at another lender, offered better value per gram.</p></div></div><div class="panel sm"><i class="ic" data-lucide="user-plus" aria-hidden="true"></i><div><h3>New leads</h3><p>Walk-ins, phone, app, WhatsApp, referrals and local campaigns, by area.</p></div></div><div class="panel sm"><i class="ic" data-lucide="layers" aria-hidden="true"></i><div><h3>Cross-sell</h3><p>Gold customers for your other loans (MSME, home, microfinance), and the reverse.</p></div></div></div>
+      <div class="feed-ar" aria-hidden="true"><i></i><svg class="arw" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h42M36 3l8 7-8 7"/></svg></div>
+      <div class="panel hero feed-out"><i class="ic" data-lucide="list-checks" aria-hidden="true"></i><h3>Target Guide</h3><p>The plan picks the mix that closes the gap with the fewest, likeliest contacts: usually renewals first, then top-ups, win-backs and new leads.</p></div>
     </div>
-    <p class="note">The plan picks the mix that closes the gap with the fewest, likeliest contacts: usually renewals first, then top-ups, win-backs and new leads.</p>
   </div>
-  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>10</b></div>
-</div></section>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>10</b></div></div></section>
 
 <!-- 11 · sales tracking -->
-<section class="slide dark" aria-label="Slide 11"><div class="in">
+<section class="slide dark has-art" aria-label="Slide 11"><div class="art" role="img" aria-label="From lead to loan: the enquiry, the gold appraised on the scale, the loan disbursed"><svg viewBox="0 0 300 115">
+  <use href="#sky"/><use href="#floor"/>
+  <g font-family="IBM Plex Mono, monospace" font-weight="600" font-size="6" letter-spacing="1" fill="#f2c55c" text-anchor="middle"><text x="50" y="17">LEAD</text><text x="150" y="17">APPRAISAL</text><text x="250" y="17">DISBURSED</text></g>
+  <path class="flow" d="M74 66 H112 M188 66 H226" stroke="#f2c55c" stroke-opacity=".6" stroke-dasharray="3 4"/>
+  <path d="M109 62.5 L115 66 L109 69.5 M223 62.5 L229 66 L223 69.5" fill="none" stroke="#f2c55c" stroke-width="1.2"/>
+  <circle cx="50" cy="62" r="22" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/>
+  <rect x="41" y="47" width="18" height="30" rx="3.5" fill="#050c2b" stroke="#ffe2a0" stroke-width="1.2"/>
+  <rect x="44" y="51" width="12" height="20" rx="1" fill="#fdfcf8"/><path d="M46 56h8M46 60h6M46 64h7" stroke="#2952d9" stroke-width="1.2" stroke-linecap="round"/>
+  <ellipse cx="150" cy="91" rx="36" ry="3" fill="url(#g-spot)"/>
+  <use href="#scale" x="118" y="44" width="64" height="45.7"/>
+  <rect x="226" y="54" width="40" height="20" rx="2" fill="#0f7a59" stroke="#1fbf8f"/>
+  <rect x="232" y="60" width="40" height="20" rx="2" fill="#1fbf8f" stroke="#0f7a59"/>
+  <circle cx="252" cy="70" r="6" fill="none" stroke="#0f7a59" stroke-width="1.2"/><text x="252" y="73" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="7.5" fill="#0f7a59">₹</text>
+  <circle cx="276" cy="48" r="8" fill="#1fbf8f" stroke="#fff" stroke-width="1"/><path d="M272 48 l3 3 l5 -6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div><div class="in">
   <p class="eyebrow">Module · Sales Tracking</p>
   <h2>Every lead tracked from enquiry to loan</h2>
   <div class="body">
@@ -707,20 +1032,36 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
 </div></section>
 
 <!-- 12 · customer intelligence -->
-<section class="slide light pat" aria-label="Slide 12"><i class="wm" data-lucide="fingerprint" aria-hidden="true"></i><div class="in">
+<section class="slide light pat has-art" aria-label="Slide 12"><div class="art" role="img" aria-label="A customer's borrowing cycle, peaking at festivals, harvest and school reopening"><svg viewBox="0 0 300 115">
+  <use href="#sky"/>
+  <path d="M14 92 H290" stroke="#f2c55c" stroke-opacity=".4"/>
+  <path d="M14 86 C40 86 52 44 70 44 C88 44 100 84 120 84 C140 84 146 54 160 54 C174 54 186 82 205 82 C222 82 228 62 240 62 C252 62 262 80 290 80 L290 92 L14 92 Z" fill="url(#g-chartfill)"/>
+  <path class="flow" d="M14 86 C40 86 52 44 70 44 C88 44 100 84 120 84 C140 84 146 54 160 54 C174 54 186 82 205 82 C222 82 228 62 240 62 C252 62 262 80 290 80" fill="none" stroke="#f2c55c" stroke-width="1.6"/>
+  <g fill="#ffe2a0"><circle cx="70" cy="44" r="3"/><circle cx="160" cy="54" r="3"/><circle cx="240" cy="62" r="3"/></g>
+  <g font-family="IBM Plex Mono, monospace" font-weight="600" font-size="5.6" letter-spacing=".8" text-anchor="middle" fill="#ffe2a0">
+    <rect x="46" y="26" width="48" height="11" rx="5.5" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/><text x="70" y="33.4">FESTIVAL</text>
+    <rect x="138" y="36" width="44" height="11" rx="5.5" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/><text x="160" y="43.4">HARVEST</text>
+    <rect x="218" y="44" width="44" height="11" rx="5.5" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/><text x="240" y="51.4">SCHOOL</text>
+  </g>
+  <path d="M52 92 V58" stroke="#1fbf8f" stroke-dasharray="2 2"/>
+  <rect x="10" y="10" width="72" height="13" rx="6.5" fill="#1fbf8f" fill-opacity=".2" stroke="#1fbf8f"/>
+  <g transform="translate(15 12) scale(.38)" fill="none" stroke="#8ff0cd" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></g>
+  <text x="51" y="18.8" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="5.6" letter-spacing=".6" fill="#8ff0cd">CALL BEFORE</text>
+  <circle cx="276" cy="22" r="11" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/><use href="#person" x="269.5" y="13" width="13" height="17.3" style="color:#ffe2a0"/>
+</svg></div><i class="wm" data-lucide="fingerprint" aria-hidden="true"></i><div class="in">
   <p class="eyebrow">Module · Customer Intelligence</p>
   <h2>Patterns that become named opportunities</h2>
   <div class="body">
     <div class="g3">
-      <div class="panel"><i class="ic" data-lucide="calendar-range" aria-hidden="true"></i><h3>Borrowing cycle</h3><p>Festivals, harvest, school reopening <span class="to">→</span> call before their usual time</p></div>
-      <div class="panel"><i class="ic" data-lucide="repeat" aria-hidden="true"></i><h3>Renewal habit</h3><p>Renews late or runs to auction <span class="to">→</span> start earlier, flag the risk</p></div>
-      <div class="panel"><i class="ic" data-lucide="trending-down" aria-hidden="true"></i><h3>Interest trend</h3><p>Paying later each month <span class="to">→</span> warn the employee before it’s overdue</p></div>
-      <div class="panel"><i class="ic" data-lucide="arrow-big-up" aria-hidden="true"></i><h3>Top-up response</h3><p>Took top-ups before <span class="to">→</span> first on the list after a rate rise</p></div>
-      <div class="panel"><i class="ic" data-lucide="bar-chart-3" aria-hidden="true"></i><h3>Loan size trend</h3><p>Borrowing more or less over time <span class="to">→</span> offer more, or ask why</p></div>
-      <div class="panel"><i class="ic" data-lucide="shuffle" aria-hidden="true"></i><h3>Gold movement</h3><p>Part releases and quick re-pledges <span class="to">→</span> may be using another lender</p></div>
-      <div class="panel"><i class="ic" data-lucide="log-out" aria-hidden="true"></i><h3>Signs of leaving</h3><p>Quiet past their usual cycle <span class="to">→</span> win-back list, with the reason</p></div>
-      <div class="panel"><i class="ic" data-lucide="users-round" aria-hidden="true"></i><h3>Referrals</h3><p>Brings family and neighbours <span class="to">→</span> ask for introductions</p></div>
-      <div class="panel"><i class="ic" data-lucide="message-circle" aria-hidden="true"></i><h3>Contact preference</h3><p>WhatsApp or call, and what time <span class="to">→</span> reach them the way that works</p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="calendar-range" aria-hidden="true"></i><div><h3>Borrowing cycle</h3><p>Festivals, harvest, school reopening</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>call before their usual time</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="repeat" aria-hidden="true"></i><div><h3>Renewal habit</h3><p>Renews late or runs to auction</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>start earlier, flag the risk</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="trending-down" aria-hidden="true"></i><div><h3>Interest trend</h3><p>Paying later each month</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>warn the employee before it’s overdue</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="arrow-big-up" aria-hidden="true"></i><div><h3>Top-up response</h3><p>Took top-ups before</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>first on the list after a rate rise</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="bar-chart-3" aria-hidden="true"></i><div><h3>Loan size trend</h3><p>Borrowing more or less over time</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>offer more, or ask why</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="shuffle" aria-hidden="true"></i><div><h3>Gold movement</h3><p>Part releases and quick re-pledges</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>may be using another lender</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="log-out" aria-hidden="true"></i><div><h3>Signs of leaving</h3><p>Quiet past their usual cycle</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>win-back list, with the reason</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="users-round" aria-hidden="true"></i><div><h3>Referrals</h3><p>Brings family and neighbours</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>ask for introductions</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="message-circle" aria-hidden="true"></i><div><h3>Contact preference</h3><p>WhatsApp or call, and what time</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>reach them the way that works</span></p></div>
     </div>
     <div class="band"><b>Fair use</b><span>Built only from loan and contact behaviour, never religion, caste or gender. Patterns guide outreach; they never decide a loan or a rate.</span></div>
   </div>
@@ -728,17 +1069,32 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
 </div></section>
 
 <!-- 13 · employee intelligence -->
-<section class="slide dark pat" aria-label="Slide 13"><div class="in">
+<section class="slide dark pat has-art" aria-label="Slide 13"><div class="art" role="img" aria-label="Employee intelligence: top performers on a podium, coaching and a rising chart"><svg viewBox="0 0 300 115">
+  <use href="#sky"/>
+  <ellipse cx="150" cy="96" rx="130" ry="12" fill="url(#g-bluespot)"/>
+  <rect x="118" y="58" width="64" height="38" rx="2" fill="url(#g-gold)"/>
+  <rect x="54" y="70" width="64" height="26" rx="2" fill="#1d3fb8"/>
+  <rect x="182" y="76" width="64" height="20" rx="2" fill="#12246b" stroke="#bec8ff" stroke-opacity=".2"/>
+  <g font-family="Sora, sans-serif" font-weight="800" font-size="12" text-anchor="middle"><text x="150" y="82" fill="#0a1747">1</text><text x="86" y="88" fill="#e1e4f0">2</text><text x="214" y="91" fill="#c3c8dc">3</text></g>
+  <use href="#person" x="136" y="27" width="28" height="31" style="color:#ffe2a0"/>
+  <use href="#person" x="73" y="39" width="26" height="31" style="color:#c3c8dc"/>
+  <use href="#person" x="201" y="46" width="26" height="30" style="color:#8e95b0"/>
+  <path class="twinkle" d="M150 8 L151.8 13.2 L157 15 L151.8 16.8 L150 22 L148.2 16.8 L143 15 L148.2 13.2 Z" fill="#f2c55c"/>
+  <rect x="10" y="18" width="48" height="17" rx="5" fill="#12246b" stroke="#f2c55c" stroke-opacity=".55"/><path d="M22 35 L20 41 L28 35" fill="#12246b"/>
+  <circle cx="24" cy="26.5" r="1.8" fill="#ffe2a0"/><circle cx="34" cy="26.5" r="1.8" fill="#ffe2a0"/><circle cx="44" cy="26.5" r="1.8" fill="#ffe2a0"/>
+  <g><rect x="256" y="78" width="7" height="14" rx="1" fill="#2952d9"/><rect x="266" y="68" width="7" height="24" rx="1" fill="#4a74f0"/><rect x="276" y="56" width="7" height="36" rx="1" fill="#c9962e"/><rect x="286" y="42" width="7" height="50" rx="1" fill="#f2c55c"/></g>
+  <path d="M256 66 L270 54 L280 46 L292 30" fill="none" stroke="#ffe2a0" stroke-width="1.3" stroke-linecap="round"/><path d="M286 29 L293 29 L292.5 36" fill="none" stroke="#ffe2a0" stroke-width="1.3" stroke-linecap="round"/>
+</svg></div><div class="in">
   <p class="eyebrow">Module · Employee Intelligence</p>
   <h2>What each employee does well, and what to coach</h2>
   <div class="body">
     <div class="g3">
-      <div class="panel"><i class="ic" data-lucide="pie-chart" aria-hidden="true"></i><h3>Strengths by product</h3><p>Strong at renewals, weak at new customers <span class="to">→</span> a daily list mix that builds the weak side</p></div>
-      <div class="panel"><i class="ic" data-lucide="timer" aria-hidden="true"></i><h3>Follow-up speed</h3><p>Calls new leads late <span class="to">→</span> a nudge within the hour; the manager sees repeat delays</p></div>
-      <div class="panel"><i class="ic" data-lucide="trophy" aria-hidden="true"></i><h3>What top performers do</h3><p>Timing, offers and order of contacts that win <span class="to">→</span> next best action for everyone</p></div>
-      <div class="panel"><i class="ic" data-lucide="signpost" aria-hidden="true"></i><h3>Lead source fit</h3><p>Converts walk-ins well, phone leads poorly <span class="to">→</span> route leads to whoever converts them</p></div>
-      <div class="panel"><i class="ic" data-lucide="users" aria-hidden="true"></i><h3>Workload</h3><p>More customers than time allows <span class="to">→</span> rebalance lists and targets</p></div>
-      <div class="panel"><i class="ic" data-lucide="shield-check" aria-hidden="true"></i><h3>Quality and consistency</h3><p>Appraisal errors, overdue or month-end spikes <span class="to">→</span> coaching, and counted in appraisal</p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="pie-chart" aria-hidden="true"></i><div><h3>Strengths by product</h3><p>Strong at renewals, weak at new customers</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>a daily list mix that builds the weak side</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="timer" aria-hidden="true"></i><div><h3>Follow-up speed</h3><p>Calls new leads late</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>a nudge within the hour; the manager sees repeat delays</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="trophy" aria-hidden="true"></i><div><h3>What top performers do</h3><p>Timing, offers and order of contacts that win</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>next best action for everyone</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="signpost" aria-hidden="true"></i><div><h3>Lead source fit</h3><p>Converts walk-ins well, phone leads poorly</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>route leads to whoever converts them</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="users" aria-hidden="true"></i><div><h3>Workload</h3><p>More customers than time allows</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>rebalance lists and targets</span></p></div>
+      <div class="panel wt"><div class="wt-top"><i class="ic" data-lucide="shield-check" aria-hidden="true"></i><div><h3>Quality and consistency</h3><p>Appraisal errors, overdue or month-end spikes</p></div></div><p class="wt-then"><i data-lucide="corner-down-right" aria-hidden="true"></i><span>coaching, and counted in appraisal</span></p></div>
     </div>
     <div class="band lite"><b>Fair use</b><span>For coaching and fair targets, never automatic penalties. Each employee sees their own data; managers see the reasons.</span></div>
   </div>
@@ -919,18 +1275,20 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
   <p class="eyebrow">Data and security</p>
   <h2>Your data and the AI stay in India</h2>
   <div class="body">
-    <div class="g3">
-      <div class="panel"><i class="ic" data-lucide="eye" aria-hidden="true"></i><h3>Read-only</h3><p>We read a replica, a reporting copy or your API. We never write to your system.</p></div>
-      <div class="panel"><i class="ic" data-lucide="network" aria-hidden="true"></i><h3>Private connection</h3><p>A VPN or IP allowlist between your servers and ours. Nothing is opened to the internet.</p></div>
-      <div class="panel hero"><i class="ic" data-lucide="map-pin" aria-hidden="true"></i><h3>AI hosted in India</h3><p>The AI runs on dedicated servers for your company. No data goes to any outside AI provider.</p></div>
-      <div class="panel"><i class="ic" data-lucide="filter" aria-hidden="true"></i><h3>Only what’s needed</h3><p>No Aadhaar, PAN, addresses or photos. Names and consented phones only for the Target Guide.</p></div>
-      <div class="panel"><i class="ic" data-lucide="key-round" aria-hidden="true"></i><h3>Access by role</h3><p>Each person sees only their branch, region or company. Every login and change is logged.</p></div>
-      <div class="panel"><i class="ic" data-lucide="file-signature" aria-hidden="true"></i><h3>Agreements first</h3><p>NDA and data processing agreement before we connect, in line with RBI outsourcing guidance and the DPDP Act.</p></div>
+    <div class="sec">
+      <div class="panel sec-n"><i class="ic" data-lucide="eye" aria-hidden="true"></i><h3>Read-only</h3><p>We read a replica, a reporting copy or your API. We never write to your system.</p></div>
+      <div class="sec-l"><span class="sec-pipe" aria-hidden="true"><i data-lucide="lock"></i></span><h3><i class="ic" data-lucide="network" aria-hidden="true"></i>Private connection</h3><p>A VPN or IP allowlist between your servers and ours. Nothing is opened to the internet.</p></div>
+      <div class="panel hero sec-n"><i class="ic" data-lucide="map-pin" aria-hidden="true"></i><h3>AI hosted in India</h3><p>The AI runs on dedicated servers for your company. No data goes to any outside AI provider.</p></div>
+      <div class="sec-l"><span class="sec-pipe" aria-hidden="true"><i data-lucide="user-check"></i></span><h3><i class="ic" data-lucide="key-round" aria-hidden="true"></i>Access by role</h3><p>Each person sees only their branch, region or company. Every login and change is logged.</p></div>
+      <div class="panel sec-n"><i class="ic" data-lucide="users" aria-hidden="true"></i><h3>Your people</h3><p>Employees, branch managers, region and zone heads, and leadership, each with their own view.</p></div>
+    </div>
+    <div class="g2">
+      <div class="panel sec-r"><i class="ic" data-lucide="filter" aria-hidden="true"></i><div><h3>Only what’s needed</h3><p>No Aadhaar, PAN, addresses or photos. Names and consented phones only for the Target Guide.</p></div></div>
+      <div class="panel sec-r"><i class="ic" data-lucide="file-signature" aria-hidden="true"></i><div><h3>Agreements first</h3><p>NDA and data processing agreement before we connect, in line with RBI outsourcing guidance and the DPDP Act.</p></div></div>
     </div>
     <p class="note">A full security and architecture pack is available for your IT team under NDA.</p>
   </div>
-  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>20</b></div>
-</div></section>
+  <div class="foot"><span><i class="bv" aria-hidden="true"></i>Bheem Gold AI · Sales &amp; Performance for gold loan NBFCs</span><b>20</b></div></div></section>
 
 <!-- 21 · platform -->
 <section class="slide dark" aria-label="Slide 21"><div class="in">
@@ -969,7 +1327,24 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
 </div></section>
 
 <!-- 22 · deployment -->
-<section class="slide light" aria-label="Slide 22"><i class="wm" data-lucide="server" aria-hidden="true"></i><div class="in">
+<section class="slide light has-art" aria-label="Slide 22"><div class="art" role="img" aria-label="Dedicated servers in an Indian data centre, connected privately"><svg viewBox="0 0 300 115">
+  <use href="#sky"/><use href="#floor"/>
+  <g>
+    <rect x="36" y="22" width="56" height="70" rx="3" fill="#0a1747" stroke="#cfcabb" stroke-opacity=".5"/>
+    <rect x="104" y="22" width="56" height="70" rx="3" fill="#0a1747" stroke="#cfcabb" stroke-opacity=".5"/>
+    <g fill="#12246b" stroke="#bec8ff" stroke-opacity=".2"><rect x="42" y="28" width="44" height="9" rx="1"/><rect x="42" y="40" width="44" height="9" rx="1"/><rect x="42" y="52" width="44" height="9" rx="1"/><rect x="42" y="64" width="44" height="9" rx="1"/><rect x="42" y="76" width="44" height="9" rx="1"/>
+      <rect x="110" y="28" width="44" height="9" rx="1"/><rect x="110" y="40" width="44" height="9" rx="1"/><rect x="110" y="52" width="44" height="9" rx="1"/><rect x="110" y="64" width="44" height="9" rx="1"/><rect x="110" y="76" width="44" height="9" rx="1"/></g>
+    <g class="twinkle" fill="#1fbf8f"><circle cx="80" cy="32.5" r="1.5"/><circle cx="80" cy="56.5" r="1.5"/><circle cx="148" cy="44.5" r="1.5"/><circle cx="148" cy="68.5" r="1.5"/></g>
+    <g fill="#f2c55c"><circle cx="80" cy="44.5" r="1.5"/><circle cx="148" cy="32.5" r="1.5"/><circle cx="148" cy="80.5" r="1.5"/><circle cx="80" cy="80.5" r="1.5"/></g>
+    <path d="M48 32.5h20M48 44.5h16M48 56.5h22M48 68.5h14M48 80.5h18M116 32.5h18M116 44.5h22M116 56.5h14M116 68.5h20M116 80.5h16" stroke="#bec8ff" stroke-opacity=".35" stroke-width="1.4"/>
+  </g>
+  <path class="flow" d="M160 56 C186 56 196 40 214 40" fill="none" stroke="#f2c55c" stroke-opacity=".7" stroke-dasharray="2 3"/>
+  <path d="M206 50 C200 50 196 46 196 41 C196 36 200 32 205 32 C207 25 213 21 220 21 C228 21 234 26 235 33 C241 33 246 37 246 42 C246 47 242 50 237 50 Z" fill="#12246b" stroke="#f2c55c" stroke-opacity=".7"/>
+  <rect x="214" y="35" width="12" height="9" rx="1.5" fill="url(#g-gold)"/><path d="M216.5 35 V32.5 a3.5 3.5 0 0 1 7 0 V35" fill="none" stroke="#f2c55c" stroke-width="1.4"/>
+  <g transform="translate(250 54) scale(1.2)" fill="url(#g-gold)"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3" fill="#0a1747"/></g>
+  <rect x="196" y="62" width="50" height="13" rx="6.5" fill="#f2c55c" fill-opacity=".15" stroke="#f2c55c" stroke-opacity=".7"/>
+  <text x="221" y="70.6" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="5.8" letter-spacing="1" fill="#ffe2a0">IN INDIA</text>
+</svg></div><i class="wm" data-lucide="server" aria-hidden="true"></i><div class="in">
   <p class="eyebrow">Deployment</p>
   <h2>Run by us or in your data centre, always in India</h2>
   <div class="body">
@@ -985,7 +1360,24 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
 </div></section>
 
 <!-- 23 · rollout -->
-<section class="slide dark" aria-label="Slide 23"><div class="in">
+<section class="slide dark has-art" aria-label="Slide 23"><div class="art" role="img" aria-label="The daily list on a phone, in each employee's own language"><svg viewBox="0 0 300 115">
+  <use href="#sky"/>
+  <g class="flow" fill="none" stroke="#f2c55c" stroke-opacity=".5" stroke-dasharray="2 3"><path d="M86 22 H124M86 57 H124M86 92 H124M176 22 H214M176 57 H214M176 92 H214"/></g>
+  <rect x="124" y="6" width="52" height="103" rx="8" fill="#050c2b" stroke="#cfcabb" stroke-opacity=".6" stroke-width="1.2"/>
+  <rect x="128" y="13" width="44" height="89" rx="4" fill="#fdfcf8"/>
+  <rect x="128" y="13" width="44" height="11" rx="4" fill="#1fbf8f"/><text x="150" y="20.6" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="5" fill="#fff">TODAY</text>
+  <g><circle cx="135" cy="32" r="2.6" fill="#f2c55c"/><circle cx="135" cy="44" r="2.6" fill="#f2c55c"/><circle cx="135" cy="56" r="2.6" fill="#1fbf8f"/><circle cx="135" cy="68" r="2.6" fill="#1fbf8f"/><circle cx="135" cy="80" r="2.6" fill="#4a74f0"/></g>
+  <path d="M141 32h24M141 44h20M141 56h22M141 68h18M141 80h21" stroke="#c3c8dc" stroke-width="2.2" stroke-linecap="round"/>
+  <rect x="134" y="88" width="32" height="9" rx="4.5" fill="#2952d9"/><text x="150" y="94.2" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-weight="600" font-size="5" fill="#fff">Call</text>
+  <g font-family="IBM Plex Sans, sans-serif" font-weight="600" font-size="6.8" fill="#ffe2a0" text-anchor="middle">
+    <rect x="16" y="15" width="70" height="14" rx="7" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/><text x="51" y="24.4">Malayalam</text>
+    <rect x="16" y="50" width="70" height="14" rx="7" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/><text x="51" y="59.4">Tamil</text>
+    <rect x="16" y="85" width="70" height="14" rx="7" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/><text x="51" y="94.4">Telugu</text>
+    <rect x="214" y="15" width="70" height="14" rx="7" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/><text x="249" y="24.4">Hindi</text>
+    <rect x="214" y="50" width="70" height="14" rx="7" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/><text x="249" y="59.4">Kannada</text>
+    <rect x="214" y="85" width="70" height="14" rx="7" fill="#12246b" stroke="#f2c55c" stroke-opacity=".6"/><text x="249" y="94.4">English</text>
+  </g>
+</svg></div><div class="in">
   <p class="eyebrow">Rollout</p>
   <h2>Built for branch staff, with no new app to learn</h2>
   <div class="body">
@@ -1059,7 +1451,7 @@ svg.wm, .wm { position: absolute; right: -3cqw; bottom: -4cqw; width: 30cqw; hei
 
 
   // ── motion: split headlines into words; tag the elements that stagger in; play when a slide comes into view
-  const STAGGER = '.panel, .pill3 > div, .steps li, .rules > div, .ns li, .signals span, .loop span, .kpi tbody tr, .leak, .funnel .h, .flow .arrow, .br, .stack > .panel, .lv, .role, .src, .layer, .tile, .mrow, .agentcard, .pipe li, .gov > div'
+  const STAGGER = '.panel, .pill3 > div, .steps li, .rules > div, .ns li, .signals span, .loop span, .kpi tbody tr, .leak, .funnel .h, .flow .arrow, .br, .stack > .panel, .lv, .role, .src, .layer, .tile, .mrow, .agentcard, .pipe li, .gov > div, .ms, .drop, .chev, .lc-loop, .zz-n, .zz-c, .lp-a, .lp-mid, .sec-l, .mt-r, .feed-ar, .lane-c'
   const isGradientText = (el) => { const cs = getComputedStyle(el); return (cs.backgroundClip || cs.webkitBackgroundClip) === 'text' || cs.webkitBackgroundClip === 'text' }
   const split = (el, counter) => {
     for (const node of [...el.childNodes]) {
